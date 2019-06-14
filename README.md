@@ -1,8 +1,8 @@
-# nuxt-test
+# The Speckle Website 
 
-> My Test Project
+WOW! More details to follow.
 
-## Build Setup
+## How To Build
 
 ``` bash
 # install dependencies
