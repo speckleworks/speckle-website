@@ -177,6 +177,11 @@
   import { mapMutations } from 'vuex'
 
 export default {
+  head() {
+    return {
+      title: 'Speckle: AEC Open Data'
+    }
+  },
   computed: {
     posts( ) {
       return this.$store.getters[ 'blog/getPosts' ].slice(0,3)

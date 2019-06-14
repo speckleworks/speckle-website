@@ -1,9 +1,6 @@
 ---
-title: "Roundup: 2017 Edition"
-author: Dimitrie
-tags: [ 'announcement' ]
-featuredimg: woot.jpg
-summary: A short summary of 2017!
+title: "Revit Plugin"
+summary: "A brief intro to the revit connector"
 date: 2017-12-29
 ---
 <template lang='md'>

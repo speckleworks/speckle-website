@@ -1,8 +1,8 @@
 ---
 title: "Python"
-author: Dimitrie
-summary: The Speckle Python API
+summary: "The Speckle Python API"
 date: 2017-12-29
+order: 2
 ---
 <template lang='md'>
 

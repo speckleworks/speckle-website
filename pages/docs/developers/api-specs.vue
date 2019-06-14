@@ -1,7 +1,8 @@
 ---
-title: OpenAPI Specifications
-summary: A federated future you can own.
+title: API Specifications
+summary: "How to approach and interact with the speckle api"
 date: 2017-09-30
+order: 0
 ---
 <template lang='md'>
 

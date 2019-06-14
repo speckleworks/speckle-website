@@ -1,7 +1,8 @@
 ---
-title: .NET SDK (SpeckleCore)
+title: ".NET SDK"
 summary: "Using Speckle in .NET environments"
 date: 2019-01-21
+order: 1
 ---
 
 <template lang='md'>

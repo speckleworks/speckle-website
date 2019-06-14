@@ -21,7 +21,6 @@ export const mutations = {
 
 export const actions = {
   loadDocs( { commit }, {docsTree, flatArr} ) {
-    console.log( docsTree )
     commit( "setTree", docsTree )
     commit( "setFlat", flatArr)
   }
