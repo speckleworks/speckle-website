@@ -62,7 +62,6 @@ export default {
     linkify: true,
     breaks: true,
     use: [
-      'markdown-it-container',
       'markdown-it-attrs',
       'markdown-it-meta',
       'markdown-it-highlightjs'
