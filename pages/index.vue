@@ -118,8 +118,8 @@
           </v-hover>
         </v-flex>
         <v-flex xs12 sm8 md12 class='text-xs-center'>
-          <v-btn xxflat outline round block large color='primary' class='my-3 pa-4' to='/docs/start'>
-            Getting Started
+          <v-btn xxflat outline round block large color='primary' class='my-3 pa-4' style="height:210px;"to='/docs/start'>
+            Ready? Get started!
           </v-btn>
         </v-flex>
       </v-layout>

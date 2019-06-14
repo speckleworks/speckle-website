@@ -1,9 +1,8 @@
 ---
-title: Schemas and Standards
-author: Dimitrie
-tags: [ 'object models' ]
-summary: "Speckle's take on object models, schemas and various standards."
+title: Rhino Plugin
+summary: "Rhino plugin introduction tutorial"
 date: 2017-12-27
+order: 30
 ---
 <template lang='md'>
 

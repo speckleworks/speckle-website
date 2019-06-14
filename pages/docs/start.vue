@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-summary: "Getting up and running!"
+summary: "Start using or developing for speckle"
 date: 2019-07-07
 order: 0
 ---

@@ -19,7 +19,7 @@
           <template v-slot:activator>
             <v-list-tile :to='item.slug'>
               <v-list-tile-content>
-                <v-list-tile-title class='font-weight-bold text-capitalize'>
+                <v-list-tile-title class='font-weight-bold text-capitalize subheading'>
                   {{item.name}}
                 </v-list-tile-title>
               </v-list-tile-content>
@@ -52,7 +52,11 @@
               {{frontmatter.attributes.title}}
             </div>
             <div class='grey--text subheading'>
-              {{frontmatter.attributes.summary}} • Last modified on {{new Date(frontmatter.mtime).toLocaleDateString()}}
+              {{frontmatter.attributes.summary}} • Last modified on {{new Date(frontmatter.mtime).toLocaleDateString()}} • <a :href="`https://github.com/speckleworks/speckle-website/tree/master/${frontmatter.path}`" target='_blank' class=''>edit</a>
+            </div>
+            <div class='grey--text mt-2'>
+
+              <!-- <v-btn :href="`https://github.com/speckleworks/speckle-website/tree/master/${frontmatter.path}`" target='_blank'>Edit</v-btn> -->
             </div>
             <v-divider class='mt-2 mb-4'></v-divider>
           </v-flex>
@@ -67,8 +71,8 @@
 <script>
 import Footer from '~/components/footer.vue'
 export default {
-  head() {
-    if(!this.attributes) return { title: 'Speckle'}
+  head( ) {
+    if ( !this.attributes ) return { title: 'Speckle' }
     return {
       title: `Speckle / ${this.frontmatter.attributes.title}`,
       meta: [
