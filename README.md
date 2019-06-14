@@ -1,6 +1,8 @@
 # The Speckle Website 
 
-WOW! More details to follow.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19fb397f-ec8a-4c61-88f7-631e21c02b8a/deploy-status)](https://app.netlify.com/sites/speckle/deploys)
+
+This is the repository speckle's main website. 
 
 ## How To Build
 
@@ -18,5 +20,3 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

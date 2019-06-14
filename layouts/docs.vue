@@ -54,10 +54,8 @@
             <div class='grey--text subheading'>
               {{frontmatter.attributes.summary}} • Last modified on {{new Date(frontmatter.mtime).toLocaleDateString()}} • <a :href="`https://github.com/speckleworks/speckle-website/tree/master/${frontmatter.path}`" target='_blank' class=''>edit</a>
             </div>
-            <div class='grey--text mt-2'>
-
-              <!-- <v-btn :href="`https://github.com/speckleworks/speckle-website/tree/master/${frontmatter.path}`" target='_blank'>Edit</v-btn> -->
-            </div>
+            <!-- <div class='grey--text mt-2'>
+            </div> -->
             <v-divider class='mt-2 mb-4'></v-divider>
           </v-flex>
           <v-flex xs11 sm10 lg8>
