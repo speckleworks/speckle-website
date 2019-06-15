@@ -136,7 +136,7 @@
           <v-layout row wrap>
             <v-flex xs12 md12 class='px-4 my-3 text-xs-center text-md-left'>
               <span class='display-1 font-weight-light'>Blog</span><br>
-              <!-- <span><a href='https://twitter.com/speckle_works' target="_blank">twitter</a></span> -->
+              <span class='caption'>Infrequent updates from Speckle HQ</span>
             </v-flex>
             <v-flex xs12 v-for='post in posts' :key='post.attributes.title' class='px-4'>
               <v-hover>
@@ -165,9 +165,15 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <v-flex style="max-height:840px; overflow-y: scroll;">
-          <a class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <v-flex xs12 md6 class='px-4 my-3 text-xs-center text-md-left'>
+          <span class='display-1 font-weight-light'>Speckle Tweets</span><br>
+          <span class='caption'>Promoting the community's work with speckle!</span>
+          <v-card style='max-height: 1260px; overflow-y: scroll;' class='mt-4'>
+            <a v-if='!$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a v-if='$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
+            <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+          </v-card>
         </v-flex>
       </v-layout>
     </v-container>
