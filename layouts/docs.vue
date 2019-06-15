@@ -3,7 +3,7 @@
     <v-navigation-drawer app v-model='navBar'>
       <v-toolbar class='elevation-0 xxxtransparent pa-0'>
         <v-toolbar-title class='text-uppercase font-weight-thin' style='margin-left:-6px;'>
-          Docs
+          Speckle Docs
         </v-toolbar-title>
       </v-toolbar>
       <v-list two-line>
@@ -36,10 +36,19 @@
     </v-navigation-drawer>
     <v-toolbar :scroll-threshold='0' app :scroll-off-screen='true' x-inverted-scroll class='elevation-0'>
       <v-toolbar-side-icon @click.native='navBar=!navBar'></v-toolbar-side-icon>
-      <v-toolbar-title>
-        <v-btn small depressed round color='primary' to='/' class='xxxfont-weight-light'>SPECKLE</v-btn>
-      </v-toolbar-title>
+      <v-toolbar-items>
+        <v-btn small flat class='hidden-xs' to='/'>
+          &nbsp;
+          <img src='/speckle-min.png' style="width: 21px">
+          &nbsp;
+        </v-btn>
+      </v-toolbar-items>
       <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn small flat to='/' class='xxxfont-weight-light'>HOME</v-btn>
+        <v-btn small flat to='/docs/start' class='xxxfont-weight-light'>DOCS</v-btn>
+        <v-btn small flat to='/blog' class='xxxfont-weight-light'>BLOG</v-btn>
+      </v-toolbar-items>
       <v-btn icon small depressed round @click='toggleDark'>
         <v-icon small>wb_sunny</v-icon>
       </v-btn>
@@ -63,11 +72,13 @@
           </v-flex>
         </v-layout>
       </v-container>
+        <Footer></Footer>
     </v-content>
   </v-app>
 </template>
 <script>
 import Footer from '~/components/footer.vue'
+import MyToolbar from '~/components/toolbar.vue'
 export default {
   head( ) {
     if ( !this.attributes ) return { title: 'Speckle' }
@@ -80,7 +91,8 @@ export default {
     }
   },
   components: {
-    Footer
+    Footer,
+    MyToolbar
   },
   data( ) {
     return {
@@ -88,6 +100,9 @@ export default {
     }
   },
   computed: {
+    // navBar( ) {
+    //   return this.$store.state.navbar
+    // },
     frontmatter( ) {
       return this.$store.getters[ 'docs/getDoc' ]( this.$route.path )
     },

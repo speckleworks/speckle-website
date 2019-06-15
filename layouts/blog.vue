@@ -1,12 +1,19 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-toolbar :scroll-threshold='0' app :scroll-off-screen='true' x-inverted-scroll class='elevation-0'>
-      <v-toolbar-title>
-        <v-btn small depressed round color='primary' to='/' class='xxxfont-weight-light'>SPECKLE</v-btn>
-        <span class='text-uppercase font-weight-thin caption'>AEC & Data</span>
-      </v-toolbar-title>
+    <v-toolbar app :scroll-off-screen='true' class='elevation-0'>
+      <v-toolbar-items>
+        <v-btn small flat class='hidden-xs'  to='/'>
+          &nbsp;
+          <img src='/speckle-min.png' style="width: 21px">
+          &nbsp;
+        </v-btn>
+      </v-toolbar-items>
       <v-spacer></v-spacer>
-      <!-- <v-btn small depressed round color='primary' to='/'>home</v-btn> -->
+      <v-toolbar-items>
+        <v-btn small flat to='/'>HOME</v-btn>
+        <v-btn small flat to='/docs/start'>DOCS</v-btn>
+        <v-btn small flat to='/blog'>BLOG</v-btn>
+      </v-toolbar-items>
       <v-btn icon small depressed round @click='toggleDark'>
         <v-icon small>wb_sunny</v-icon>
       </v-btn>
@@ -14,7 +21,7 @@
     <v-content>
       <v-container>
         <v-layout justify-center row wrap>
-          <v-flex xs12 sm10 lg8 class=' mb-4' v-if='frontmatter'>
+          <v-flex xs12 sm10 md8 lg6 class='mb-4' v-if='frontmatter'>
             <div class='display-1 font-weight-thin mb-4'>
               <v-btn round small depressed color='' class='mx-0 px-2' to='/blog'>
                 <v-icon left small>arrow_back</v-icon>Blog &nbsp;&nbsp;
@@ -29,7 +36,9 @@
             </div>
             <v-divider class='mt-2 mb-4'></v-divider>
           </v-flex>
-          <v-flex xs11 sm10 lg8>
+        </v-layout>
+        <v-layout justify-center row wrap>
+          <v-flex xs12 sm10 md8 lg6>
             <nuxt />
           </v-flex>
         </v-layout>

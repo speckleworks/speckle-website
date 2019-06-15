@@ -2,10 +2,14 @@ import BlogFromDir from './mdFromDir.js'
 import DocsFromDir from './DocsFromDir.js'
 
 export const state = ( ) => ( {
-  dark: false
+  dark: false,
+  navbar: true
 } )
 
 export const mutations = {
+  TOGGLE_NAVBAR: state => {
+    state.dark = !state.dark
+  },
   TOGGLE_DARK: state => {
     state.dark = !state.dark
   },

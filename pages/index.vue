@@ -1,15 +1,15 @@
 <template>
   <div>
-    <v-container grid-xl xxx-fluid class='mt-5'>
-      <v-layout row wrap px-5 mt-5 class='text-xs-center'>
-        <v-flex xs12 sm8 offset-sm2 mt-5 xxxml-5>
+    <v-container grid-xl class='mt-5'>
+      <v-layout justify-center row wrap px-5 mt-5 class='text-xs-center'>
+        <v-flex xs12 sm8 lg6 mt-5>
           <span class='display-3 font-weight-light xxx-text-uppercase'>
-            <b>Speckle</b> is the open source <span class='primary--text'>data</span> platform for aec.
+            <b>Speckle</b> is the open source <span class='primary--text'>data</span> platform for aec
           </span>
           <br>
           <br>
           <span class='grey--text subheading'>
-            a fast 🚀 web-first 🌎 base for automation in 🏗 aec
+            a fast, web-first base for automation in aec.
           </span>
           <br>
           <v-btn large round color='primary' class='mt-5' @click="$vuetify.goTo('#features')">Read more</v-btn>
@@ -30,7 +30,7 @@
         </v-flex>
       </v-layout>
       <v-layout row wrap justify-center id='features'>
-        <v-flex xs12 sm9 md6 lg6>
+        <v-flex xs12 sm9 md6 lg5>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
@@ -51,9 +51,7 @@
             </v-card>
           </v-hover>
         </v-flex>
-        <!--       </v-layout>
-      <v-layout row wrap> -->
-        <v-flex xs12 sm9 md6 lg6 xxx-offset-lg6 xxx-offset-md6>
+        <v-flex xs12 sm9 md6 lg5 xxx-offset-lg5 xxx-offset-md6>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
@@ -72,9 +70,7 @@
             </v-card>
           </v-hover>
         </v-flex>
-        <!--       </v-layout>
-      <v-layout row wrap> -->
-        <v-flex xs12 sm9 md6 lg6>
+        <v-flex xs12 sm9 md6 lg5>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
@@ -93,9 +89,7 @@
             </v-card>
           </v-hover>
         </v-flex>
-        <!--       </v-layout>
-      <v-layout row wrap> -->
-        <v-flex xs12 sm9 md6 lg6 xxx-offset-lg6 xxx-offset-md6>
+        <v-flex xs12 sm9 md6 lg5 xxx-offset-lg6 xxx-offset-md6>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <!--               <v-expand-transition>
@@ -117,7 +111,7 @@
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex xs12 sm8 md12 class='text-xs-center'>
+        <v-flex xs12 sm8 md12 lg10 class='text-xs-center'>
           <v-btn xxflat outline round block large color='primary' class='my-3 pa-4' style="height:210px;"to='/docs/start'>
             Ready? Get started!
           </v-btn>

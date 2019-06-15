@@ -24,17 +24,17 @@ Let's go ahead and create one, you can do so from the Grasshopper **or** the Dyn
 
 In **Grasshopper**, drag and drop the *Data Sender* or *Data Receiver* components on the canvas.
 
-![1537457464215](/docsimages/grasshopper-dynamo/1537457464215.png) {.text-xs-center .my-5}
+![1537457464215](~/assets/docs/grasshopper-dynamo/1537457464215.png) {.text-xs-center .my-4}
 
 In **Dynamo**, click on the *Speckle Sender* or *Speckle Receiver* to place the on the graph.
 
-![1537457525739](/docsimages/grasshopper-dynamo/1537457525739.png) {.text-xs-center .my-5}
+![1537457525739](~/assets/docs/grasshopper-dynamo/1537457525739.png) {.text-xs-center .my-4}
 
 (Yes, I agree with you, we need to standardize naming, but at least icons are the same!)
 
 Now, in both cases, you'll see the following window:
 
-![1537457889305](/docsimages/grasshopper-dynamo/1537457889305.png) {.text-xs-center .my-5}
+![1537457889305](~/assets/docs/grasshopper-dynamo/1537457889305.png) {.text-xs-center .my-4}
 
 For *Server Url* use: `https://hestia.speckle.works/api/v1`, unless you want to use a different deployment. Finally, fill in the other fields and click **Register**!
 
@@ -48,7 +48,7 @@ If everything went smooth so far, we'll be ready to start sending and receiving 
 
 In **Grasshopper**, each time you place a component you'll be prompted to select what account to use. In **Dynamo**, after selecting an account, it becomes the **default** one. But you can change it and add new ones at any time from *View > Speckle Accounts*:
 
-![1537461939189](/docsimages/grasshopper-dynamo/1537461939189.png) {.text-xs-center .my-5}
+![1537461939189](~/assets/docs/grasshopper-dynamo/1537461939189.png) {.text-xs-center .my-4}
 
 
 ## Hello Speckle!
@@ -59,25 +59,24 @@ More info on streams can be found in the [Speckle docs](https://speckle.works/do
 
 In **Grasshopper**, place a Sender component (or reuse the one created previously) and create a panel with some text, then connect the panel to one of the input ports of the Sender, just like so:
 
-![1537459297992](/docsimages/grasshopper-dynamo/1537459297992.png) {.text-xs-center .my-5}
+![1537459297992](~/assets/docs/grasshopper-dynamo/1537459297992.png) {.text-xs-center .my-4}
 
 Now, right click on the Sender and then select to copy the streamId to clipboard:
 
-![1537459159288](/docsimages/grasshopper-dynamo/1537459159288.png) {.text-xs-center .my-5}
+![1537459159288](~/assets/docs/grasshopper-dynamo/1537459159288.png) {.text-xs-center .my-4}
 
 In **Dynamo**, place a Receiver node:
 
-![1537459420963](/docsimages/grasshopper-dynamo/1537459420963.png) {.text-xs-center .my-5}
+![1537459420963](~/assets/docs/grasshopper-dynamo/1537459420963.png) {.text-xs-center .my-4}
 
 Then, either paste the streamId or use the friendly *paste button*, and....
 
-![mind blown](https://media1.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif)
-
+![mind blown](https://media1.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif) {.text-xs-center .my-4}
 
 
 Here's a full gif of the process, it took us 4 mouse clicks, but we made it! We now  have real time data streaming between Grasshopper and Dynamo. Just try changing the text, and you'll see it update automatically.
 
-![speckle-basic](/docsimages/grasshopper-dynamo/speckle-basic.gif)
+![speckle-basic](~/assets/docs/grasshopper-dynamo/speckle-basic.gif) {.text-xs-center .my-4}
 
 
 
@@ -91,21 +90,21 @@ Optional, but good to keep our streams organized.
 
 In **Grasshopper**, right click on the Sender and set the component Name:
 
-![1537461209453](/docsimages/grasshopper-dynamo/1537461209453.png) {.text-xs-center .my-5}
+![1537461209453](~/assets/docs/grasshopper-dynamo/1537461209453.png) {.text-xs-center .my-4}
 
 In **Dynamo**, similarly, right click and select *Rename Node...*:
 
-![1537461278786](/docsimages/grasshopper-dynamo/1537461278786.png) {.text-xs-center .my-5}
+![1537461278786](~/assets/docs/grasshopper-dynamo/1537461278786.png) {.text-xs-center .my-4}
 
 ### Find a stream by name
 
 In **Grasshopper**, you'll need to use a few components, more specifically the Accounts + Streams + Expand Object:
 
-![1537461555475](/docsimages/grasshopper-dynamo/1537461555475.png) {.text-xs-center .my-5}
+![1537461555475](~/assets/docs/grasshopper-dynamo/1537461555475.png) {.text-xs-center .my-4}
 
 In **Dynamo**, just use the Streams node and select/search the name:
 
-![speckle-basic2](/docsimages/grasshopper-dynamo/speckle-basic2.gif)
+![speckle-basic2](~/assets/docs/grasshopper-dynamo/speckle-basic2.gif) {.text-xs-center .my-4}
 
 ### Add/Remove inputs
 
@@ -113,21 +112,21 @@ You can add and remove inputs from a Sender component/node, these correspond to 
 
 In **Grasshopper**, zoom on the component until you see these + and - signs:
 
-![1537462182235](/docsimages/grasshopper-dynamo/1537462182235.png) {.text-xs-center .my-5}
+![1537462182235](~/assets/docs/grasshopper-dynamo/1537462182235.png) {.text-xs-center .my-4}
 
 In **Dynamo**, click on the + and - buttons:
 
-![1537462250778](/docsimages/grasshopper-dynamo/1537462250778.png) {.text-xs-center .my-5}
+![1537462250778](~/assets/docs/grasshopper-dynamo/1537462250778.png) {.text-xs-center .my-4}
 
 ### Rename inputs/layers
 
 In **Grasshopper**, right click on the **input** itself:
 
-![1537462494319](/docsimages/grasshopper-dynamo/1537462494319.png) {.text-xs-center .my-5}
+![1537462494319](~/assets/docs/grasshopper-dynamo/1537462494319.png) {.text-xs-center .my-4}
 
 In **Dynamo**, right click on the *node > Rename Inputs...*:
 
-![1537462570526](/docsimages/grasshopper-dynamo/1537462570526.png) {.text-xs-center .my-5}
+![1537462570526](~/assets/docs/grasshopper-dynamo/1537462570526.png) {.text-xs-center .my-4}
 
 ### Support for multiple data types
 
@@ -135,7 +134,7 @@ Speckle supports natively many data types like text, numbers, geometry primitive
 
 https://github.com/speckleworks/SpeckleDynamo/issues/10
 
-![1537463244196](/docsimages/grasshopper-dynamo/1537463244196.png) {.text-xs-center .my-5}
+![1537463244196](~/assets/docs/grasshopper-dynamo/1537463244196.png) {.text-xs-center .my-4}
 
 
 
@@ -143,13 +142,13 @@ https://github.com/speckleworks/SpeckleDynamo/issues/10
 
 Speckle will automatically convert data trees to nested lists and vice versa:
 
-![1537464067342](/docsimages/grasshopper-dynamo/1537464067342.png) {.text-xs-center .my-5}
+![1537464067342](~/assets/docs/grasshopper-dynamo/1537464067342.png) {.text-xs-center .my-4}
 
 ### Add Custom User Data
 
 Geometry sent with Speckle can have *User Data* attached to it, which is a way of adding *extra* information/properties/metadata. User Data is structured as a dictionary and you'll need ad-hoc *set* and *get* nodes/components to attach/retrieve it.
 
-![1537464815824](/docsimages/grasshopper-dynamo/1537464815824.png) {.text-xs-center .my-5}
+![1537464815824](~/assets/docs/grasshopper-dynamo/1537464815824.png) {.text-xs-center .my-4}
 
 
 ## Conclusion
