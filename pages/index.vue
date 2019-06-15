@@ -9,7 +9,7 @@
           <br>
           <br>
           <span class='grey--text subheading'>
-            a fast, web-first base for automation in aec.
+            a fast, web-scale base for automation in design, engineering and construction.
           </span>
           <br>
           <v-btn large round color='primary' class='mt-5' @click="$vuetify.goTo('#features')">Read more</v-btn>
@@ -112,7 +112,9 @@
           </v-hover>
         </v-flex>
         <v-flex xs12 sm8 md12 lg10 class='text-xs-center'>
-          <v-btn xxflat outline round block large color='primary' class='my-3 pa-4' style="height:210px;"to='/docs/start'>
+        </v-flex>
+        <v-flex xs12 sm8 md12 lg10 class='text-xs-center'>
+          <v-btn xxflat outline round block large color='primary' class='my-3 pa-4' style="height:210px;" to='/docs/start'>
             Ready? Get started!
           </v-btn>
         </v-flex>
@@ -130,12 +132,12 @@
         </v-flex>
       </v-layout>
       <v-layout row wrap class=''>
-        <v-flex xs12 md3 class='px-4 my-3 text-xs-center text-md-left'>
-          <span class='display-1 font-weight-light'>News</span><br>
-          <!-- <span><a href='https://twitter.com/speckle_works' target="_blank">twitter</a></span> -->
-        </v-flex>
-        <v-flex xs12 md9>
+        <v-flex xs12 md6>
           <v-layout row wrap>
+            <v-flex xs12 md12 class='px-4 my-3 text-xs-center text-md-left'>
+              <span class='display-1 font-weight-light'>Blog</span><br>
+              <!-- <span><a href='https://twitter.com/speckle_works' target="_blank">twitter</a></span> -->
+            </v-flex>
             <v-flex xs12 v-for='post in posts' :key='post.attributes.title' class='px-4'>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 0} pa-3`" :to='post.href'>
@@ -163,6 +165,10 @@
             </v-flex>
           </v-layout>
         </v-flex>
+        <v-flex style="max-height:840px; overflow-y: scroll;">
+          <a class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </v-flex>
       </v-layout>
     </v-container>
   </div>
@@ -173,7 +179,11 @@
 export default {
   head() {
     return {
-      title: 'Speckle: AEC Open Data'
+      title: 'Speckle: Data Platform for AEC',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: 'Speckle is the open source data platform for aec.' }
+      ]
     }
   },
   computed: {

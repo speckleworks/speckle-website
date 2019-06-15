@@ -2,7 +2,7 @@
   <v-app :dark='$store.state.dark'>
     <v-toolbar app :scroll-off-screen='true' class='elevation-0'>
       <v-toolbar-items>
-        <v-btn small flat class='hidden-xs'  to='/'>
+        <v-btn small flat class='hidden-xs' to='/'>
           &nbsp;
           <img src='/speckle-min.png' style="width: 21px">
           &nbsp;
@@ -50,6 +50,16 @@
 <script>
   import Footer from '~/components/footer.vue'
 export default {
+  head( ) {
+    if ( !this.frontmatter ) return { title: 'Speckle Blog' }
+    return {
+      title: `Speckle Blog / ${this.frontmatter.attributes.title}`,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        { hid: 'description', name: 'description', content: this.frontmatter.attributes.summary }
+      ]
+    }
+  },
   components: {
     Footer
   },

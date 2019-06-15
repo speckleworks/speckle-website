@@ -5,7 +5,7 @@ const dirTree = require( "directory-tree" )
 
 export default ( directory ) => {
 
-  let docsTree = dirTree( `./pages/${directory}`, { attributes: [ "mtime" ] } )
+  let docsTree = dirTree( `./pages/${directory}`, { attributes: [ "mtime" ], extensions: /\.vue/ } )
   let flatArr = [ ]
 
   function parseItem( treeItem ) {

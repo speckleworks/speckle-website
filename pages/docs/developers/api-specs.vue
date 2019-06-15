@@ -1,33 +1,34 @@
 ---
-title: API Specifications
+title: API
 summary: "How to approach and interact with the speckle api"
 date: 2017-09-30
 order: 0
 ---
 <template lang='md'>
 
-Design data communication around complex projects is too big a issue to be handled in a centralized fashion. Furthermore, stakeholders have their own, project specific requirements when it comes to guaranteeing project data safety and all the issues around non-disclosure agreements - it's sometimes a schizophrenic world, but it's what we have to deal with.
+Besides the server, everyting else in the speckle platform is, at the end of the day, an API client. The Speckle REST API's documentation lives in a separate place - [check it out](https://speckleworks.github.io/SpeckleSpecs/#speckle)! It covers all the essential endpoints, specifically:
 
-Speckle is released under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) - one of the most permissive licenses out there - for this specific reason: anyone is free to deploy speckle as they see fit on the infrastructure of their choice.
+- Accounts: creating new users, logging in, etc.
+- Streams: creating, updating, deleting and diffing streams
+- Objects: base create, read, update, delete
+- Projects: grouping streams together and setting permissions
+- etc.
 
-# Deployment Scenarios {.headline .font-weight-thin .my-4}
+# Interacting and Testing the API {.headline .font-weight-thin .my-4}
 
-- **internally**: _`mySpeckle.company.intranet`_
-- **per-project** : _`myProject.company.com`_
-- **company level**: _`mySpeckle.company.com`_
-- **SaaS**: _`speckle.startup`_
+The speckle api is documented in the OpenAPI v3 format, which allows you to easily import it into an API tool of choice and start hacking. Which api tools? There's quite a few to choose from: [Postman](https://www.getpostman.com/), [Insomnia](https://insomnia.rest/), Paw, etc.
 
-<!-- <v-divider class='my-4'></v-divider> -->
-<br>
+![postman](~/assets/docs/various/apipaw.png)
 
+If you want a leg up, you can download and import in the api tool of your choice the [raw specification file](https://github.com/speckleworks/SpeckleSpecs/blob/9e1ae90fdfdd84811fbf0bc5158abda9b5d251d9/SpeckleV1OpenApiSpecs.yaml), if it supports OpenApi specs. You can, of course, interact with speckle straight from the command line, if you're so inclined! TIP: [jq](https://stedolan.github.io/jq/) will help you parse json in the command line.
 
-So if you're a small office with a spare computer, you're good to go. If you're ready to go next level, rent a £20/month virtual machine and unleash the fun of sharing design data around. Most importantly, we believe that it is good to dogfood your own principles: since Speckle aims to enable a transparent and open design process, why not apply that at a licensing level? At the end of the day, you can trust Speckle because you actually don't need to.
+```sh
 
-## Final Words {.headline .font-weight-thin .my-4}
-
-This leads to a different landscape where information is not centralised in files or service providers. Project information can be spread organically around stakeholders and Speckle deployments and selectively opened up based on needs arising from collaboration models, thus opening up new avenues for looking at the _social and information architecture_ of collaboration in complex - or simple - design projects.
-
-Thoughts or comments? Join us on [#Slack](https://slacker.speckle.works)!
+curl -X POST https://hestia.speckle.works/api/streams \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: API_KEY'
+```
 
 </template>
 <script>

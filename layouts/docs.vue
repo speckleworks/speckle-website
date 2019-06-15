@@ -83,9 +83,9 @@ import Footer from '~/components/footer.vue'
 import MyToolbar from '~/components/toolbar.vue'
 export default {
   head( ) {
-    if ( !this.attributes ) return { title: 'Speckle' }
+    if ( !this.frontmatter ) return { title: 'Speckle Docs' }
     return {
-      title: `Speckle / ${this.frontmatter.attributes.title}`,
+      title: `Speckle Docs / ${this.frontmatter.attributes.title}`,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         { hid: 'description', name: 'description', content: this.frontmatter.attributes.summary }
