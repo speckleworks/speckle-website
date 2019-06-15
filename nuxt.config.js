@@ -12,14 +12,25 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
+      {
+        hid: `og:image`,
+        property: 'og:image',
+        content: `/speckle.png`
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'Speckle is the open source data platform for architecture, engineering and construction.'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/speckle-min.png' },
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      },
+
     ]
   },
 
@@ -41,7 +52,7 @@ export default {
    */
   plugins: [
     '@/plugins/vuetify',
-    { ssr: false, src: '~plugins/init'}
+    { ssr: false, src: '~plugins/init' }
   ],
 
   /*
@@ -87,6 +98,5 @@ export default {
       };
     }
   },
-  generate: {
-  }
+  generate: {}
 }

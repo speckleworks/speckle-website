@@ -9,7 +9,7 @@
       <v-list two-line>
         <v-list-tile v-for='(primaryItem) in $store.state.docs.tree.children.filter(kid => kid.type==="file")' :key='primaryItem.name' :to='primaryItem.slug'>
           <v-list-tile-content>
-            <v-list-tile-title class='xxx-font-weight-light'>
+            <v-list-tile-title class='font-weight-bold text-capitalize subheading'>
               {{ primaryItem.name }}
             </v-list-tile-title>
             <v-list-tile-sub-title class='caption' v-html="primaryItem.attributes.summary"></v-list-tile-sub-title>
@@ -17,7 +17,7 @@
         </v-list-tile>
         <v-list-group :value="true" v-if='item.type==="directory"' v-for='(item, index) in $store.state.docs.tree.children' :key='item.name'>
           <template v-slot:activator>
-            <v-list-tile :to='item.slug'>
+            <v-list-tile :xxxto='item.slug'>
               <v-list-tile-content>
                 <v-list-tile-title class='font-weight-bold text-capitalize subheading'>
                   {{item.name}}

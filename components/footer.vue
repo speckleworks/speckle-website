@@ -8,11 +8,11 @@
               <div class='subheading mb-5'>
                 Join the Speckle Community via the channles below!
               </div>
-              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://twitter.com/speckle_works' target='_blank'>Twitter <v-icon right>arrow_right_alt</v-icon>
+              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://twitter.com/speckle_works' target='_blank'>Twitter <v-icon right>share</v-icon>
               </v-btn>
-              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://slacker.speckle.works' target='_blank'>Slack <v-icon right>arrow_right_alt</v-icon>
+              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://slacker.speckle.works' target='_blank'>Slack <v-icon right>question_answer</v-icon>
               </v-btn>
-              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://discourse.speckle.works' target='_blank'>Forum <v-icon right>arrow_right_alt</v-icon>
+              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://discourse.speckle.works' target='_blank'>Forum <v-icon right>speaker_notes</v-icon>
               </v-btn>
               <div class='subheading mt-5 pt-5 text-none text--white'>
                 <router-link :class='background==="" ? "":"footer-link"' to='/'>Home</router-link> •

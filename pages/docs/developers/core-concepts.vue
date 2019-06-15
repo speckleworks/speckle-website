@@ -5,11 +5,8 @@ date: 2019-07-07
 order: -10
 ---
 <template lang='md'>
-  Getting started with speckle can be approached from several directions.
+  We still have to write documentation! If you want, you could help :)
 </template>
-<!--
-  frontmatter
--->
 <script>
 export default {
   layout: 'docs',

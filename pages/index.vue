@@ -132,13 +132,18 @@
               <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
               <v-img :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img>
               <v-fade-transition>
-              <div v-if="hover" class="d-flex v-card--reveal" style="height: 100%;">
-                <v-flex xs12>
-                  <v-btn large color='primary' class='my-3 pa-4 elevation-15' style="height:300px; width:300px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
-                    <v-icon left large >local_library</v-icon>Getting Started
-                  </v-btn>
-                </v-flex>
-              </div>
+                <div v-if="hover || $vuetify.breakpoint.sm" class="d-flex v-card--reveal" style="height: 100%;">
+                  <v-flex xs12>
+                    <v-btn large color='primary' class='my-3 pa-4 elevation-15' style="height:300px; width:300px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
+                      <v-icon left large>local_library</v-icon>Getting Started
+                    </v-btn>
+                    <div class='caption'>
+                      <v-btn icon small href='https://hestia.speckle.works/#/view/qHzcdZVGk' target="_blank">
+                        <v-icon small>open_in_new</v-icon>
+                      </v-btn>
+                    </div>
+                  </v-flex>
+                </div>
               </v-fade-transition>
             </v-card>
           </v-hover>
