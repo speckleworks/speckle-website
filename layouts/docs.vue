@@ -56,7 +56,7 @@
     <v-content>
       <v-container v-if='frontmatter'>
         <v-layout justify-center row wrap>
-          <v-flex xs12 sm10 lg8 class=' mb-4' xxxv-if='frontmatter'>
+          <v-flex xs12 sm10 lg6 class=' mb-4' xxxv-if='frontmatter'>
             <div class='display-2 font-weight-thin mb-4'>
               {{frontmatter.attributes.title}}
             </div>
@@ -67,7 +67,9 @@
             </div> -->
             <v-divider class='mt-2 mb-4'></v-divider>
           </v-flex>
-          <v-flex xs11 sm10 lg8>
+        </v-layout>
+        <v-layout justify-center row wrap>
+          <v-flex xs11 sm10 lg6>
             <nuxt />
           </v-flex>
         </v-layout>

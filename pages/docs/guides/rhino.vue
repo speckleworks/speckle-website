@@ -65,6 +65,6 @@ In short, this approach opens up the possibility for actors involved in the desi
 </template>
 <script>
 export default {
-  layout: 'blog'
+  layout: 'docs'
 }
 </script>

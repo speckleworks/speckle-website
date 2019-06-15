@@ -59,6 +59,6 @@ What has been proven so far is that it's possible: we can have an open source de
 </template>
 <script>
 export default {
-  layout: 'blog'
+  layout: 'docs'
 }
 </script>
