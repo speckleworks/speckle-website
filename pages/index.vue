@@ -25,12 +25,12 @@
           <!-- Arup | HOK | RoyalHaskoning | Aurecon | BVN | Grimshaw | Heatherwick | BIG | Woods Bagot -->
           <span class='grey--text text--lighten-0 subheading'>Speckle has been seen in the wild at some of the most progressive AEC companies</span>
         </v-flex>
-        <v-flex xs12 sm9 md12>
-          <v-img :src='require("~/assets/userlogos.png")' max-height='84' contain></v-img>
+        <v-flex xs12 sm9 md12 id='features'>
+          <v-img :src='require("~/assets/userlogos.png")' max-height='100' contain></v-img>
         </v-flex>
       </v-layout>
-      <v-layout row wrap justify-center id='features'>
-        <v-flex xs12 sm9 md6 lg5>
+      <v-layout row wrap justify-center xxxid='features'>
+        <v-flex xs12 sm9 md6 xl4>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
@@ -38,7 +38,6 @@
                   <v-icon large color='grey lighten-2'>usb</v-icon>
                   <h1 class='display-1 font-weight-light'>Connect</h1>
                   <h3 class='text-uppercase mt-3 subheading font-weight-medium primary--text'>Data Curation & Integration</h3>
-                  <!-- <v-divider class='my-3'></v-divider> -->
                   <p class='grey--text text--darken-1 mt-3'>Speckle provides a default set of connectors that help you easily curate the design data you need to share.</p>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Rhino</v-chip>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Grasshopper</v-chip>
@@ -48,10 +47,15 @@
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Blender</v-chip>
                 </v-card-text>
               </v-responsive>
+              <v-slide-x-transition>
+                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
+                  <v-img :src='require("@/assets/splashes/better-interop.png")' contain></v-img>
+                </div>
+              </v-slide-x-transition>
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex xs12 sm9 md6 lg5 xxx-offset-lg5 xxx-offset-md6>
+        <v-flex xs12 sm9 md6 xl4>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
@@ -59,7 +63,6 @@
                   <v-icon large color='grey lighten-2'>supervisor_account</v-icon>
                   <h1 class='display-1 font-weight-light'>Manage</h1>
                   <h3 class='text-uppercase mt-3 subheading font-weight-medium primary--text'>People, Projects & Permissions</h3>
-                  <!-- <v-divider class='my-3'></v-divider> -->
                   <p class='grey--text text--darken-1 mt-3'>You are in control of what you share, and with whom you share.</p>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Link Sharing</v-chip>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Projects & Teams</v-chip>
@@ -67,10 +70,16 @@
                   <v-chip large label outline>Stakeholder Network (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
+              <v-slide-x-transition>
+                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
+                  <v-img :src='$store.state.dark ? require("@/assets/splashes/manage-dark.png") : require("@/assets/splashes/manage.png")' contain></v-img>
+                </div>
+              </v-slide-x-transition>
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex xs12 sm9 md6 lg5>
+        <v-flex xs12 style='height: 1px' class='ma-0 pa-0'></v-flex>
+        <v-flex xs12 sm9 md6 xl4>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
@@ -78,7 +87,6 @@
                   <v-icon large color='grey lighten-2'>multiline_chart</v-icon>
                   <h1 class='display-1 font-weight-light'>Coordinate</h1>
                   <h3 class='text-uppercase mt-3 subheading font-weight-medium primary--text'>Data Informed Discussions</h3>
-                  <!-- <v-divider class='my-3'></v-divider> -->
                   <p class='grey--text text--darken-1 mt-3'>From viewing multiple data streams online to advanced querying, Speckle allows you to coordinate and gather insights on your project's data footprint.</p>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Online 3d Viewer</v-chip>
                   <!-- <v-chip large label outline color='primary' xxxclass='elevation-5'>Filter, Sort</v-chip> -->
@@ -86,37 +94,54 @@
                   <v-chip large label outline>Data History (API)</v-chip>
                 </v-card-text>
               </v-responsive>
+              <v-slide-x-transition>
+                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
+                  <v-img :src='$store.state.dark ? require("@/assets/splashes/coordinate-dark.png") : require("@/assets/splashes/coordinate.png")' contain></v-img>
+                </div>
+              </v-slide-x-transition>
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex xs12 sm9 md6 lg5 xxx-offset-lg6 xxx-offset-md6>
+        <v-flex xs12 sm9 md6 xl4>
           <v-hover>
             <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
-              <!--               <v-expand-transition>
-                <div v-if="hover" class="d-flex transition-fast-in-fast-out primary lighten-2 v-card--reveal display-3 white--text" style="height: 100%;">
-                </div>
-              </v-expand-transition> -->
               <v-responsive :aspect-ratio='4/2.5'>
                 <v-card-text class='xxx-text-xs-center'>
                   <v-icon large color='grey lighten-1'>code</v-icon>
                   <h1 class='display-1 font-weight-light'>Extend</h1>
                   <h3 class='text-uppercase mt-3 subheading font-weight-medium primary--text'>Automation & More</h3>
-                  <!-- <v-divider class='my-3'></v-divider> -->
-                  <p class='grey--text text--darken-1 mt-3'>Speckle is a solid base for developing third party applications that enable the workflows you need.</p>
+                  <p class='grey--text text--darken-1 mt-3'>
+                    Speckle is a solid base for developing third party applications that enable the workflows you need.
+                  </p>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Arup Carbon</v-chip>
-                  <v-chip large label outline color='' xxxclass='elevation-5'>BIM Part Tracking</v-chip>
-                  <v-chip large label outline color='' xxxclass='elevation-5'>Automated MEP Reports</v-chip>
+                  <v-chip large label outline color='' xxxclass='elevation-5'>Part Tracking</v-chip>
+                  <v-chip large label outline color='' xxxclass='elevation-5'>MEP Reporting</v-chip>
                 </v-card-text>
               </v-responsive>
+              <v-slide-x-transition>
+                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
+                  <v-img :src='require("@/assets/splashes/carbon.png")' contain></v-img>
+                </div>
+              </v-slide-x-transition>
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex xs12 sm8 md12 lg10 class='text-xs-center'>
-        </v-flex>
-        <v-flex xs12 sm8 md12 lg10 class='text-xs-center'>
-          <v-btn xxflat outline round block large color='primary' class='my-3 pa-4' style="height:210px;" to='/docs/start'>
-            Ready? Get started!
-          </v-btn>
+        <v-flex xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5' :style="{ backgroundImage: `url('@/assets/splashes/screenshots.png')` }">
+          <v-hover>
+            <v-card slot-scope="{ hover }" class='transparent elevation-0'>
+              <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
+              <v-img :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img>
+              <v-fade-transition>
+              <div v-if="hover" class="d-flex v-card--reveal" style="height: 100%;">
+                <v-flex xs12>
+                  <v-btn large color='primary' class='my-3 pa-4 elevation-15' style="height:300px; width:300px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
+                    <v-icon left large >local_library</v-icon>Getting Started
+                  </v-btn>
+                </v-flex>
+              </div>
+              </v-fade-transition>
+            </v-card>
+          </v-hover>
         </v-flex>
       </v-layout>
       <v-layout justify-center class='mt-5 py-5'>
@@ -131,8 +156,8 @@
           </v-btn>
         </v-flex>
       </v-layout>
-      <v-layout row wrap class=''>
-        <v-flex xs12 md6>
+      <v-layout row wrap justify-center class=''>
+        <v-flex xs12 md6 xl4>
           <v-layout row wrap>
             <v-flex xs12 md12 class='px-4 my-3 text-xs-center text-md-left'>
               <span class='display-1 font-weight-light'>Blog</span><br>
@@ -141,7 +166,6 @@
             <v-flex xs12 v-for='post in posts' :key='post.attributes.title' class='px-4'>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 0} pa-3`" :to='post.href'>
-                  <!-- <v-divider class='mb-4'></v-divider> -->
                   <v-card-text>
                     <span class='title font-weight-thin'>{{post.attributes.title}}</span><br>
                     by {{post.attributes.author}} on <b>{{new Date(post.attributes.date).toLocaleDateString()}}</b>
@@ -149,7 +173,6 @@
                     <br>
                     <span class='grey--text text--darken-2'>{{post.attributes.summary}}</span>
                   </v-card-text>
-                  <!-- <v-divider class='mt-4'></v-divider> -->
                 </v-card>
               </v-hover>
             </v-flex>
@@ -165,14 +188,13 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <v-flex xs12 md6 class='px-4 my-3 text-xs-center text-md-left'>
+        <v-flex xs12 md6 xl4 class='px-4 my-3 text-xs-center text-md-left'>
           <span class='display-1 font-weight-light'>Speckle Tweets</span><br>
           <span class='caption'>Promoting the community's work with speckle!</span>
-          <v-card style='max-height: 1260px; overflow-y: scroll;' class='mt-4'>
+          <v-card style='max-height: 760px; overflow-y: scroll;' class='mt-4'>
             <a v-if='!$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             <a v-if='$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
-            <!-- <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
           </v-card>
         </v-flex>
       </v-layout>
@@ -180,9 +202,7 @@
   </div>
 </template>
 <script>
-  import { mapMutations } from 'vuex'
-
-export default {
+  export default {
   head() {
     return {
       title: 'Speckle: Data Platform for AEC',
@@ -202,10 +222,10 @@ export default {
 <style type="text/css">
 .v-card--reveal {
   align-items: center;
-  bottom: 0;
-  right: 0;
+  bottom: 0px;
+  right: 0px;
   justify-content: center;
-  opacity: .1;
+  /*opacity: .1;*/
   position: absolute;
   width: 100%;
 }

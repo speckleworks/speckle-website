@@ -5,13 +5,16 @@ date: 2019-07-07
 order: 0
 ---
 <template lang='md'>
-  <v-alert type='info' :value='true' class='my-3'>
-    Keep in mind, whenever you need help, ask on slack or discourse!
-  </v-alert>
+
+  ![clients](~/assets/docs/various/screenshots.png)
 
   Getting started with speckle can be approached from several directions: either as an end user, where you just want to send data and geometry around, as a developer wanting to build on top of speckle, or as a maintainer deploying a server for your company or group.
 
   # Taking Speckle For a Spin {.font-weight-thin .display-1 .my-4}
+
+  <v-alert type='info' :value='true' class='my-3'>
+    Keep in mind, whenever you need help, ask on slack or discourse!
+  </v-alert>
 
   In order to use speckle, you will need to have some authoring software installed on your computer. We currently have integrations for Grasshopper, Dynamo, Rhino, and a WIP Revit client - either of those should do. It also helps to have a friend next to you, as it's much more fun to send data to each other rather than play ping-pong alone!
 
