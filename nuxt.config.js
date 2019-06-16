@@ -71,7 +71,8 @@ export default {
    */
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/markdownit',
+    '@nuxtjs/google-analytics'
   ],
   /*
    ** Axios module configuration
@@ -89,6 +90,9 @@ export default {
       'markdown-it-highlightjs'
     ]
   },
+  googleAnalytics: {
+    id: 'UA-96321582-1'
+  }
   /*
    ** Build configuration
    */
