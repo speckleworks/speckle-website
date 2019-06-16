@@ -37,21 +37,21 @@
     <v-toolbar :scroll-threshold='0' app :scroll-off-screen='true' x-inverted-scroll class='elevation-0'>
       <v-toolbar-side-icon @click.native='navBar=!navBar'></v-toolbar-side-icon>
       <v-toolbar-items>
-        <v-btn small flat class='hidden-xs' to='/'>
+<!--         <v-btn small flat class='hidden-xs' to='/'>
           &nbsp;
           <img src='/speckle-min.png' style="width: 21px">
           &nbsp;
-        </v-btn>
+        </v-btn> -->
       </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn small flat to='/' class='xxxfont-weight-light'>HOME</v-btn>
         <v-btn small flat to='/docs/start' class='xxxfont-weight-light'>DOCS</v-btn>
         <v-btn small flat to='/blog' class='xxxfont-weight-light'>BLOG</v-btn>
+        <v-btn icon small depressed round @click='toggleDark'>
+          <v-icon small>wb_sunny</v-icon>
+        </v-btn>
       </v-toolbar-items>
-      <v-btn icon small depressed round @click='toggleDark'>
-        <v-icon small>wb_sunny</v-icon>
-      </v-btn>
     </v-toolbar>
     <v-content>
       <v-container v-if='frontmatter'>
@@ -74,7 +74,7 @@
           </v-flex>
         </v-layout>
       </v-container>
-        <Footer></Footer>
+      <Footer></Footer>
     </v-content>
   </v-app>
 </template>

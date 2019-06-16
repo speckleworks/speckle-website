@@ -47,11 +47,11 @@
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Blender</v-chip>
                 </v-card-text>
               </v-responsive>
-              <v-slide-x-transition>
+<!--               <v-slide-x-transition>
                 <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
                   <v-img :src='require("@/assets/splashes/better-interop.png")' contain></v-img>
                 </div>
-              </v-slide-x-transition>
+              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
@@ -70,11 +70,11 @@
                   <v-chip large label outline>Stakeholder Network (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
-              <v-slide-x-transition>
+<!--               <v-slide-x-transition>
                 <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
                   <v-img :src='$store.state.dark ? require("@/assets/splashes/manage-dark.png") : require("@/assets/splashes/manage.png")' contain></v-img>
                 </div>
-              </v-slide-x-transition>
+              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
@@ -94,11 +94,11 @@
                   <v-chip large label outline>Data History (API)</v-chip>
                 </v-card-text>
               </v-responsive>
-              <v-slide-x-transition>
+  <!--             <v-slide-x-transition>
                 <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
                   <v-img :src='$store.state.dark ? require("@/assets/splashes/coordinate-dark.png") : require("@/assets/splashes/coordinate.png")' contain></v-img>
                 </div>
-              </v-slide-x-transition>
+              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
@@ -118,11 +118,11 @@
                   <v-chip large label outline color='' xxxclass='elevation-5'>MEP Reporting</v-chip>
                 </v-card-text>
               </v-responsive>
-              <v-slide-x-transition>
+<!--               <v-slide-x-transition>
                 <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
                   <v-img :src='require("@/assets/splashes/carbon.png")' contain></v-img>
                 </div>
-              </v-slide-x-transition>
+              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
@@ -130,21 +130,20 @@
           <v-hover>
             <v-card slot-scope="{ hover }" class='transparent elevation-0'>
               <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
-              <v-img :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img>
-              <v-fade-transition>
-                <div v-if="hover || $vuetify.breakpoint.sm" class="d-flex v-card--reveal-btn" style="height: 100%;">
+              <!-- <v-img :style='`opacity: ${hover ? 0.42 : 0.84}; transition: all 1s ease;`'  :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img> -->
+              <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/docs/various/screenshots.png")'></v-img>
+                <div class="d-flex v-card--reveal-btn" style="height: 100%;">
                   <v-flex xs12>
-                    <v-btn large color='primary' class='my-3 pa-4 elevation-15' style="height:300px; width:300px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
+                    <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
                       <v-icon left large>local_library</v-icon>Getting Started
                     </v-btn>
-                    <div class='caption'>
+<!--                     <div class='caption'>
                       <v-btn icon small href='https://hestia.speckle.works/#/view/qHzcdZVGk' target="_blank">
                         <v-icon small>open_in_new</v-icon>
                       </v-btn>
-                    </div>
+                    </div> -->
                   </v-flex>
                 </div>
-              </v-fade-transition>
             </v-card>
           </v-hover>
         </v-flex>
@@ -161,7 +160,7 @@
           </v-btn>
         </v-flex>
       </v-layout>
-      <v-layout row wrap justify-center class=''>
+      <v-layout row wrap justify-center class='py-5'>
         <v-flex xs12 md6 xl4>
           <v-layout row wrap>
             <v-flex xs12 md12 class='px-4 my-3 text-xs-center text-md-left'>

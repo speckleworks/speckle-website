@@ -14,7 +14,7 @@
         <v-btn small flat to='/docs/start' class='xxxfont-weight-light'>DOCS</v-btn>
         <v-btn small flat to='/blog' class='xxxfont-weight-light'>BLOG</v-btn>
       </v-toolbar-items>
-      <v-btn icon small depressed round @click='toggleDark' class='hidden-sm-and-down'>
+      <v-btn icon small depressed round @click='toggleDark' xxxclass='hidden-sm-and-down'>
         <v-icon small>wb_sunny</v-icon>
       </v-btn>
     </v-toolbar>
