@@ -13,10 +13,10 @@
         <v-btn small flat to='/'>HOME</v-btn>
         <v-btn small flat to='/docs/start'>DOCS</v-btn>
         <v-btn small flat to='/blog'>BLOG</v-btn>
+        <v-btn icon small depressed round @click='toggleDark'>
+          <v-icon small>wb_sunny</v-icon>
+        </v-btn>
       </v-toolbar-items>
-      <v-btn icon small depressed round @click='toggleDark'>
-        <v-icon small>wb_sunny</v-icon>
-      </v-btn>
     </v-toolbar>
     <v-content>
       <v-container>
@@ -48,11 +48,11 @@
               <v-flex xs12 my-5>
                 <!-- <v-divider></v-divider> -->
               </v-flex>
-              <v-flex xs6  v-if='nextPrevious.next' class='text-xs-left'>
+              <v-flex xs6 v-if='nextPrevious.next' class='text-xs-left'>
                 <v-icon large>keyboard_arrow_left</v-icon>
                 <div class='grey--text subheading'>Next up:</div>
                 <div class='grey--text headline font-weight-thin text-truncate'>
-                 <router-link :to='nextPrevious.next.slug'>
+                  <router-link :to='nextPrevious.next.slug'>
                     {{nextPrevious.next.attributes.title}}
                   </router-link>
                 </div>
