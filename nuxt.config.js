@@ -17,7 +17,7 @@ export default {
         hid: `og:image`,
         property: 'og:image',
         name: 'og:image',
-        content: `/speckle.png`
+        content: `/spksplash.png`
       },
       {
         hid: 'og:site_name',
