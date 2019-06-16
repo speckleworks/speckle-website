@@ -16,12 +16,23 @@ export default {
       {
         hid: `og:image`,
         property: 'og:image',
+        name: 'og:image',
         content: `/speckle.png`
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
+        name: 'og:site_name',
         content: 'Speckle is the open source data platform for architecture, engineering and construction.'
+      }, {
+        hid: 'twitter:site',
+        name: 'twitter:site',
+        content: '@speckle_works'
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
       }
     ],
     link: [

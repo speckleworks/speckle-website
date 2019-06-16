@@ -81,7 +81,7 @@
         <v-flex xs12 style='height: 1px' class='ma-0 pa-0'></v-flex>
         <v-flex xs12 sm9 md6 xl4>
           <v-hover>
-            <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
+            <v-card slot-scope="{ hover }" :class="`${hover ? 'v-card--reveal-back' : ''} elevation-${hover ? 0 : 0} pa-3`">
               <v-responsive :aspect-ratio='4/2.5'>
                 <v-card-text>
                   <v-icon large color='grey lighten-2'>multiline_chart</v-icon>
@@ -132,7 +132,7 @@
               <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
               <v-img :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img>
               <v-fade-transition>
-                <div v-if="hover || $vuetify.breakpoint.sm" class="d-flex v-card--reveal" style="height: 100%;">
+                <div v-if="hover || $vuetify.breakpoint.sm" class="d-flex v-card--reveal-btn" style="height: 100%;">
                   <v-flex xs12>
                     <v-btn large color='primary' class='my-3 pa-4 elevation-15' style="height:300px; width:300px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
                       <v-icon left large>local_library</v-icon>Getting Started
@@ -225,12 +225,27 @@
 }
 </script>
 <style type="text/css">
+.v-card--reveal-back {
+  /*transform: translateX(-50px) translateY(-50px);*/
+  /*position: relative;*/
+}
 .v-card--reveal {
   align-items: center;
   bottom: 0px;
-  right: 0px;
+  right: -100%;
   justify-content: center;
-  /*opacity: .1;*/
+  /*opacity: 1;*/
+  position: absolute;
+  width: 90%;
+  z-index: 100;
+  background: white;
+}
+.v-card--reveal-btn {
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  opacity: 1;
   position: absolute;
   width: 100%;
 }
