@@ -3,7 +3,9 @@ import DocsFromDir from './DocsFromDir.js'
 
 export const state = ( ) => ( {
   dark: false,
-  navbar: true
+  navbar: true,
+  slackInviteUrl: 'https://speckle-works.slack.com/join/shared_invite/enQtNjY5Mzk2NTYxNTA4LTU4MWI5ZjdhMjFmMTIxZDIzOTAzMzRmMTZhY2QxMmM1ZjVmNzJmZGMzMDVlZmJjYWQxYWU0MWJkYmY3N2JjNGI',
+
 } )
 
 export const mutations = {

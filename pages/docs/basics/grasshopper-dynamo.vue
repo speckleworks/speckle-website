@@ -42,7 +42,7 @@ If everything went smooth so far, we'll be ready to start sending and receiving 
 
 - on the [forum](https://discourse.speckle.works/), for general discussions
 - on [github](https://github.com/speckleworks), to report bugs/feature requests
-- on [slack](http://speckle-works.slack.com), to chat with the community
+- on [slack](https://speckle-works.slack.com/join/shared_invite/enQtNjY5Mzk2NTYxNTA4LTU4MWI5ZjdhMjFmMTIxZDIzOTAzMzRmMTZhY2QxMmM1ZjVmNzJmZGMzMDVlZmJjYWQxYWU0MWJkYmY3N2JjNGI), to chat with the community
 
 ### Changing account {.mt-5}
 

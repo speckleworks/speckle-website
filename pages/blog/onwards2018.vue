@@ -36,7 +36,7 @@ Furthermore, Speckle will be welcoming in its governance structure, standards, c
 
 Mixing openess and freedom while ensuring a sustainable future that can create the correct environment in which our ambitions can be delivered is going to be quite the challenge.
 
-You're welcome to join the [slack channel](https://slacker.speckle.works) and tell us what you think & discuss how you can help out!
+You're welcome to join the [slack channel](https://speckle-works.slack.com/join/shared_invite/enQtNjY5Mzk2NTYxNTA4LTU4MWI5ZjdhMjFmMTIxZDIzOTAzMzRmMTZhY2QxMmM1ZjVmNzJmZGMzMDVlZmJjYWQxYWU0MWJkYmY3N2JjNGI) and tell us what you think & discuss how you can help out!
 
 Happy 2018!
 <h1>🎉 🌲 🎉</h1>

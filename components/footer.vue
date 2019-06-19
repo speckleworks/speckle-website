@@ -10,7 +10,7 @@
               </div>
               <v-btn large round color='' style='width: 200px' class='mt-1' href='https://twitter.com/speckle_works' target='_blank'>Twitter <v-icon right>share</v-icon>
               </v-btn>
-              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://slacker.speckle.works' target='_blank'>Slack <v-icon right>question_answer</v-icon>
+              <v-btn large round color='' style='width: 200px' class='mt-1' :href='$store.state.slackInviteUrl' target='_blank'>Slack <v-icon right>question_answer</v-icon>
               </v-btn>
               <v-btn large round color='' style='width: 200px' class='mt-1' href='https://discourse.speckle.works' target='_blank'>Forum <v-icon right>speaker_notes</v-icon>
               </v-btn>
