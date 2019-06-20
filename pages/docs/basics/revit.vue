@@ -52,6 +52,8 @@ order: 20
 
   Which can then add into excel, if you so choose - or start scaffolding your own custom automation applications on top of.
 
+  ![revit](~/assets/docs/revit/excel.gif) {.my-4 .elevation-20}
+
   This covered the basis of speckle sending data out of revit. It's still early days, but we're getting there. There are a few planned features:
   - optional geometry sending
   - better filtering (so you could, for example, send all the rooms from a project only)

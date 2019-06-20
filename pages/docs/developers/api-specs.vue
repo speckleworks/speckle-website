@@ -6,7 +6,7 @@ order: 0
 ---
 <template lang='md'>
 
-Besides the server, everyting else in the speckle platform is, at the end of the day, an API client. The Speckle REST API's documentation lives in a separate place - [check it out](https://speckleworks.github.io/SpeckleSpecs/#speckle)! It covers all the essential endpoints, specifically:
+Besides the server, everyting else in the speckle platform is, at the end of the day, an API client. The Speckle REST API's documentation lives in a separate place. It covers all the essential endpoints, specifically:
 
 - Accounts: creating new users, logging in, etc.
 - Streams: creating, updating, deleting and diffing streams
@@ -14,7 +14,15 @@ Besides the server, everyting else in the speckle platform is, at the end of the
 - Projects: grouping streams together and setting permissions
 - etc.
 
-# Interacting and Testing the API {.headline .font-weight-thin .my-4}
+ <!-- <v-alert type='x' :value='true' class='my-4 text-xs-center' color='primary'> -->
+  <div class='text-xs-center my-4'>
+  <v-btn large color='primary' depressed round href='https://speckleworks.github.io/SpeckleSpecs/#speckle' target="_blank">
+    Speckle OpenAPI specs <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+  </div>
+  <!-- </v-alert> -->
+
+# Interacting & Testing the API {.headline .font-weight-thin .my-4}
 
 The speckle api is documented in the OpenAPI v3 format, which allows you to easily import it into an API tool of choice and start hacking. Which api tools? There's quite a few to choose from: [Postman](https://www.getpostman.com/), [Insomnia](https://insomnia.rest/), Paw, etc.
 
