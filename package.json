@@ -1,7 +1,7 @@
 {
   "name": "Speckle",
   "version": "1.0.0",
-  "description": "Speckle website",
+  "description": "Speckle: The Open Source Data Platform for AEC",
   "author": "Dimitrie Stefanescu",
   "private": true,
   "scripts": {

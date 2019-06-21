@@ -20,11 +20,30 @@ export default {
         content: `/spksplash.png`
       },
       {
+        hid: `twitter:image`,
+        property: 'twitter:image',
+        name: 'twitter:image',
+        content: `/spksplash.png`
+      },
+      {
         hid: 'og:site_name',
         property: 'og:site_name',
         name: 'og:site_name',
         content: 'Speckle is the open source data platform for architecture, engineering and construction.'
-      }, {
+      },
+      {
+        hid: 'twitter:title',
+        property: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Speckle: The open source data platform for architecture, engineering and construction.'
+      },
+      {
+        hid: 'twitter:description',
+        property: 'twitter:description',
+        name: 'twitter:description',
+        content: 'A fast, web-scale base for automation, used by some of the most progressive companies in the AEC industry.'
+      },
+      {
         hid: 'twitter:site',
         name: 'twitter:site',
         content: '@speckle_works'
