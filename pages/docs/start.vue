@@ -18,7 +18,7 @@ order: 0
 
   <v-alert :value='true' class='my-4' color='primary'>
   <div class='text-xs-center my-1'>
-  <v-btn color='white' href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
+  <v-btn color='accent' href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
     download speckle clients
   </v-btn>
   </div>
