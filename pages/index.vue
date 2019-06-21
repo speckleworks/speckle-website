@@ -3,14 +3,14 @@
     <v-container grid-xl class='mt-5'>
       <v-layout justify-center row wrap px-5 mt-5 class='text-xs-center'>
         <v-flex xs12 sm8 lg6 mt-5>
-          <span class='display-3 font-weight-light xxx-text-uppercase'>
+          <h1 class='display-3 font-weight-light xxx-text-uppercase'>
             <b>Speckle</b> is the open source <span class='primary--text'>data</span> platform for aec
-          </span>
+          </h1>
           <br>
           <br>
-          <span class='grey--text subheading'>
+          <h2 class='grey--text subheading'>
             a fast, web-scale base for automation in design, engineering and construction.
-          </span>
+          </h2>
           <br>
           <v-btn large round color='primary' class='mt-5' @click="$vuetify.goTo('#features')">Read more</v-btn>
           <v-btn large flat round small color='primary' class='mt-5' @click="$vuetify.goTo('#gettingStarted')">Getting Started</v-btn>

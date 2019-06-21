@@ -16,7 +16,7 @@ order: 0
 
   <!-- ### The Speckle Clients Installer {.font-weight-thin-xx .my-4} -->
 
-  <v-alert type='x' :value='true' class='my-4' color='primary'>
+  <v-alert :value='true' class='my-4' color='primary'>
   <div class='text-xs-center my-1'>
   <v-btn color='white' href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
     download speckle clients
