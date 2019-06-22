@@ -42,7 +42,7 @@
                   <p class='grey--text text--darken-1 mt-3'>Speckle provides a default set of connectors that help you easily curate the design data you need to share.</p>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Rhino</v-chip>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Grasshopper</v-chip>
-                  <v-chip large label outline color='primary' xxxclass='elevation-5'>Dyanmo</v-chip>
+                  <v-chip large label outline color='primary' xxxclass='elevation-5'>Dynamo</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Revit (WIP)</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>GSA (WIP)</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Blender</v-chip>
