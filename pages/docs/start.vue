@@ -16,13 +16,13 @@ order: 0
 
   <!-- ### The Speckle Clients Installer {.font-weight-thin-xx .my-4} -->
 
-  <v-alert :value='true' class='my-4' color='primary'>
-  <div class='text-xs-center my-1'>
-  <v-btn color='accent' href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
-    download speckle clients
+  <!-- <v-alert :value='true' class='my-4' color='primary'> -->
+  <div class='text-xs-center my-4'>
+  <v-btn color='primary' round large href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
+    download speckle clients <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>
-  </v-alert>
+  <!-- </v-alert> -->
 
   <!-- ### Getting Started Guides {.font-weight-thin-xx .my-4} -->
 
@@ -46,6 +46,8 @@ order: 0
   <v-alert type='warning' :value='true' class='my-4' color='primary'>
     Please be aware that the test server, Hestia, comes with absolutely no guarantees of any sort. While it has had stellar uptime record so far, please do not rely on it for anyting remotely important!
   </v-alert>
+
+  **Location:** Hestia, the test server, is currently hosted by Digital Ocean in a data center in Frankfurt. For those of you far away - on the other side of the planet - this introduces some potentially quite high latency (upwards of 200ms). Furthermore, please be aware since data resides on European soil, European (and German) laws apply.
 
   # Developing and Extending {.font-weight-thin .display-1 .my-4}
 

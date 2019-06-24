@@ -1,5 +1,5 @@
 ---
-title: "Streams & Projects Management"
+title: "Data Streams & Project Management"
 summary: "Mangaging & creating streams and projects in the speckle admin interface."
 date: 2019-12-29
 order: 31
@@ -80,30 +80,32 @@ order: 31
 
   <br>
 
-
-  ## Stream Creation & The Data Tab
-
-  Yes, you actually can create streams online: while in the main streams page, click on the big blue plus button in the lower right corner (that's where the data tab comes in!). This is useful for simple data structures - numbers, text, booleans, etc. Specifically, it's been implemented so you can store & edit generic project paramters and then receive them throughout the ecosystem (more importantly, grasshopper and dynamo).
-
-  <v-alert type='info' :value='true' class='my-4' color='primary'>
-  The "Data Tab" is enabled only for streams that have been created online.
-  </v-alert>
-
-  Here's a short animation showing how you can copy and paste some excel data into a stream (remember the big blue button in the lower right corner):
-
-  ![create a stream](~/assets/docs/manage/createstream.gif) {.my-4 .elevation-10}
-
-  The layers that you create become output ports - you can rename them. The values that you enter should be comma-separated, and they're parsed automatically to numbers, strings or bools. Once you are happy with the way the data is looking, you will need to click on the "save" button (and enter a commit message - this will make your reading of the history easier). Once saving is done, you can now receive that data in grasshopper, dynamo, or via the API. Congratulations, you've created your first online stream - see below how this stream looks like in grasshopper:
-
-  ![receive a stream](~/assets/docs/manage/ghreceiver.png)
-
   ## Projects
 
-  // TODO. Summary: group streams and users for easy permission management.
+  Projects serve a simple purpose: group a bunch of streams with a team of people. That being said, here is how you can create one:
+  - First, go to the project overview page
+  - Click the friendly blue button in the lower right corner
+  - Edit the description, tags, etc. if you so need to
+  - Add the streams you want to share with your team in the left side (search by stream name)
+  - Add the people you want to share with in the right side (search by their name)
+
+  <br>
+
+  Here's a quick gif going through the motions:
+
+    ![overview stream](~/assets/docs/manage/newproject.gif) {.my-4 .elevation-10}
+
+  Done. That's it - now everyone in the right hand list will have read access to the streams in the left side. If you add a new team member, or a new stream, permissions will be propagated amongst this group.
+
+  Project permissions work like this:
+  - People with `read project` rights will just be able to see the project.
+  - People with `write project` rights will be able to add and remove streams and other people from the project.
+
+  For stream permissions, see above!
 
   ## Archive
 
-  // TODO. Summary: give your data a second chance.
+  The archive is the buggy place where all your deleted resources go. It's like the recycle bin; I'm a bit tired of writing things now so I'll let you figure it out. It should be rather self-explanatory! If not, remember there's an "edit" button on the top of this page ;)
 
 </template>
 <script>
