@@ -1,5 +1,5 @@
 ---
-title: "Bring Your Own Object Models"
+title: "BYO Schemas & Object Models"
 author: Dimitrie
 tags: [ 'object models', 'announcement' ]
 featuredimg: woot.jpg
