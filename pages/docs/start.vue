@@ -28,7 +28,7 @@ order: 0
 
   You will need to download and run the `SpeckleInstaller.exe` file from the link above. This will install the latest release of the clients and once it is succesful, you should be able to open the speckle plugins the software you've installed it for.
 
-  <v-icon small>warning</v-icon> Sometimes you might get security warnings because we don not sign the installer, so check for that! {.caption}
+  <v-icon small>warning</v-icon> Sometimes you might get security warnings because we do not sign the installer, so check for that! {.caption}
 
   <v-icon small>info</v-icon> If you're curious about new features, you can always try out the [pre-release channel](https://github.com/speckleworks/SpeckleInstaller/releases/). {.caption}
 
@@ -37,14 +37,14 @@ order: 0
 
   # Deploying a Server {.font-weight-thin .display-1 .my-4}
 
-  The speckle server, in a nutshell, is a stateless nodejs application that can run on pretty much anywhere. Its dependencies are a small tiny redis instance to coordinate messaging (real time updates), and a mongo database where to store information.
+  The speckle server, in a nutshell, is a stateless nodejs application that can run on pretty much anywhere. Its dependencies are a small tiny redis instance to coordinate messaging (real time updates), and a mongo database to store information.
 
   Deploying a [speckle server](https://github.com/speckleworks/SpeckleServer) is easy, but not for the faint-hearted, as hosting one entails a certain amount of risk. There are some guidelines in the github repository's readme, as well as a set of [community-maintained instructions on the forum](https://discourse.speckle.works/t/speckle-server-debian-9-installation-notes-for-development-machines/344).
 
   If you just want to test speckle, to begin with you can just use [Hestia](https://hestia.speckle.works), the free server maintained by Dimitrie. To do so, just use `https://hestia.speckle.works/api` as a server url input when promted by the clients, or just head over there now and [register a new account](https://hestia.speckle.works/#/register).
 
   <v-alert type='warning' :value='true' class='my-4' color='primary'>
-    Please be aware that the test server, Hestia, comes with absolutely no guarantees of any sort. While it has had stellar uptime record so far, please do not rely on it for anyting remotely important!
+    Please be aware that the test server, Hestia, comes with absolutely no guarantees of any sort. While it has had stellar uptime record so far, please do not rely on it for anything remotely important!
   </v-alert>
 
   **Location:** Hestia, the test server, is currently hosted by Digital Ocean in a data center in Frankfurt. For those of you far away - on the other side of the planet - this introduces some potentially quite high latency (upwards of 200ms). Furthermore, please be aware since data resides on European soil, European (and German) laws apply.
