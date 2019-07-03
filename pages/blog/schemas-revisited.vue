@@ -1,5 +1,5 @@
 ---
-title: "Schemas & Standards: 2019 Update"
+title: "Schemas & Standards: The BYO Approach"
 author: Dimitrie
 tags: [ 'object models', 'announcement' ]
 featuredimg: woot.jpg
@@ -17,7 +17,7 @@ date: 2019-01-21
 
   This approach worked well so far, but due to the needs coming out from the community, many of which had existing object models, or were developing others internally, I have changed the architecture of how speckle deals with this aspect of interoperability to allow for more flexibility. **Essentially, speckle has adopted a management solution to the wicked problem of AEC data interoperability.**
 
-  The big news is that you can fully replace speckle's "default" object model with your own. Speckle only enforces minimal conventions to make sure speckle can still efficiently round trip objects and work its other magic. These are speckle kits, and you can read more about them below:
+  The big news is that you can fully replace speckle's "default" object model with your own, wrapped under a so called speckle kit. **Essentially, it's now an officially "bring your own schema" party**. Speckle only enforces minimal conventions to make sure speckle can still efficiently round trip objects and work its other magic. You can read more on how to create your own speckle-ready object model below:
 
 
   <div class='text-xs-center my-4'>
@@ -30,7 +30,7 @@ date: 2019-01-21
 
   It's important to stress that interoperability in AEC is a wicked problem, involving a mixture of technical and political factors. While I strongly believe in the benefits a centralised, unified object model brings (such as the consistency associated with IFC), I also believe we need to allow for a process of bottom up evolution. Consequently, kits play several key roles:
   - they **enable an organic process of evolution** of object models,
-  - they **divide and conquer**, ie they facilitate the subdivision of an immense problem into smaller, managable, and hopefully crowd-sourced subsets, and
+  - they **divide and conquer**, ie they facilitate the subdivision of an immense problem into smaller, manageable, and hopefully crowd-sourced subsets, and
   - they **decouple schema from serialisation**, allowing their independent evolution and development.
 
 </template>
