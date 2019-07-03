@@ -6,7 +6,6 @@ summary: "Speckle's take on object models, schemas and various standards."
 date: 2017-12-27
 ---
 <template lang='md'>
-
 # Introduction {.headline .font-weight-thin .my-4}
 **As there is no such thing in AEC as "one model", equally there is no "one standard"**: Speckle delivers your own data in your own way to other design stakeholders in a managed & curated way.
 
@@ -62,6 +61,13 @@ You can even mix and mash classes of different types and from different assembli
 Existing AEC standards for data exchange are either fragmented, or too massive and complex to wield. Speckle takes a different approach: instead of enforcing a strict format, it aims to provide a framework in which data can be articulated meaningfully and shared transparently at various levels of abstraction.
 
 In short, this approach opens up the possibility for actors involved in the design process to freely create and structure their own native data models whilst maintaining fidelity and privacy, without compromising on transparency!
+
+<div class='text-xs-center my-4'>
+  <v-btn large color='primary' outline round to='/blog/schemas-revisited'>
+    2019 Update <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+  </div>
+
 
 </template>
 <script>

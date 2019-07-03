@@ -1,5 +1,5 @@
 ---
-title: "BYO Schemas & Object Models"
+title: "Schemas & Standards: 2019 Update"
 author: Dimitrie
 tags: [ 'object models', 'announcement' ]
 featuredimg: woot.jpg
@@ -8,6 +8,9 @@ date: 2019-01-21
 ---
 
 <template lang='md'>
+
+  ![kit](~/assets/docs/objectmodels/kit02.png)
+
   Since the end of 2017, a few things have improved and changed in the way Speckle deals with object models and their implementation details in various CAD applications.
 
   Originally, Speckle embedded its own extensible object model and allowed for end-user defined data structures (classes) to pass through natively if the receiving party had access to original assembly. You can read more about this in this [early blogpost](/blog/schemas).
