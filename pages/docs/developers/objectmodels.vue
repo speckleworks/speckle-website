@@ -17,6 +17,10 @@ order: 2
 
   Essentially, a speckle kit is _(1) a set of class defintions_ and _(2) separate projects with the implementation details (conversion to/from native) for authoring software_. {.headline .font-weight-thin .pa-5 .my-5 .text-xs-justify .elevation-5 }
 
+  Below is a diagram representing a fictional speckle kit.
+
+  ![kit diagram](~/assets/docs/objectmodels/kitsdiagram.png)
+
   ## Bootstrapping a Speckle Kit
 
   <v-alert type='info' :value='true' class='my-4' color='grey'>
