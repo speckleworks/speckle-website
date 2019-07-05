@@ -10,6 +10,12 @@ order: 33
   This small tutorial is assuming you're comfortable around the online interface of speckle. If you haven't even heard about it, then please read <a href="/docs/basics/data-stream-management"> the following section.</a>
   </v-alert>
 
+  <div class='text-xs-center my-4'>
+  <v-btn large color='primary' depressed round href='https://hestia.speckle.works/#/view/BBnqvGqP_e' target='_blank'>
+    Example <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+  </div>
+
   ## Loading Streams
 
   If you have a bunch of geometry that you're passing around with speckle, you can most probably view it online in the 3d viewer. It's quite easy:
