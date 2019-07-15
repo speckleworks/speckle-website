@@ -2,7 +2,7 @@
 title: "Online Data Stream Creation"
 summary: "How to create a new stream online."
 date: 2019-12-29
-order: 32
+order: 52
 ---
 <template lang='md'>
   <v-alert type='info' icon='school' :value='true' class='my-4' color='grey'>

@@ -16,6 +16,8 @@ export default ( directory ) => {
         treeItem.name = attributes.title || treeItem.name
 
         let pathElms = treeItem.path.split( '/' )
+        // Fix for Windows systems. May break others.
+        if(pathElms.length === 1 ) pathElms = treeItem.path.split('\\')
         pathElms[ pathElms.length - 1 ] = slugify( pathElms[ pathElms.length - 1 ].replace( /\.vue$/, "" ), { lower: true } )
         treeItem.slug = pathElms.join( '/' ).replace( 'pages/', "/" ).toLowerCase( )
 
