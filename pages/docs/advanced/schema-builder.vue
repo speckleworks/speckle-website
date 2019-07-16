@@ -6,8 +6,8 @@ order: 10
 ---
 <template lang='md'>
   The Grasshopper plugin contains components which allows you to create objects from any installed [schema and object model](../../docs/developers/objectmodels). These three components are grouped under `SpeckleKits` and perform the following functions:
-    - <img src="~/assets/docs/schema-builder/SchemaBuilderIcon.png" style="height:1.5em;"/> Creates a SpeckleObject
-    - <img src="~/assets/docs/schema-builder/ModifyIcon.png" style="height:1.5em;"/> Modifies the properties of a SpeckleObject
+    - <img src="~/assets/docs/schema-builder/schemaBuilderIcon.png" style="height:1.5em;"/> Creates a SpeckleObject
+    - <img src="~/assets/docs/schema-builder/modifyIcon.png" style="height:1.5em;"/> Modifies the properties of a SpeckleObject
     - <img src="~/assets/docs/schema-builder/convertIcon.png" style="height:1.5em;"/> Converts to the chosen SpeckleObject
   
   <br>
@@ -17,7 +17,7 @@ order: 10
 
   To use the component, first select the object type you wish to create by right-clicking on the component to bring up its context menu. The object types will be grouped by its Speckle kit name. After selecting a type, the inputs will then be automatically populated to expose its properties. **You can expose additional properties from the `overwrite custom properties` menu option.** Hovering over an input will bring out a tooltip which will provide information regarding what type of input it takes.
 
-  ![schemaBuilder](~/assets/docs/schema-builder/SchemaBuilder.gif) {.my-4 .elevation-10}
+  ![schemaBuilder](~/assets/docs/schema-builder/schemaBuilder.gif) {.my-4 .elevation-10}
 
   ## Modifying Speckle objects
   The modify component allows you to change the properties of a Speckle object. Similar to the object creation, default properties are automatically exposed, with additional properties hidden in the `overwrite custom properties` menu option. **The modify component will only change properties which have inputs.**
