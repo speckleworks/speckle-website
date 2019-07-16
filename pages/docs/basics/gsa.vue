@@ -9,7 +9,7 @@ order: 40
 
   ### Installation
 
-  The GSA plugin is distributed by Arup. To gain access to the plugin, please contact [Mishael Nuh](https://github.com/mishaelnuh).
+  The GSA plugin is distributed by [Oasys](https://www.oasys-software.com/contact-us/). Please get in touch for more information.
 
   If you haven't done so already, read [here how to get started with Speckle](/docs/start).
 
