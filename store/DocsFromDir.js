@@ -2,6 +2,7 @@ const slugify = require( "slugify" )
 const fs = require( "fs" )
 const fm = require( "front-matter" )
 const dirTree = require( "directory-tree" )
+const path = require( "path" )
 
 export default ( directory ) => {
 
@@ -15,9 +16,8 @@ export default ( directory ) => {
         treeItem.attributes = attributes
         treeItem.name = attributes.title || treeItem.name
 
-        let pathElms = treeItem.path.split( '/' )
-        // Fix for Windows systems. May break others.
-        if(pathElms.length === 1 ) pathElms = treeItem.path.split('\\')
+        let pathElms = treeItem.path.split( path.sep )
+        
         pathElms[ pathElms.length - 1 ] = slugify( pathElms[ pathElms.length - 1 ].replace( /\.vue$/, "" ), { lower: true } )
         treeItem.slug = pathElms.join( '/' ).replace( 'pages/', "/" ).toLowerCase( )
 
