@@ -2,7 +2,7 @@
 title: "Queries & Excel / PowerBI"
 summary: "How to query a stream to filter for the information you need"
 date: 2019-12-29
-order: 40
+order: 60
 ---
 <template lang='md'>
 

@@ -2,7 +2,7 @@
 title: "Speckle 3D Viewer"
 summary: "How to navigate and use speckle's online 3d viewer"
 date: 2019-12-29
-order: 33
+order: 53
 ---
 <template lang='md'>
 

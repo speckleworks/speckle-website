@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: "👉 Getting Started"
 summary: "Start using or developing for speckle"
 date: 2019-07-07
 order: 0

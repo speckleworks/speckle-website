@@ -2,7 +2,7 @@
   <div>
     <v-container grid-xl class='mt-5'>
       <v-layout justify-center row wrap px-5 mt-5 class='text-xs-center'>
-        <v-flex xs12 sm8 lg6 mt-5>
+        <v-flex xs12 sm8 lg8 mt-5>
           <h1 class='display-3 font-weight-light xxx-text-uppercase'>
             <b>Speckle</b> is the open source <span class='primary--text'>data</span> platform for aec
           </h1>
@@ -20,16 +20,17 @@
       </v-layout>
     </v-container>
     <!-- </v-responsive> -->
-    <v-container grid-list-xl xx-fluid mt-5>
-      <v-layout justify-center row wrap align-center class='my-5 pa-5'>
+    <v-container grid-list-xl fluid mt-5>
+      <v-layout justify-center row wrap align-center class='my-5'>
         <v-flex xs12 md12 xs-center class='text-xs-center xxx-text-md-left'>
-          <!-- Arup | HOK | RoyalHaskoning | Aurecon | BVN | Grimshaw | Heatherwick | BIG | Woods Bagot -->
           <span class='grey--text text--lighten-0 subheading'>Speckle has been seen in the wild at some of the most progressive AEC companies</span>
         </v-flex>
-        <v-flex xs12 sm9 md12 id='features'>
-          <v-img :src='require("~/assets/userlogos.png")' max-height='100' contain></v-img>
+        <v-flex xs12 sm12 md8 id='features'>
+          <v-img :src='require("~/assets/userlogos.png")' max-height='144' contain></v-img>
         </v-flex>
       </v-layout>
+    </v-container>
+    <v-container grid-list-xl xx-fluid xxxmt-5>
       <v-layout row wrap justify-center xxxid='features'>
         <v-flex xs12 sm9 md6 xl4>
           <v-hover>

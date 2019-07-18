@@ -132,5 +132,6 @@ export default {
       };
     }
   },
-  generate: {}
+  generate: {
+  }
 }
