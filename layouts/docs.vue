@@ -1,47 +1,15 @@
 <template>
   <v-app :dark='$store.state.dark'>
     <v-navigation-drawer app v-model='navBar'>
-      <v-toolbar class='elevation-0 xxxtransparent pa-0'>
-        <v-toolbar-title class='text-uppercase font-weight-thin' style='margin-left:-6px;'>
-          Speckle Docs
-        </v-toolbar-title>
-      </v-toolbar>
-      <v-list two-line>
-        <v-list-tile v-for='(primaryItem) in $store.state.docs.tree.children.filter(kid => kid.type==="file")' :key='primaryItem.name' :to='primaryItem.slug'>
-          <v-list-tile-content>
-            <v-list-tile-title class='font-weight-bold text-capitalize subheading'>
-              {{ primaryItem.name }}
-            </v-list-tile-title>
-            <v-list-tile-sub-title class='caption' v-html="primaryItem.attributes.summary"></v-list-tile-sub-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-group :value="true" v-if='item.type==="directory"' v-for='(item, index) in $store.state.docs.tree.children' :key='item.name'>
-          <template v-slot:activator>
-            <v-list-tile :xxxto='item.slug'>
-              <v-list-tile-content>
-                <v-list-tile-title class='font-weight-bold text-capitalize subheading'>
-                  {{item.name}}
-                </v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-          <v-list-tile v-for='(subItem) in item.children' :key='subItem.name' :to="`${subItem.slug}`">
-            <v-list-tile-content>
-              <v-list-tile-title class='font-weight-light-xxx'>{{ subItem.name }}</v-list-tile-title>
-              <v-list-tile-sub-title class='caption' v-html="subItem.attributes.summary"></v-list-tile-sub-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list-group>
+      <v-list two-line expand class='py-0 my-0'>
+        <!-- Nav pane -->
+        <directory :directory='$store.state.docs.tree'></directory>
+        <!-- End nav -->
       </v-list>
     </v-navigation-drawer>
     <v-toolbar :scroll-threshold='0' app :scroll-off-screen='true' x-inverted-scroll class='elevation-0'>
       <v-toolbar-side-icon @click.native='navBar=!navBar'></v-toolbar-side-icon>
       <v-toolbar-items>
-<!--         <v-btn small flat class='hidden-xs' to='/'>
-          &nbsp;
-          <img src='/speckle-min.png' style="width: 21px">
-          &nbsp;
-        </v-btn> -->
       </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-toolbar-items>
@@ -63,8 +31,6 @@
             <div class='grey--text subheading'>
               {{frontmatter.attributes.summary}} • Last modified on {{new Date(frontmatter.mtime).toLocaleDateString()}} • <a :href="`https://github.com/speckleworks/speckle-website/tree/master/${frontmatter.path}`" target='_blank' class=''>edit</a>
             </div>
-            <!-- <div class='grey--text mt-2'>
-            </div> -->
             <v-divider class='mt-2 mb-4'></v-divider>
           </v-flex>
         </v-layout>
@@ -81,6 +47,8 @@
 <script>
 import Footer from '~/components/footer.vue'
 import MyToolbar from '~/components/toolbar.vue'
+import Directory from '~/components/directory.vue'
+
 export default {
   head( ) {
     if ( !this.frontmatter ) return { title: 'Speckle Docs' }
@@ -94,7 +62,8 @@ export default {
   },
   components: {
     Footer,
-    MyToolbar
+    MyToolbar,
+    Directory
   },
   data( ) {
     return {
@@ -119,5 +88,4 @@ export default {
     }
   }
 }
-
 </script>

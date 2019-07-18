@@ -5,11 +5,11 @@ date: 2019-07-15
 order: 40
 ---
 <template lang='md'>
+  <v-alert type='info' :value='true' class='my-4' color='primary'>
+    The GSA plugin is distributed by <a class='white--text' href='https://www.oasys-software.com/' target='_blank'>Oasys</a>. To get access, <a class='white--text' href='https://www.oasys-software.com/contact-us/' target='_blank'>please get in touch</a>. The following guide assumes that you already have the SpeckleGSA plugin installed.
+  </v-alert>
+
   # Basics
-
-  ### Installation
-
-  The GSA plugin is distributed by [Oasys](https://www.oasys-software.com/contact-us/). Please get in touch for more information.
 
   If you haven't done so already, read [here how to get started with Speckle](/docs/start).
 
