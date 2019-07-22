@@ -6,7 +6,7 @@
           <v-layout align-center style='height:520px' row wrap class='mb-5 xx-text-xs-center'>
             <v-flex xs12 class='text-xs-center'>
               <div class='subheading mb-5'>
-                Join the Speckle Community via the channles below!
+                Join the Speckle Community via the channels below!
               </div>
               <v-btn large round color='' style='width: 200px' class='mt-1' href='https://twitter.com/speckle_works' target='_blank'>Twitter <v-icon right>share</v-icon>
               </v-btn>
