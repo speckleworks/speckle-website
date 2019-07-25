@@ -33,7 +33,7 @@ order: 40
   ![login](~/assets/docs/gsa/login.png)
 
   ### Sending
-  Once logged in, you can start sending GSA models. First, either create or open a GSA file from the GSA tab. **Only files opened through this menu are accessible by the client.** Next, switch to the sender tab and click on the <v-icon small>play_circle_filled</v-icon> button to start sending. Once finished, the ID of the stream as well as the name will be displayed in the list view. Right clicking this entry will give various useful options, such as viewing the model in the [online viewer](/docs/basics/viewer), copying the stream ID, or cloning the stream.
+  Once logged in, you can start sending GSA models. First, either create or open a GSA file from the GSA tab. **Only files opened through this menu are accessible by the client.** A demo GSA file can be downloaded [here](/docs/gsa/Speckle GSA Demo.gwb). Next, switch to the sender tab and click on the <v-icon small>play_circle_filled</v-icon> button to start sending. Once finished, the ID of the stream as well as the name will be displayed in the list view. Right clicking this entry will give various useful options, such as viewing the model in the [online viewer](/docs/basics/viewer), copying the stream ID, or cloning the stream.
 
   ![sending](~/assets/docs/gsa/sending.gif) {.my-4 .elevation-10}
 
@@ -87,7 +87,7 @@ order: 40
 
   ### Revit to GSA
   <v-alert type='error' :value='true' class='my-4' color='primary'>
-    The Revit plugin is WIP. Use it, have fun, but thinks may break.
+    The Revit plugin is WIP. Use it, have fun, but things may break.
   </v-alert>
 
   Using the Revit plugin and the GSA plugin, you can send the Revit Analytical Model and receive it in GSA. To do so, add the analytical model elements you wish to send to a sender in the Revit plugin and receive as usual in GSA. For more about the Revit plugin, click [here](/docs/basics/revit).
