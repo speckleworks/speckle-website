@@ -1,5 +1,5 @@
 <template>
-  <v-list-group :value="true"  class='elevation-0'>
+  <v-list-group :value="show"  class='elevation-0'>
     <template v-slot:activator>
       <v-list-tile :class='`${nestlevel >= 2 ? "pl-4" : ""}`'>
         <v-list-tile-content>
@@ -39,6 +39,14 @@ export default {
     showHeader: {
       type: Boolean,
       default: true
+    }
+  },
+  computed: {
+    show() {
+      if (this.directory.name === "docs")
+        return true
+      else
+        return ("pages" + this.$router.currentRoute.path).includes(this.directory.path.replace(/\\/g, "/"))
     }
   },
   name: 'directory-nav'
