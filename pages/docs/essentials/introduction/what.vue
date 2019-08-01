@@ -5,7 +5,13 @@ date: 2019-08-01
 order: 1
 ---
 <template lang='md'>
-  Speckle is an **open source data platform** for AEC. It provides a method of liberating data from one platform to another in a quick, manageable, and efficient way.
+  Speckle is an **open source data platform** for AEC. It provides a method of liberating data from one platform to another in a quick, manageable, and efficient way. With Speckle, you can:
+  - Connect to various platforms to extract and provide the design data you need
+  - Manage who has access to your data through link sharing, permission, and project organizations
+  - Coordinate and collaborate with others by streaming project data between people
+  - Extend the platform to create custom third party applications and workflows that works for you
+
+  ![speckle-diagram](~/assets/docs/essentials/introduction/speckle-diagram.png)
 
   # What makes Speckle different? {.font-weight-thin .display-1 .my-4}
   You may have heard about other data platforms which promises similar things to Speckle. However, Speckle is unique in a number of ways:

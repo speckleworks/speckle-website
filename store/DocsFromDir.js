@@ -10,7 +10,11 @@ export default ( directory ) => {
   let flatArr = [ ]
 
   function parseItem( treeItem ) {
-    if ( treeItem.type === 'file' && treeItem.name !== 'index' ) {
+    if ( treeItem.name === 'index.vue' )
+      return null
+
+    if ( treeItem.type === 'file' ) {
+      console.log(treeItem)
       try {
         let { attributes } = fm( fs.readFileSync( './' + treeItem.path, "utf8" ) )
         treeItem.attributes = attributes
@@ -49,7 +53,7 @@ export default ( directory ) => {
     }
   }
 
-  docsTree.children = docsTree.children.filter( item => item.name !== 'index')
+  docsTree.children = docsTree.children.filter( item => item.name !== 'index.vue')
   docsTree.children.forEach( kid => parseItem( kid ) )
   try {
     docsTree.children = docsTree.children.sort( ( a, b ) => a.attributes.order - b.attributes.order )
