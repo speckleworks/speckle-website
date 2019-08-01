@@ -136,7 +136,7 @@
               <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/docs/various/screenshots.png")'></v-img>
                 <div class="d-flex v-card--reveal-btn" style="height: 100%;">
                   <v-flex xs12>
-                    <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/start'>
+                    <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/essentials/introduction/getting-started'>
                       <v-icon left large>local_library</v-icon>Getting Started
                     </v-btn>
 <!--                     <div class='caption'>

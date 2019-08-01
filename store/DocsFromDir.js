@@ -14,7 +14,6 @@ export default ( directory ) => {
       return null
 
     if ( treeItem.type === 'file' ) {
-      console.log(treeItem)
       try {
         let { attributes } = fm( fs.readFileSync( './' + treeItem.path, "utf8" ) )
         treeItem.attributes = attributes
