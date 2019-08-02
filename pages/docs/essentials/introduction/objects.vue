@@ -7,6 +7,7 @@ order: 3
 <template lang='md'>
   Objects are the basic unit in which data is stored within a Speckle server. You can store and organize any type of data within an object and Speckle will store that object for future use. There are minimal restrictions on what objects can be stored, as long as it has a `type` declared. This flexibility allows for a wide variety of object models to be supported by Speckle.
 
+  ![speckle-objects](~/assets/docs/essentials/introduction/objects.png)
   The following are examples of some objects in their JSON representation which can be stored in Speckle.
   
   ```cs
@@ -45,7 +46,7 @@ order: 3
   
   <br>
 
-  In general, clients take care of how native data is represented as a Speckle object and users will not have to worry about how to package their data into objects.
+  In general, the individual plugins take care of how native data is represented as a Speckle object and users will not have to worry about how to package their data into objects.
 </template>
 <script>
 export default {

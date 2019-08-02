@@ -12,6 +12,8 @@ export default ( directory ) => {
   function parseItem( treeItem ) {
     if ( treeItem.name === 'index.vue' )
       return null
+    
+    treeItem.name = treeItem.name.replace(/_/g, " ")
 
     if ( treeItem.type === 'file' ) {
       try {

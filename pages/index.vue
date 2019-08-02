@@ -133,7 +133,7 @@
             <v-card slot-scope="{ hover }" class='transparent elevation-0'>
               <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
               <!-- <v-img :style='`opacity: ${hover ? 0.42 : 0.84}; transition: all 1s ease;`'  :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img> -->
-              <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/docs/various/screenshots.png")'></v-img>
+              <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/splashes/screenshots.png")'></v-img>
                 <div class="d-flex v-card--reveal-btn" style="height: 100%;">
                   <v-flex xs12>
                     <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/essentials/introduction/getting-started'>

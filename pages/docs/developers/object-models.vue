@@ -19,7 +19,7 @@ order: 2
 
   Below is a diagram representing a fictional speckle kit.
 
-  ![kit diagram](~/assets/docs/objectmodels/kitsdiagram.png)
+  ![kit diagram](~/assets/docs/developers/kitsdiagram.png)
 
   ## Bootstrapping a Speckle Kit
 
@@ -83,7 +83,7 @@ order: 2
 
   Once grasshopper is up, add a "schema builder" component on the canvas and right click on its middle. Amongst the drop down options, you should see your object model's name and the new "SphericalPoint" class!
 
-  ![first object model test in grasshopper](~/assets/docs/objectmodels/ghtest.png)
+  ![first object model test in grasshopper](~/assets/docs/developers/ghtest.png)
 
   That's all there is to creating the first part of a kit, schema definitions. You can already use the schema builder component from grasshopper to instantiate custom classes and pass them around through speckle. The next step is to implement this object model in our two target applications, Rhino and Revit.
 
