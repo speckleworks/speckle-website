@@ -5,17 +5,15 @@ date: 2019-08-01
 order: 1
 ---
 <template lang='md'>
-  <!-- So you want to stream data between Grasshopper and Dynamo? This guide will get you started! -->
+  <v-alert type='error' :value='true' class='my-4' color='primary'>
+    If you have previously installed speckle for rhino via the .rhi for "all users", you will need to uninstall it manually first by deleting the rhino plugin from its installation folder. You can find the installation folder in Rhino's Plugin Options dialog.
+  </v-alert>
 
-  ## Installation
+  ## Account login
 
-  Download the [latest installer](https://github.com/speckleworks/SpeckleInstaller/releases/latest). This installer bundles together all the stable application plugins, namely Rhino, Grasshopper and Dynamo. It does not require admin privileges, so double click with confidence!
+  In order to use either the Grasshopper or Dynamo plugin, you will need to login to your account. Registration can be done from the [Speckle admin](../../essentials/introduction/management) interface
 
-  Please note: if you have previously installed speckle for rhino via the .rhi for "all users", you will need to uninstall it manually first by deleting the rhino plugin from its installation folder. You can find the installation folder in Rhino's Plugin Options dialog.
-
-  ## Account creation
-
-  To use Speckle you need a Speckle Account, the first time you use a Speckle plugin you'll be prompted for your details, but you'll also be able to create one.
+  To use Speckle you need a Speckle Account. the first time you use a Speckle plugin you'll be prompted for your details, but you'll also be able to create one.
 
   You only need one Speckle Account to use Speckle, but you could have more if, for instance, your company was running a self hosted version.
 

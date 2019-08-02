@@ -5,6 +5,10 @@ date: 2019-08-01
 order: 1
 ---
 <template lang='md'>
+  <v-alert type='error' :value='true' class='my-4' color='primary'>
+    If you have previously installed speckle for rhino via the .rhi for "all users", you will need to uninstall it manually first by deleting the rhino plugin from its installation folder. You can find the installation folder in Rhino's Plugin Options dialog.
+  </v-alert>
+
   ## Opening the plugin
 
   After you've installed speckle, you'll need to initialise speckle inside Rhino by typing `SpecklePanel` in the command line. Afterwards, click `Show` and you should see the panel containing the speckle plugin show up:
