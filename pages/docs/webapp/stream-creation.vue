@@ -6,7 +6,7 @@ order: 2
 ---
 <template lang='md'>
   <v-alert type='info' icon='school' :value='true' class='my-4' color='grey'>
-  This small tutorial is assuming you're comfortable around the online interface of speckle. If you haven't even heard about it, then please read <a href="/docs/basics/data-stream-management"> the following tutorial.</a>
+  This small tutorial is assuming you're comfortable around the online interface of Speckle. If you haven't even heard about it, then please read <a href="/docs/essentials/introduction/management"> the following tutorial.</a>
   </v-alert>
 
   Creating streams online is useful for various purposes, such as centralising in one place project parameters and pulling them out afterwards in Grasshopper or Dynamo to drive your parametric models. You can do this from the online interface!

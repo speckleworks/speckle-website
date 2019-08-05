@@ -6,7 +6,7 @@ order: 2
 ---
 <template lang='md'>
   <v-alert type='info' icon='school' :value='true' class='my-4' color='grey'>
-    This tutorial assumes you are comfortable with creating, modifying, and converting Speckle objects in Grasshopper. To learn more, please read the <a href="/docs/advanced/schema-builder"> the following tutorial</a>.
+    This tutorial assumes you are comfortable with creating, modifying, and converting Speckle objects in Grasshopper. To learn more, please read the <a href="/docs/clients/grasshopper/schema-builder"> the following tutorial</a>.
   </v-alert>
 
   It is possible to construct a full structural model in Grasshopper using the Speckle plugin. The level of fidelity of the model can be up to the user; you can send simple meshes and lines all the way to full models with section properties, loads, and analysis tasks. For this guide, we will be assuming that the model will be sent to the `design` layer of GSA. In addition, we will be using the SpeckleElement object model. To start, create the geometry of the model using `lines` for 1D members and `meshes` for 2D members. Sending this to GSA will transfer the members.

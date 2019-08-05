@@ -1,23 +1,23 @@
 ---
 title: "Schemas & Object Models (.NET)"
-summary: "How speckle deals with object models and conversion logic"
+summary: "How Speckle deals with object models and conversion logic"
 date: 2019-01-21
 order: 2
 ---
 
 <template lang='md'>
 
-  Speckle is evolving a "management" solution to the wicked problem of interoperability. These are speckle kits, self-contained object models and their implementations in AEC authoring software, that can grow organically, reference each other, and solve parts of the problem.
+  Speckle is evolving a "management" solution to the wicked problem of interoperability. These are Speckle kits, self-contained object models and their implementations in AEC authoring software, that can grow organically, reference each other, and solve parts of the problem.
 
   It is important to know that, by itself, Speckle Core comes with only three default object types, namely `SpeckleObject`, `SpecklePlaceholder`, and `SpeckleAbstract` and no conversion routines (to/from authoring software). All other schemas (or object defintions) and their conversion routines are coming from dynamically loaded SpeckleKits, which should be independent assemblies that can be freely distributed and licensed.
 
 <!--   <v-alert type='info' :value='true' class='my-4' color='primary'>
-    When installing the Speckle clients, you will automatically get the "default" speckle kits for geometry, structural elements, and some archiectural objects. Speckle would otherwise not be useful out of the box :)
+    When installing the Speckle clients, you will automatically get the "default" Speckle kits for geometry, structural elements, and some archiectural objects. Speckle would otherwise not be useful out of the box :)
   </v-alert> -->
 
-  Essentially, a speckle kit is _(1) a set of class defintions_ and _(2) separate projects with the implementation details (conversion to/from native) for authoring software_. {.headline .font-weight-thin .pa-5 .my-5 .text-xs-justify .elevation-5 }
+  Essentially, a Speckle kit is _(1) a set of class defintions_ and _(2) separate projects with the implementation details (conversion to/from native) for authoring software_. {.headline .font-weight-thin .pa-5 .my-5 .text-xs-justify .elevation-5 }
 
-  Below is a diagram representing a fictional speckle kit.
+  Below is a diagram representing a fictional Speckle kit.
 
   ![kit diagram](~/assets/docs/developers/kitsdiagram.png)
 
@@ -66,7 +66,7 @@ order: 2
 
   <br>
 
-  Note the first constraints of a speckle kit class definition:
+  Note the first constraints of a Speckle kit class definition:
   - inheritance from the base `SpeckleObject` class
   - the class should be marked as `[Serializable]`
   - overriding the `Type` property with something descriptive and as unique as possible
@@ -79,13 +79,13 @@ order: 2
 
   If you're up for a quick test, build the solution, then copy paste `bin/Debug/*.dll` into `%localappdata%/SpeckleKits/SuperObjectModel/` and start up Grasshopper.
 
-  If you're debugging speckle for rhino, then probably SpeckleCore was built for Debug, in which case the folder you should copy paste to is `SpeckleKitsDebug`. {.caption}
+  If you're debugging Speckle for Rhino, then probably SpeckleCore was built for Debug, in which case the folder you should copy paste to is `SpeckleKitsDebug`. {.caption}
 
-  Once grasshopper is up, add a "schema builder" component on the canvas and right click on its middle. Amongst the drop down options, you should see your object model's name and the new "SphericalPoint" class!
+  Once Grasshopper is up, add a "schema builder" component on the canvas and right click on its middle. Amongst the drop down options, you should see your object model's name and the new "SphericalPoint" class!
 
-  ![first object model test in grasshopper](~/assets/docs/developers/ghtest.png)
+  ![first object model test in Grasshopper](~/assets/docs/developers/ghtest.png)
 
-  That's all there is to creating the first part of a kit, schema definitions. You can already use the schema builder component from grasshopper to instantiate custom classes and pass them around through speckle. The next step is to implement this object model in our two target applications, Rhino and Revit.
+  That's all there is to creating the first part of a kit, schema definitions. You can already use the schema builder component from Grasshopper to instantiate custom classes and pass them around through Speckle. The next step is to implement this object model in our two target applications, Rhino and Revit.
 
 
   ### Schema Implementations
@@ -121,7 +121,7 @@ order: 2
 
   There's a few things to note before we move to the conversion routines themselves.
 
-  **First**, notice the `Initialiser` class: it's important that all namespaces containing speckle kit application implementations contain one. This is because SpeckleCore loads kits dynamically at runtime (notice there's no references inside SpeckleCore to your object model, nor should they ever be), and this ensures that, against the best efforts of the CLR, the assembly containing your conversion routines is actually loaded in the AppDomain. This class has other uses - as we shall see in the case of our Revit implementation - but for now, it can stay empty.
+  **First**, notice the `Initialiser` class: it's important that all namespaces containing Speckle kit application implementations contain one. This is because SpeckleCore loads kits dynamically at runtime (notice there's no references inside SpeckleCore to your object model, nor should they ever be), and this ensures that, against the best efforts of the CLR, the assembly containing your conversion routines is actually loaded in the AppDomain. This class has other uses - as we shall see in the case of our Revit implementation - but for now, it can stay empty.
 
   **Second**, the `Conversions` class will contain static extension methods containing the conversion and instantiation logic between Rhino's/Revit's object model and your object model. For this reason, the class containing them needs to be marked as static.
 
@@ -171,7 +171,7 @@ order: 2
 
   First, the **ToSpeckle()** method converts from the application native object to our schema. The **ToNative()** method does the opposite.
 
-  Second, it's important that you call the `GenerateHash()` method in the `ToSpeckle()` method just before returning, or whenever it actually makes sense given the implementation details of the API you're dealing with. This will ensure that, when an object is sent to a speckle server, local caching can be leveraged and that preflight diffing can occur.
+  Second, it's important that you call the `GenerateHash()` method in the `ToSpeckle()` method just before returning, or whenever it actually makes sense given the implementation details of the API you're dealing with. This will ensure that, when an object is sent to a Speckle server, local caching can be leveraged and that preflight diffing can occur.
 
   These methods should return one object, but they can return as well a list of objects. For example, in Revit, a wall based on a polyline does not work; consequently, split the polyline in its "atomic" parts and generate walls based on those. Just make sure that the client implementations can deal with this, as we are a bit behind on some fronts.
 
@@ -182,13 +182,13 @@ order: 2
 
   The `ToSpeckle` and `ToNative` methods, once loaded in the `AppDomain`, will be dynamically invoked by the SpeckleCore Converter, which will then pass on the result of that invocation to you (or the clients).
 
-  Mainly, that's all there is to a defining a simple speckle kit. What's left now is to rinse and repeat for all the classes you have defined, and for all the applications you are planning to support!
+  Mainly, that's all there is to a defining a simple Speckle kit. What's left now is to rinse and repeat for all the classes you have defined, and for all the applications you are planning to support!
 
   ### Graceful Degradation
 
-  In order to better support inheritance, there is another **optional** convention that we implemented, namely "graceful degradation". For instance, imagine we have to define a Floor object to enable Revit to Revit workflows. Nevertheless, we still want to be able to display this Floor object in the speckle viewer, or in rhino, whithouot writing complicated methods for generating a displayable mesh.
+  In order to better support inheritance, there is another **optional** convention that we implemented, namely "graceful degradation". For instance, imagine we have to define a Floor object to enable Revit to Revit workflows. Nevertheless, we still want to be able to display this Floor object in the Speckle viewer, or in Rhino, whithouot writing complicated methods for generating a displayable mesh.
 
-  Consequently, since we make SpeckleElement's Floor class definition inherit from SpeckleCoreGeometry's Mesh element. We override its type in a particular way to let speckle know that, if there are no conversion methods found for the Floor object, it should attempt to try with conversion methods defined for the Mesh object. Here's how that looks like:
+  Consequently, since we make SpeckleElement's Floor class definition inherit from SpeckleCoreGeometry's Mesh element. We override its type in a particular way to let Speckle know that, if there are no conversion methods found for the Floor object, it should attempt to try with conversion methods defined for the Mesh object. Here's how that looks like:
 
   ```cs
 
@@ -204,7 +204,7 @@ order: 2
 
   There's several benefits to this extra complexity:
   - **Globally**, when SpeckleCore will attempt to deserialise a JSON response from the server, if the SpeckleElements kit is not present, it will try to deserialise the object into a Mesh (this is why the `Type` property - which acts as a discriminator - needs to reflect inheritance too).
-  - **At the application integration level**, if the Floor object has no `ToNative()` method defined, speckle will attempt to follow the inheritance chain and invoke the first `ToNative()` method that it finds.
+  - **At the application integration level**, if the Floor object has no `ToNative()` method defined, Speckle will attempt to follow the inheritance chain and invoke the first `ToNative()` method that it finds.
 
   <br>
 
@@ -262,7 +262,7 @@ order: 2
 
   ## Conclusion {.mt-4}
 
-  Please be aware, Speckle is under continuous improvement and needs your help and input. The speckle kit concept is not new per se, and in its current implementation it does need cleanup, simplification and potentially some architectural changes. Nevertheless, for now it is stable and we have been dogfooding it in the main release channel since January 2019, or thereabouts.
+  Please be aware, Speckle is under continuous improvement and needs your help and input. The Speckle kit concept is not new per se, and in its current implementation it does need cleanup, simplification and potentially some architectural changes. Nevertheless, for now it is stable and we have been dogfooding it in the main release channel since January 2019, or thereabouts.
 
   It is important to remember, *interoperability* is a wicked problem involving a mixture of technical and political factors. Speckle does not aim to solve it, but rather help manage it, one step at a time.
 

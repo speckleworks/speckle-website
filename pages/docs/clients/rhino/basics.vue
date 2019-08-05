@@ -1,23 +1,23 @@
 ---
-title: "Basics"
+title: "Rhino Basics"
 summary: "Rhino plugin basics"
 date: 2019-08-01
 order: 1
 ---
 <template lang='md'>
   <v-alert type='error' :value='true' class='my-4' color='primary'>
-    If you have previously installed speckle for rhino via the .rhi for "all users", you will need to uninstall it manually first by deleting the rhino plugin from its installation folder. You can find the installation folder in Rhino's Plugin Options dialog.
+    If you have previously installed Speckle for Rhino via the .rhi for "all users", you will need to uninstall it manually first by deleting the Rhino plugin from its installation folder. You can find the installation folder in Rhino's Plugin Options dialog.
   </v-alert>
 
   ## Opening the plugin
 
-  After you've installed speckle, you'll need to initialise speckle inside Rhino by typing `SpecklePanel` in the command line. Afterwards, click `Show` and you should see the panel containing the speckle plugin show up:
+  After you've installed Speckle, you'll need to initialise Speckle inside Rhino by typing `SpecklePanel` in the command line. Afterwards, click `Show` and you should see the panel containing the speckle plugin show up:
 
   ![rhino](~/assets/docs/clients/rhino/rhino.png)
 
   ## Creating an account
 
-  First off, if you haven't, create an account on the speckle server of your choice. In case you don't have one, and just want to test out speckle, you can use `https://hestia.speckle.works/api`! <v-icon small>warning</v-icon> Do be advised that this is a test server - use at your own risk. The diagram below explains most of the steps.
+  If you haven't already, create an account on the Speckle server of your choice. In case you don't have one, and just want to test out Speckle, you can use `https://hestia.speckle.works/api`! <v-icon small>warning</v-icon> Do be advised that this is a test server - use at your own risk. The diagram below explains most of the steps.
 
   ![accounts](~/assets/docs/clients/rhino/accounts.png)
 
@@ -44,7 +44,7 @@ order: 1
 
   Of course, if you send something to speckle, it's going to be available in the wider speckle ecosystem. So you can:
   - [view it online](https://hestia.speckle.works/#/view/KAQzY9_C6e),
-  - or, for example receive it in [grasshopper and dynamo](/docs/basics/grasshopper-dynamo)
+  - or, for example receive it in [grasshopper](/docs/clients/grasshopper/basics) and [dynamo](/docs/clients/dynamo/basics)
   - get it as raw data via the API
   - and more!
 

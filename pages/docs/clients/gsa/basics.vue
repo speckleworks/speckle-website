@@ -1,5 +1,5 @@
 ---
-title: "Basics"
+title: "GSA Basics"
 summary: "GSA plugin basics"
 date: 2019-08-01
 order: 1
@@ -77,8 +77,8 @@ order: 1
 
   ![ghcontour](~/assets/docs/clients/gsa/ghcontour.png) {.my-4 .elevation-10}
 
-  ### Conclusion
-  This guide has shown how to use the GSA plugin to send and receive models with Speckle. Below are a list of more advanced features of the GSA plugin. The best way to familiarize yourself is to play around with the plugin in conjunction with other Speckle plugins. Make sure to report all bugs you might encounter.
+  ### Beyond the basics
+  This guide has shown how to use the GSA plugin to send and receive models with Speckle. The best way to familiarize yourself is to play around with the plugin in conjunction with other Speckle plugins. Check out the other GSA docs for some other features and integrations with other clients.
 
 </template>
 <script>

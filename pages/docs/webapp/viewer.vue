@@ -6,7 +6,7 @@ order: 1
 ---
 <template lang='md'>
   <v-alert type='info' icon='school' :value='true' class='my-4' color='grey'>
-  This small tutorial is assuming you're comfortable around the online interface of speckle. If you haven't even heard about it, then please read <a href="/docs/basics/data-stream-management"> the following section.</a>
+  This small tutorial is assuming you're comfortable around the online interface of Speckle. If you haven't even heard about it, then please read <a href="/docs/essentials/introduction/management"> the following section.</a>
   </v-alert>
 
   <div class='text-xs-center my-4'>
@@ -17,7 +17,7 @@ order: 1
 
   ## Loading Streams
 
-  If you have a bunch of geometry that you're passing around with speckle, you can most probably view it online in the 3d viewer. It's quite easy:
+  If you have a bunch of geometry that you're passing around with Speckle, you can most probably view it online in the 3d viewer. It's quite easy:
   - under the viewer section, search for a stream and click add
   - from the stream overview / stream details section click on the rotate icon
 
@@ -39,7 +39,7 @@ order: 1
   Speckle allows you to group your objects by any common property. This adds a bit of legibility to the default gray view. To do so, in the viewer controls, go to the middle tab. Here you will be able to select by filed or property to group your objects.
 
   Some of the predefined filters are:
-  - `speckle_type`: what type of object this is, within the speckle worldview
+  - `speckle_type`: what type of object this is, within the Speckle worldview
   - `layer_name` and `layer_guid`: if the stream contains layers, these will be used to group objects
 
   <br>
@@ -68,7 +68,7 @@ order: 1
 
   ![3d viewer groups](~/assets/docs/web-app/object-properties.png)
 
-  You can now unfold in the tree view to the left to inspect whatever metadata and other properties are associated with this object. That's it - this covers pretty much all the things the speckle viewer can do for you (so far).
+  You can now unfold in the tree view to the left to inspect whatever metadata and other properties are associated with this object. That's it - this covers pretty much all the things the Speckle viewer can do for you (so far).
 </template>
 <script>
 export default {

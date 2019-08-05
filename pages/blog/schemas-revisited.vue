@@ -9,7 +9,7 @@ date: 2019-01-21
 
 <template lang='md'>
 
-  ![kit](~/assets/docs/objectmodels/kit02.png)
+  ![kit](~/assets/blog/objectmodels/kit02.png)
 
   Since the end of 2017, a few things have improved and changed in the way Speckle deals with object models and their implementation details in various CAD applications.
 

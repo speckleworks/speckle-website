@@ -6,12 +6,12 @@ order: 1
 ---
 
 <template lang='md'>
-  The [.NET SDK (SpeckleCore)](https://github.com/speckleworks/specklecore) lies at the base of the grasshopper, dynamo, rhino, gsa, and revit connectors. It provides:
+  The [.NET SDK (SpeckleCore)](https://github.com/speckleworks/specklecore) lies at the base of the Grasshopper, Dynamo, Rhino, Gsa, and Revit connectors. It provides:
 
-  - async methods for calling the speckle [api](https://speckleworks.github.io/SpeckleOpenApi/)
-  - methods for interacting with the speckle's websocket api
+  - async methods for calling the Speckle [API](https://speckleworks.github.io/SpeckleOpenApi/)
+  - methods for interacting with the Speckle's websocket API
   - the core conversion methods (`Serialise` and `Deserialise`) & other helper methods
-  - a base SpeckleObject from which you can inherit to create your own speckle kits
+  - a base SpeckleObject from which you can inherit to create your own [Speckle kits](/docs/developers/object-models)
   - methods for getting local accounts
   - methods for passing things through a local cache
 

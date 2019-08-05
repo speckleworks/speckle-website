@@ -5,7 +5,7 @@ date: 2019-08-01
 order: 2
 ---
 <template lang='md'>
-  In order to get started with Speckle, you will need some authoring software installed on your computer and access to a Speckle server. Installation instructions and links can be found [here](../installation). 
+  In order to get started with Speckle, you will need some authoring software installed on your computer and access to a Speckle server. Installation instructions and links can be found [here](/docs/essentials/installation). 
 
   # Server {.font-weight-thin .display-1 .my-4}
 
