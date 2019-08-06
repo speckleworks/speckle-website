@@ -1,5 +1,6 @@
 <template>
-  <v-list-group :value="show"  class='elevation-0'>
+  <div>
+  <v-list-group :value="show"  class='elevation-0' v-if="directory.name !== 'docs'">
     <template v-slot:activator>
       <v-list-tile :class='`${nestlevel >= 2 ? "pl-4" : ""}`'>
         <v-list-tile-content>
@@ -19,6 +20,8 @@
       <directory-nav v-else :directory='subItem' :key='subItem.name' :nestlevel='nestlevel+1'></directory-nav>
     </template>
   </v-list-group>
+    <directory-nav v-else v-for='(subItem) in directory.children' :directory='subItem' :key='subItem.name' :nestlevel='nestlevel+1'></directory-nav>
+  </div>
 </template>
 <script>
 export default {

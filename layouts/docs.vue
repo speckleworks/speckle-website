@@ -1,16 +1,27 @@
 <template>
   <v-app :dark='$store.state.dark'>
     <v-navigation-drawer app v-model='navBar'>
-      <v-container pa-2>
+      <v-container mt-2>
         <v-autocomplete
           return-object
           solo
           hide-no-data
+          append-icon="search"
           label="Search"
           :items='$store.state.docs.flat'
           item-text="name"
           item-value="name"
-          v-on:input="searchRedirect">
+          :filter="searchFilter"
+          v-on:input="$router.push($event.slug)">
+          <template slot="item" slot-scope="directories">
+            <div>
+              {{directories.item.attributes.title}}
+              <br>
+              <span class="caption text-light">
+                {{directories.item.attributes.summary}}
+              </span>
+            </div>
+          </template>
         </v-autocomplete>
       </v-container>
       <v-list two-line expand class='py-0 my-0'>
@@ -98,9 +109,15 @@ export default {
       this.$store.commit( 'TOGGLE_DARK' )
       localStorage.setItem( 'dark', this.$store.state.dark )
     },
-    searchRedirect( val ) {
-      console.log(val)
-      this.$router.push(val.slug)
+    searchFilter( item, queryText, itemText ) {
+      if (item.name.toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1)
+        return true
+      if (item.path.replace(/\\\//g, " ").toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1)
+        return true
+      if (item.attributes.summary.toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1)
+        return true
+
+      return false
     }
   }
 }
