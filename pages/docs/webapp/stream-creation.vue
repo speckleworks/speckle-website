@@ -1,5 +1,5 @@
 ---
-title: "Online data stream creation"
+title: "Online Data Stream Creation"
 summary: "Create custom data streams"
 date: 2019-08-01
 order: 2

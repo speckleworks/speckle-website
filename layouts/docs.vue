@@ -1,6 +1,18 @@
 <template>
   <v-app :dark='$store.state.dark'>
     <v-navigation-drawer app v-model='navBar'>
+      <v-container pa-2>
+        <v-autocomplete
+          return-object
+          solo
+          hide-no-data
+          label="Search"
+          :items='$store.state.docs.flat'
+          item-text="name"
+          item-value="name"
+          v-on:input="searchRedirect">
+        </v-autocomplete>
+      </v-container>
       <v-list two-line expand class='py-0 my-0'>
         <!-- Nav pane -->
         <directory :directory='$store.state.docs.tree'></directory>
@@ -85,6 +97,10 @@ export default {
     toggleDark( ) {
       this.$store.commit( 'TOGGLE_DARK' )
       localStorage.setItem( 'dark', this.$store.state.dark )
+    },
+    searchRedirect( val ) {
+      console.log(val)
+      this.$router.push(val.slug)
     }
   }
 }

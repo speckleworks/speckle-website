@@ -5,16 +5,16 @@ date: 2019-08-01
 order: 3
 ---
 <template lang='md'>
-  The processor interface within the Speckle admin interface allows you to run operations on Speckle objects, streams, and projects from within the web application.
+  The [processor interface](https://app.speckle.systems/#/processors) within Speckle admin allows you to run operations on Speckle objects, streams, and projects from within the web application.
 
-  Each processor is composed of **blocks**. Each block takes the input of the previous block, passes it through a function, and returns the output for further use. Note that you do not need any programming knowledge to use processor, only to add new blocks to it.
+  Each processor is composed of **blocks**. By assembling a series of simple blocks together, a complex sequence of operations can be performed. Each block takes the input of the previous block, passes it through a function, and returns the output for further use. Note that you do not need any programming knowledge to use processor, only to add new blocks to it.
 
   <v-alert type='error' :value='true' class='my-4' color='grey'>
     Processor currently only works from the Speckle admin found in <a href="https://app.speckle.systems/">https://app.speckle.systems/</a>. Additionally, all processors are saved locally in your browser's local storage. This means that if you will not see the processors you've assembled when you login from another computer.
   </v-alert>
 
   ## Creating your first processor
-  Our first processor will take stream, filter objects based on its proximity to a location, and create a new stream based on its objects.
+  Our first processor will take a stream, filter its objects based on its proximity to a location, and create a new stream based on these objects.
   
   To start, create a new processor by pressing the blue + button in the lower right corner of the processor page. You will then be taken to the processor details page. From here, you can change its name, add tags, create a description, share you processor, and assemble your blocks.
 
@@ -30,9 +30,11 @@ order: 3
   5. **Speckle Stream Sender**: creates a new stream based on the list of object IDs.
   <br>
 
-  Generally, you will always use the **Speckle Stream Receiver** block in conjunction with the **Download Speckle Objects** block and likewise with the **Upload Speckle Objects** block and the **Speckle Stream Sender** block.
+  <v-alert type='error' :value='true' class='my-4' color='grey'>
+    Generally, you will always use the **Speckle Stream Receiver** block in conjunction with the **Download Speckle Objects** block and likewise with the **Upload Speckle Objects** block and the **Speckle Stream Sender** block.
+  </v-alert>
 
-  Once added, the parameters for the input can be added. For this section, we will be using stream [`LqyefJKXG`](https://app.speckle.systems/#/view/LqyefJKXG) found on the Hestia server containing some boxes in 3D space. For the inputs of our proximity filter, we will take all objects within a 10 unit radius from the point (0, 0, 0).
+  Once added, the parameters for the input can be added. For this doc, we will be using stream [`LqyefJKXG`](https://app.speckle.systems/#/view/LqyefJKXG) found on the Hestia server containing some boxes in 3D space. For the inputs of our proximity filter, we will take all objects within a 10 unit radius from the point (0, 0, 0).
   
   ![assembledblocks](~/assets/docs/web-app/processor-assembledblocks.gif) {.my-4 .elevation-10}
 
