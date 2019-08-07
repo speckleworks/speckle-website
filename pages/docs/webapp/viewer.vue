@@ -21,7 +21,7 @@ order: 1
   - under the viewer section, search for a stream and click add
   - from the stream overview / stream details section click on the rotate icon
 
-  ![3d viewer start](~/assets/docs/web-app/viewer-start.gif) {.my-4 .elevation-10}
+  ![3d viewer start](~/assets/docs/webapp/viewer/viewer-start.gif) {.my-4 .elevation-10}
 
   Furthermore, once in the 3d viewer, you can load as many streams as you want or need. Just search for them and click on the plus sign! To remove a stream, just click the remove button.
 
@@ -46,7 +46,7 @@ order: 1
 
   All other fields are populated based on your the properties of the objects currently loaded. In the example below, the stream comes from Revit.
 
-  ![3d viewer groups](~/assets/docs/web-app/grouping.gif) {.my-4 .elevation-10}
+  ![3d viewer groups](~/assets/docs/webapp/viewer/grouping.gif) {.my-4 .elevation-10}
 
   You will notice that if an object does not have the property you want to filter by, it will be included in the **Orphaned Objects** group. All other objects will be randomly grouped (and coloured) by that specific field.
 
@@ -58,7 +58,7 @@ order: 1
 
   If the property value you want to group objects by is numeric, you will see something else happening:
 
-  ![3d viewer groups](~/assets/docs/web-app/filtering.gif) {.my-4 .elevation-10}
+  ![3d viewer groups](~/assets/docs/webapp/viewer/filtering.gif) {.my-4 .elevation-10}
 
   Specifically, a different type of UI will pop up, which allows you to filter objects based on a specified numeric range. So, for example, if your objects have a `volume` property, or an `Air Flow` property, which is expressed by a number, the viewer will allow you to filter the current objects in a way that feels more appropriate given the nature of the property.
 
@@ -66,7 +66,7 @@ order: 1
 
   Finally, you can inspect any object's properties and fields, one by one. First, go to the last tab in the viewer controls. Next, select an object from the viewer by simply... clicking on it! If you want to look at multiple objects at the same time, hold down left shift and click some more objects!
 
-  ![3d viewer groups](~/assets/docs/web-app/object-properties.png)
+  ![3d viewer groups](~/assets/docs/webapp/viewer/object-properties.png)
 
   You can now unfold in the tree view to the left to inspect whatever metadata and other properties are associated with this object. That's it - this covers pretty much all the things the Speckle viewer can do for you (so far).
 </template>

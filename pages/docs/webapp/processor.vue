@@ -20,7 +20,7 @@ order: 3
 
   Using the *add new block* list box, you can select a new block to add to your processor. You can delete blocks by clicking on the button on the top left of each block.
   
-  ![addblock](~/assets/docs/web-app/processor-addblock.gif) {.my-4 .elevation-10}
+  ![addblock](~/assets/docs/webapp/processor/processor-addblock.gif) {.my-4 .elevation-10}
 
   For our processor, we will use the following built in blocks:
   1. **Speckle Stream Receiver**: returns the ID of the objects contained in the streams.
@@ -36,17 +36,17 @@ order: 3
 
   Once added, the parameters for the input can be added. For this doc, we will be using stream [`LqyefJKXG`](https://app.speckle.systems/#/view/LqyefJKXG) found on the Hestia server containing some boxes in 3D space. For the inputs of our proximity filter, we will take all objects within a 10 unit radius from the point (0, 0, 0).
   
-  ![assembledblocks](~/assets/docs/web-app/processor-assembledblocks.gif) {.my-4 .elevation-10}
+  ![assembledblocks](~/assets/docs/webapp/processor/processor-assembledblocks.gif) {.my-4 .elevation-10}
 
   To run the processor, click the blue play buttom on the bottom right. As the processor is running, you can see the output of each intermediate step by clicking on the **view output** button below each block. The output of the full processor is displayed at the bottom of the page. In our case, the output will be the stream ID.
   
-  ![running](~/assets/docs/web-app/processor-running.gif) {.my-4 .elevation-10}
+  ![running](~/assets/docs/webapp/processor/processor-running.gif) {.my-4 .elevation-10}
 
   To rerun, click the blue button on the bottom right again. You can also choose to rerun from a specific block by clicking the **re-run** button on that block. Processor will also automatically detect when you make changes to a block and un-runs any blocks affected by the change.
 
   You have now successfully created and ran your first processor. To see the results of the processor, you can view stream [`rVrsg-FDi`](https://app.speckle.systems/#/view/rVrsg-FDi) found on the Hestia server.
 
-  ![streams](~/assets/docs/web-app/processor-streams.jpeg){.my-4 .elevation-10}
+  ![streams](~/assets/docs/webapp/processor/processor-streams.jpeg){.my-4 .elevation-10}
 
   ## Writing your own blocks
 

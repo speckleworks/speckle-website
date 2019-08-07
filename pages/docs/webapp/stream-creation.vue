@@ -25,7 +25,7 @@ order: 2
 
   You can add stream "layers" (they will become output ports), and then type in values manually using commas to separate them from each other.
 
-  ![create a stream](~/assets/docs/web-app/create-stream-main.gif) {.my-4 .elevation-10}
+  ![create a stream](~/assets/docs/webapp/stream-creation/create-stream-main.gif) {.my-4 .elevation-10}
 
   <v-alert type='info' :value='true' class='my-4' color='primary'>
   The "Data Tab" is enabled only for streams that have been created online.
@@ -35,13 +35,13 @@ order: 2
 
   Inputing any CSV values is rather easy. Just Click the **Import CSV** button in the top right corner and paste in your data. Here's a short animation showing how you can copy and paste some excel data into a stream (remember the big blue button in the lower right corner):
 
-  ![create a stream](~/assets/docs/web-app/createstream.gif) {.my-4 .elevation-10}
+  ![create a stream](~/assets/docs/webapp/stream-creation/createstream.gif) {.my-4 .elevation-10}
 
   ## Saving Your Changes
 
   The layers that you create become output ports - you can rename them. The values that you enter should be comma-separated, and they're parsed automatically to numbers, strings or bools. Once you are happy with the way the data is looking, you will need to click on the "save" button (and enter a commit message - this will make your reading of the history easier). Once saving is done, you can now receive that data in grasshopper, dynamo, or via the API. Congratulations, you've created your first online stream - see below how this stream looks like in grasshopper:
 
-  ![receive a stream](~/assets/docs/web-app/ghreceiver.png)
+  ![receive a stream](~/assets/docs/webapp/stream-creation/ghreceiver.png)
 </template>
 <script>
 export default {
