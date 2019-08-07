@@ -47,6 +47,10 @@ The Speckle REST API supports powerful querying features. For example, below are
 - `omit`: which fields to omit from every object. Cannot be used in conjunction with `fields`.
 - `fields`: which fields to include from every object. `_id` is always returned. Cannot be used in conjunction with `omit`.
 - Filtering based on the value of a field. For example, `type=Point` will only return objects who's type is `Point` and `properties.height<10` will only return objects with `properties.height` less than 10.
+  - Supports standard comparisson operators (i.e., `=`, `!=`, `>`, `<`, `>=`, `<=`)
+  - Supports multiple matches with comma separated lists (e.g., `type=Point,Mesh`)
+  - Supports regex patterns (e.g., `type=/^.+?esh/`)
+  - For more information, see [query-to-mongo filtering](https://www.npmjs.com/package/query-to-mongo#filtering)
 
 <br>
 You can use the tool below to test out some queries.
@@ -73,7 +77,15 @@ You can use the tool below to test out some queries.
           <v-btn flat v-on="on" v-on:click="runQuery()">Test</v-btn>
         </template>
         <v-card>
-          <pre>{{ responseObject | pretty }}</pre>
+          <v-layout pa-2 row wrap>
+            <v-flex xs12>
+              <v-container text-xs-center v-if="responseObject === ''">
+                <v-progress-circular indeterminate >
+                </v-progress-circular>
+              </v-container>
+              <pre v-else>{{ responseObject | pretty }}</pre>
+            </v-flex>
+          </v-layout>
         </v-card>
       </v-dialog>
     </v-card-actions>
@@ -82,6 +94,7 @@ You can use the tool below to test out some queries.
 </template>
 <script>
 import Axios from 'axios'
+import { stringify } from 'querystring';
 
 export default {
   layout: 'docs',
@@ -126,6 +139,8 @@ export default {
   },
   methods: {
     async runQuery () {
+      this.output = ''
+
       try
       {
         let result = await Axios({
