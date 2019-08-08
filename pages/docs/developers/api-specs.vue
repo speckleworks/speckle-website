@@ -98,7 +98,7 @@ import { stringify } from 'querystring';
 
 export default {
   layout: 'docs',
-  data: function() {
+  data () {
     return {
       url: 'https://hestia.speckle.works/api/streams/qHzcdZVGk/objects',
       query: 'limit=10&fields=hash,properties.parameters.Area&properties.parameters.Area<1',
@@ -138,22 +138,16 @@ export default {
     }
   },
   methods: {
-    async runQuery () {
+    runQuery () {
       this.output = ''
-      try
-      {
-        let result = await Axios({
-          method: 'GET',
-          url: this.url + '?' + this.query,
-          baseURL: '',
-        })
 
-        this.output = result.data.resources
-      }
-      catch (e)
-      {
-        this.output = e.message
-      }
+      Axios({
+        method: 'GET',
+        url: this.url + '?' + this.query,
+        baseURL: '',
+      })
+        .then(res => this.output = res.data.resources)
+        .catch(err => this.output = err.message)
     },
     removeArraysRecursive( foo ) {
       let bar = {}
