@@ -140,20 +140,19 @@ export default {
   methods: {
     async runQuery () {
       this.output = ''
-
       try
       {
         let result = await Axios({
           method: 'GET',
           url: this.url + '?' + this.query,
-          baseURL: 'https://hestia.speckle.works/api/',
+          baseURL: '',
         })
 
         this.output = result.data.resources
       }
       catch (e)
       {
-        this.output = e.response
+        this.output = e.message
       }
     },
     removeArraysRecursive( foo ) {
