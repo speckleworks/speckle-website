@@ -74,7 +74,7 @@ You can use the tool below to test out some queries.
     <v-card-actions>
       <v-dialog>
         <template v-slot:activator="{on}">
-          <v-btn flat v-on="on" v-on:click="runQuery()">Test</v-btn>
+          <v-btn flat v-on="on">Test</v-btn>
         </template>
         <v-card>
           <v-layout pa-2 row wrap>
