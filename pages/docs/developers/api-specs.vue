@@ -72,23 +72,16 @@ You can use the tool below to test out some queries.
       </v-layout>
     </v-card-text>
     <v-card-actions>
-      <v-dialog>
-        <template v-slot:activator="{on}">
-          <v-btn flat v-on="on">Test</v-btn>
-        </template>
-        <v-card>
-          <v-layout pa-2 row wrap>
-            <v-flex xs12>
-              <v-container text-xs-center v-if="responseObject === ''">
-                <v-progress-circular indeterminate >
-                </v-progress-circular>
-              </v-container>
-              <pre v-else>{{ responseObject | pretty }}</pre>
-            </v-flex>
-          </v-layout>
-        </v-card>
-      </v-dialog>
+      <v-btn flat v-on:click="runQuery()">Test</v-btn>
     </v-card-actions>
+    <v-divider v-if="responseObject !== ''"></v-divider>
+    <v-card-text v-if="responseObject !== ''">
+      <v-layout pa-2 row wrap>
+        <v-flex xs12>
+          <pre>{{ responseObject | pretty }}</pre>
+        </v-flex>
+      </v-layout>
+    </v-card-text>
   </v-card>
 </v-container>
 </template>

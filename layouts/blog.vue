@@ -1,6 +1,6 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-toolbar app :scroll-off-screen='true' class='elevation-0'>
+    <v-toolbar app class='elevation-0'>
       <v-toolbar-items>
         <v-btn small flat class='hidden-xs' to='/'>
           &nbsp;

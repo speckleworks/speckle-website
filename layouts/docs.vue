@@ -30,7 +30,7 @@
         <!-- End nav -->
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar :scroll-threshold='0' app :scroll-off-screen='true' x-inverted-scroll class='elevation-0'>
+    <v-toolbar app x-inverted-scroll class='elevation-0'>
       <v-toolbar-side-icon @click.native='navBar=!navBar'></v-toolbar-side-icon>
       <v-toolbar-items>
       </v-toolbar-items>

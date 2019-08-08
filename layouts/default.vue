@@ -1,6 +1,6 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-toolbar :scroll-threshold='300' app :scroll-off-screen='true' inverted-scroll class='elevation-0'>
+    <v-toolbar app inverted-scroll class='elevation-0'>
       <v-toolbar-items>
         <v-btn small flat class='hidden-xs' @click="$vuetify.goTo('#top-content')">
           &nbsp;
