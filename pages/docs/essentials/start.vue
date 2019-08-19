@@ -1,6 +1,6 @@
 ---
-title: "Installation"
-summary: "Installing Speckle"
+title: "Getting Started"
+summary: "Installing Speckle and getting started with the basics."
 date: 2019-01-21
 order: 1
 ---
@@ -26,13 +26,45 @@ order: 1
 
   You will need to download and run the `SpeckleInstaller.exe` file from the link above. This will install the latest release of the clients and once it is succesful, you should be able to open the speckle plugins from the software you've installed it for.
 
-  <v-icon small>warning</v-icon> Sometimes you might get security warnings because we do not sign the installer, so check for that! {.caption}
-
-  <v-icon small>info</v-icon> If you're curious about new features, you can always try out the [pre-release channel](https://github.com/speckleworks/SpeckleInstaller/releases/). {.caption}
-
   # 2. Register {.font-weight-thin .display-1 .my-4}
 
+  When you first use Speckle you will be prompted to create an account with a speckle server.
+
+
   Speckle can be deployed by anybody anywhere they want. Hence, there's no single Speckle where you can register an account; perhaps your company already runs a server - ask around! Nevertheless, in case you just want to test things out, you can register with the "community server", hestia.
+
+  ```js
+
+  "https://hestia.speckle.works"
+  ```
+
+   <v-alert type='warning' :value='true' class='my-4' color='primary'>
+    Please be aware that the test server, Hestia, comes with absolutely no guarantees of any sort. While it has had stellar uptime record so far, please do not rely on it for anything remotely important!
+  </v-alert>
+
+  # 3. Read The Docs {.font-weight-thin .display-1 .my-4}
+
+  We've written some quick tutorials to get you started with the basic clients:
+
+  <div class='xxxtext-xs-center my-4'>
+  <v-btn xxxcolor='primary' round to='/docs/clients/grasshopper/basics'>
+    Grasshopper <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+
+  <v-btn xxxcolor='primary' round to='/docs/clients/dynamo/basics'>
+    Dynamo <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+
+  <v-btn xxxcolor='primary' round to='/docs/clients/rhino/basics'>
+    Rhino <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+
+  <v-btn xxxcolor='primary' round to='/docs/clients/revit/basics'>
+    Revit <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+  </div>
+
+  Furthermore, do read the introduction section on the right hand side. It will allow you to understand what Speckle is, how it operates, what we understand by clients, etc. It covers some basics that are useful for new starters. It will also let you know how you can ask for help if you're stuck!
 
 </template>
 <script>

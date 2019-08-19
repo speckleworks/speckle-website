@@ -2,7 +2,7 @@
 title: "What is Speckle"
 summary: "Speckle?"
 date: 2019-08-01
-order: 1
+order: 0
 ---
 <template lang='md'>
   Speckle is an **open source data platform** for AEC. It provides a method of liberating data from one platform to another in a quick, manageable, and efficient way. With Speckle, you can:

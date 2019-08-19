@@ -9,10 +9,6 @@ order: 1
     The Revit plugin is WIP. Use it, have fun, but thinks may break. Or in other words, HIC SVNT DRACONES.
   </v-alert>
 
-  <v-alert type='error' :value='true' class='my-4' color='grey'>
-    You currently cannot register/login into a Speckle account from the Revit plugin. You will need to add one with any of the other clients (Grasshopper, Dynamo, or Rhino).
-  </v-alert>
-
   Currently, the Revit plugin does rather well at getting your data out of Revit. It does less well at getting data into Revit, but we're working on it! With that in mind, let's go through the basics of using it as a data extractor, and integrating it further with the wider Speckle ecosystem.
 
   The plugin itself should now come with the default Speckle installer. If you haven't done so already, read [here how to get started with Speckle](/docs/essentials/introduction/what). Please be aware that we currently only support Revit 2019, though the plugin should work for 2018 and 2020 too (to get it to show up in there, copy paste it from the 2019 addins folder to the other versions).
