@@ -8,11 +8,9 @@ order: 1
 
   <!-- ![clients](~/assets/docs/various/screenshots.png) -->
 
-  Getting started with speckle can be approached from several directions: either as an end user, where you just want to send data and geometry around, as a developer wanting to build on top of speckle, or as a maintainer deploying a server for your company or group.
+  # 1. Download {.font-weight-thin .display-1 .my-4}
 
-  # Download {.font-weight-thin .display-1 .my-4}
-
-  In order to use speckle, you will need to have some authoring software installed on your computer. We currently have integrations for Grasshopper, Dynamo, Rhino, and a WIP Revit client - either of those should do. It also helps to have a friend next to you, as it's much more fun to send data to each other rather than play ping-pong alone!
+  In order to use speckle, you will need to have some authoring software installed on your computer. We currently have integrations for **Grasshopper, Dynamo, Rhino, and Revit (early alpha!)** - either of those should do. It also helps to have a friend next to you, as it's much more fun to send data to each other rather than play ping-pong alone!
 
   <!-- ### The Speckle Clients Installer {.font-weight-thin-xx .my-4} -->
 
@@ -31,6 +29,11 @@ order: 1
   <v-icon small>warning</v-icon> Sometimes you might get security warnings because we do not sign the installer, so check for that! {.caption}
 
   <v-icon small>info</v-icon> If you're curious about new features, you can always try out the [pre-release channel](https://github.com/speckleworks/SpeckleInstaller/releases/). {.caption}
+
+  # 2. Register {.font-weight-thin .display-1 .my-4}
+
+  Speckle can be deployed by anybody anywhere they want. Hence, there's no single Speckle where you can register an account; perhaps your company already runs a server - ask around! Nevertheless, in case you just want to test things out, you can register with the "community server", hestia.
+
 </template>
 <script>
 export default {
