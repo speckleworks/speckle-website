@@ -21,7 +21,7 @@ date: 2019-01-21
 
 
   <div class='text-xs-center my-4'>
-  <v-btn large color='primary' depressed round to='/docs/developers/objectmodels'>
+  <v-btn large color='primary' depressed round to='/docs/developers/object-models'>
     Speckle Kit Documentation <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>

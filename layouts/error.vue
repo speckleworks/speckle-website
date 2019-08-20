@@ -8,7 +8,7 @@
         <span class=''>We're joking, we just can't find that page.</span>
         <br>
         <v-btn to='/' large color='black' class='mt-4' outline round>Home</v-btn>
-        <v-btn to='/docs/essentials/introduction/what' large color='black' class='mt-4' outline round>Documentation</v-btn>
+        <v-btn to='/docs/essentials/start' large color='black' class='mt-4' outline round>Documentation</v-btn>
       </v-flex>
     </v-layout>
   </v-container>

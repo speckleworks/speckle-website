@@ -53,7 +53,7 @@ The Speckle REST API supports powerful querying features. For example, below are
   - For more information, see [query-to-mongo filtering](https://www.npmjs.com/package/query-to-mongo#filtering)
 
 <br>
-You can use the tool below to test out some queries.
+You can use the tool below to test out some queries. Please note, if nothing happens when you click test, navigate away from this page and return. It's a weird bug.
 
 <v-container>
   <v-card>
