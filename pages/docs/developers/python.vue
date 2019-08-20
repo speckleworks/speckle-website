@@ -6,7 +6,7 @@ order: 2
 ---
 <template lang='md'>
 
-  [![](~/assets/docs/various/python-api.png)](https://pyspeckle.readthedocs.io/en/latest/quickstart.html)
+  [![](~/assets/docs/developers/python-api.png)](https://pyspeckle.readthedocs.io/en/latest/quickstart.html)
 
   Thanks to [Antoine Dao](https://github.com/AntoineDao), the pyton documentation now (1) exists and (2) can [be found here!](https://pyspeckle.readthedocs.io/en/latest/quickstart.html)
 

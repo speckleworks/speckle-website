@@ -133,5 +133,9 @@ export default {
     }
   },
   generate: {
-  }
+    subFolders: true
+  },
+  router: {
+    base: '/'
+  } 
 }

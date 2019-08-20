@@ -6,7 +6,7 @@ order: 0
 ---
 <template lang='md'>
 
-Besides the server, everyting else in the speckle platform is, at the end of the day, an API client. The Speckle REST API's documentation lives in a separate place. It covers all the essential endpoints, specifically:
+Besides the server, everything else in the Speckle platform is, at the end of the day, an API client. The Speckle REST API's documentation lives in a separate place. It covers all the essential endpoints, specifically:
 
 - Accounts: creating new users, logging in, etc.
 - Streams: creating, updating, deleting and diffing streams
@@ -22,13 +22,13 @@ Besides the server, everyting else in the speckle platform is, at the end of the
   </div>
   <!-- </v-alert> -->
 
-# Interacting & Testing the API {.headline .font-weight-thin .my-4}
+# Interacting & Testing the API
 
-The speckle api is documented in the OpenAPI v3 format, which allows you to easily import it into an API tool of choice and start hacking. Which api tools? There's quite a few to choose from: [Postman](https://www.getpostman.com/), [Insomnia](https://insomnia.rest/), Paw, etc.
+The Speckle API is documented in the OpenAPI v3 format, which allows you to easily import it into an API tool of choice and start hacking. Which API tools? There's quite a few to choose from: [Postman](https://www.getpostman.com/), [Insomnia](https://insomnia.rest/), Paw, etc.
 
-![postman](~/assets/docs/various/apipaw.png)
+![postman](~/assets/docs/developers/apipaw.png)
 
-If you want a leg up, you can download and import in the api tool of your choice the [raw specification file](https://github.com/speckleworks/SpeckleSpecs/blob/9e1ae90fdfdd84811fbf0bc5158abda9b5d251d9/SpeckleV1OpenApiSpecs.yaml), if it supports OpenApi specs. You can, of course, interact with speckle straight from the command line, if you're so inclined! TIP: [jq](https://stedolan.github.io/jq/) will help you parse json in the command line.
+If you want a leg up, you can download and import in the API tool of your choice the [raw specification file](https://github.com/speckleworks/SpeckleSpecs/blob/9e1ae90fdfdd84811fbf0bc5158abda9b5d251d9/SpeckleV1OpenApiSpecs.yaml), if it supports OpenApi specs. You can, of course, interact with Speckle straight from the command line, if you're so inclined! TIP: [jq](https://stedolan.github.io/jq/) will help you parse JSON in the command line.
 
 ```sh
 
@@ -38,9 +38,138 @@ curl -X POST https://hestia.speckle.works/api/streams \
   -H 'Authorization: API_KEY'
 ```
 
+<br>
+
+# Querying
+The Speckle REST API supports powerful querying features. For example, below are some of the queries you could apply to the `StreamGetObjects` request.
+- `limit`: maximum number of objects returned.
+- `offset`: number of objects to skip (or offset) before returning.
+- `omit`: which fields to omit from every object. Cannot be used in conjunction with `fields`.
+- `fields`: which fields to include from every object. `_id` is always returned. Cannot be used in conjunction with `omit`.
+- Filtering based on the value of a field. For example, `type=Point` will only return objects who's type is `Point` and `properties.height<10` will only return objects with `properties.height` less than 10.
+  - Supports standard comparisson operators (i.e., `=`, `!=`, `>`, `<`, `>=`, `<=`)
+  - Supports multiple matches with comma separated lists (e.g., `type=Point,Mesh`)
+  - Supports regex patterns (e.g., `type=/^.+?esh/`)
+  - For more information, see [query-to-mongo filtering](https://www.npmjs.com/package/query-to-mongo#filtering)
+
+<br>
+You can use the tool below to test out some queries. Please note, if nothing happens when you click test, navigate away from this page and return. It's a weird bug.
+
+<v-container>
+  <v-card>
+    <v-card-title>
+      <span class='title ma-2'>
+        Query Tester
+      </span>
+    </v-card-title>
+    <v-divider></v-divider>
+    <v-card-text>
+      <v-layout row wrap>
+        <v-flex xs12>
+          <v-text-field label="API URL" v-model="url"></v-text-field>
+          <v-textarea auto-grow rows=1 label="Queries" v-model="query"></v-textarea>
+        </v-flex>
+      </v-layout>
+    </v-card-text>
+    <v-card-actions>
+      <v-dialog>
+        <template v-slot:activator="{on}">
+          <v-btn flat v-on="on" v-on:click="runQuery()">Test</v-btn>
+        </template>
+        <v-card>
+          <v-layout pa-2 row wrap>
+            <v-flex xs12>
+              <v-container text-xs-center v-if="responseObject === ''">
+                <v-progress-circular indeterminate >
+                </v-progress-circular>
+              </v-container>
+              <pre v-else>{{ responseObject | pretty }}</pre>
+            </v-flex>
+          </v-layout>
+        </v-card>
+      </v-dialog>
+    </v-card-actions>
+  </v-card>
+</v-container>
 </template>
 <script>
+import Axios from 'axios'
+import { stringify } from 'querystring';
+
 export default {
-  layout: 'docs'
+  layout: 'docs',
+  data () {
+    return {
+      url: 'https://hestia.speckle.works/api/streams/qHzcdZVGk/objects',
+      query: 'limit=10&fields=hash,properties.parameters.Area&properties.parameters.Area<1',
+      output: ''
+    }
+  },
+  filters: {
+    pretty: function(value) {
+      if (!value)
+        return ""
+      return JSON.stringify(value, null, 2);
+    }
+  },
+  computed: {
+    numOutput( ) {
+      if (this.output == null)
+        return 0
+      if (typeof this.output == 'string')
+        return 1
+      else
+        return Object.keys(this.output).length
+    },
+    responseObject() {
+      if (this.numOutput <= 10)
+        return this.removeArraysRecursive( this.output )
+      else
+      {
+        let bar = {}
+        for ( let key in this.output ) {
+          bar[key] = this.output[key]
+          if (Object.keys(bar).length >= 10)
+            break
+        }
+        bar['_hidden'] = `... (${this.numOutput - 10} more objects)`
+        return this.removeArraysRecursive( bar )
+      }
+    }
+  },
+  methods: {
+    runQuery () {
+      this.output = ''
+
+      Axios({
+        method: 'GET',
+        url: this.url + '?' + this.query,
+        baseURL: '',
+      })
+        .then(res => this.output = res.data.resources)
+        .catch(err => this.output = err.message)
+    },
+    removeArraysRecursive( foo ) {
+      let bar = {}
+      if (typeof foo == 'string')
+        return foo
+      for ( let key in foo ) {
+        if ( !foo.hasOwnProperty( key ) ) continue
+        if ( Array.isArray( foo[ key ] ) ) {
+          /*DO FUCKALL */
+          if( foo[key].length < 3 )
+            bar[key] = foo[key]
+          else {
+            bar[key] = [ ...foo[key].slice(0, 3), `... (${foo[key].length - 3} more values)` ]
+          }
+        } else if ( typeof foo[ key ] === 'object' && foo[ key ] !== null ) {
+          bar[ key ] = this.removeArraysRecursive( foo[ key ] )
+        } else {
+          bar[ key ] = foo[ key ]
+        }
+      }
+      return bar
+    },
+  }
 }
 </script>

@@ -10,7 +10,7 @@ export const state = ( ) => ( {
 
 export const mutations = {
   TOGGLE_NAVBAR: state => {
-    state.dark = !state.dark
+    state.navbar = !state.navbar
   },
   TOGGLE_DARK: state => {
     state.dark = !state.dark

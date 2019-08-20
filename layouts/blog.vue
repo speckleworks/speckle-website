@@ -1,23 +1,6 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-toolbar app :scroll-off-screen='true' class='elevation-0'>
-      <v-toolbar-items>
-        <v-btn small flat class='hidden-xs' to='/'>
-          &nbsp;
-          <img src='/speckle-min.png' style="width: 21px">
-          &nbsp;
-        </v-btn>
-      </v-toolbar-items>
-      <v-spacer></v-spacer>
-      <v-toolbar-items>
-        <v-btn small flat to='/'>HOME</v-btn>
-        <v-btn small flat to='/docs/start'>DOCS</v-btn>
-        <v-btn small flat to='/blog'>BLOG</v-btn>
-        <v-btn icon small depressed round @click='toggleDark'>
-          <v-icon small>wb_sunny</v-icon>
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+    <Toolbar></Toolbar>
     <v-content>
       <v-container>
         <v-layout justify-center row wrap>
@@ -76,7 +59,9 @@
   </v-app>
 </template>
 <script>
-  import Footer from '~/components/footer.vue'
+import Footer from '~/components/footer.vue'
+import Toolbar from '~/components/toolbar.vue'
+
 export default {
   head( ) {
     if ( !this.frontmatter ) return { title: 'Speckle Blog' }
@@ -89,7 +74,8 @@ export default {
     }
   },
   components: {
-    Footer
+    Footer,
+    Toolbar
   },
   computed: {
     nextPrevious() {

@@ -16,7 +16,7 @@
               </v-btn>
               <div class='subheading mt-5 pt-5 text-none text--white'>
                 <router-link :class='background==="" ? "":"footer-link"' to='/'>Home</router-link> •
-                <router-link :class='background==="" ? "":"footer-link"' to='/docs/start'>Docs</router-link> •
+                <router-link :class='background==="" ? "":"footer-link"' to='/docs/essentials/introduction/what'>Docs</router-link> •
                 <router-link :class='background==="" ? "":"footer-link"' to='/blog'>Blog</router-link> •
                 <a :class='background==="" ? "":"footer-link"' href='https://github.com/speckleworks' target="_blank">Github</a>
               </div>
