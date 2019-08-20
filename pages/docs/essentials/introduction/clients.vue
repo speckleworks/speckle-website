@@ -11,7 +11,7 @@ order: 1
 
   ![speckle-clients](~/assets/docs/essentials/introduction/speckle-clients.png)
 
-  However, clients can also take the form of **scripts** and **web applications**. In fact, Speckle's own [management interface](/docs/essentials/management) is also a client. Another example of a web application based client is the ArupCarbon tool which calculates the embodied carbon of a model sent from Revit, as shown below.
+  However, clients can also take the form of **scripts** and **web applications**. In fact, Speckle's own [management interface](/docs/web/management) is also a client. Another example of a web application based client is the ArupCarbon tool which calculates the embodied carbon of a model sent from Revit, as shown below.
 
   ![arup-carbon](~/assets/docs/essentials/introduction/carbon.png) {.my-4 .elevation-10}
 

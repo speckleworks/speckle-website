@@ -10,7 +10,7 @@ order: 1
   </v-alert>
 
   ## Using the plugin
-  The Grasshopper client is bundled as part of the [Speckle installation package](/docs/essentials/installation). Once installed, the components will appear under the Speckle tab of Grasshopper.
+  The Grasshopper client is bundled as part of the [Speckle installation package](/docs/essentials/start). Once installed, the components will appear under the Speckle tab of Grasshopper.
 
   Within the Grasshopper tab, there are a number of components there to help you control how you use Speckle. The two key main compoments are:
   - <img src="~/assets/docs/clients/grasshopper/basics/sender-icon.png" style="height:1.5em;"/> Data Sender

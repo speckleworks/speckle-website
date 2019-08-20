@@ -11,7 +11,7 @@ order: 1
 
   Currently, the Revit plugin does rather well at getting your data out of Revit. It does less well at getting data into Revit, but we're working on it! With that in mind, let's go through the basics of using it as a data extractor, and integrating it further with the wider Speckle ecosystem.
 
-  The plugin itself should now come with the default Speckle installer. If you haven't done so already, read [here how to get started with Speckle](/docs/essentials/introduction/what). Please be aware that we currently only support Revit 2019, though the plugin should work for 2018 and 2020 too (to get it to show up in there, copy paste it from the 2019 addins folder to the other versions).
+  The plugin itself should now come with the default Speckle installer. If you haven't done so already, read [here how to get started with Speckle](/docs/essentials/start). Please be aware that we currently only support Revit 2019, though the plugin should work for 2018 and 2020 too (to get it to show up in there, copy paste it from the 2019 addins folder to the other versions).
 
   ## Opening the plugin
 

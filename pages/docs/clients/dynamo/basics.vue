@@ -6,7 +6,7 @@ order: 1
 ---
 <template lang='md'>
   ## Using the plugin
-  The Dynamo client is bundled as part of the [Speckle installation package](/docs/essentials/installation). Once installed, the nodes will appear under the Speckle tab of Dynamo.
+  The Dynamo client is bundled as part of the [Speckle installation package](/docs/essentials/start). Once installed, the nodes will appear under the Speckle tab of Dynamo.
 
  There are two nodes in the Speckle Dynamo plugin which will allow you to send and receive data:
   - <img src="~/assets/docs/clients/dynamo/basics/sender-icon.png" style="height:1.5em;"/> Speckle Sender
