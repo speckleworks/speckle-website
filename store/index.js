@@ -9,9 +9,6 @@ export const state = ( ) => ( {
 } )
 
 export const mutations = {
-  TOGGLE_NAVBAR: state => {
-    state.navbar = !state.navbar
-  },
   TOGGLE_DARK: state => {
     state.dark = !state.dark
   },
@@ -25,9 +22,7 @@ export const actions = {
   nuxtServerInit( ) {
     if ( process.server ) {
       this.dispatch( "blog/loadPosts", BlogFromDir( "blog" ) )
-      // let test = DocsFromDir( "docs" )
       this.dispatch( "docs/loadDocs", DocsFromDir( "docs" ) )
-      // console.log( test )
     }
   },
   setDark( ) {

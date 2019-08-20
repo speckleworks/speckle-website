@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar app :class='`${$store.state.dark ? "royal-bg" : ""}`' :dark='$store.state.dark'>
+  <v-toolbar dense app clipped-left :class='`${$store.state.dark ? "" : ""}`' :dark='$store.state.dark'>
     <v-toolbar-side-icon @click.native='toggleNavBar()' :style='`opacity: ${sideIcon ? "1" :"0"}`'></v-toolbar-side-icon>
     <v-toolbar-title class="hidden-sm-and-down font-weight-light text-uppercase" @click='randomize()'>
       <!-- <v-btn small depressed flat icon class='transparent' to='/'><v-icon small>home</v-icon></v-btn> -->
@@ -14,6 +14,7 @@
         <v-icon small>wb_sunny</v-icon>
       </v-btn>
     </v-toolbar-items>
+    <!-- <v-spacer></v-spacer> -->
   </v-toolbar>
 </template>
 <script>
@@ -24,7 +25,7 @@ export default {
   data( ) {
     return {
       navBar: false,
-      speckle: [ 'speckle', 'spackle', 'schmeckle', 'spockle', '🍔 speck 🥓', 'spleckle', 'fluxckle 🙊' ],
+      speckle: [ '✨ speckle', '👷🏽‍♂️ spackle', '🖖 spock le', '🥓 speck', '🙃 spleckle' ],
       title: 'speckle'
     }
   },
@@ -34,7 +35,7 @@ export default {
       localStorage.setItem( 'dark', this.$store.state.dark )
     },
     toggleNavBar( ) {
-      this.$store.commit( 'TOGGLE_NAVBAR' )
+      this.$bus.$emit( 'toggle-nav' )
     },
     randomize( ) {
       this.title = this.speckle[ Math.floor( Math.random( ) * this.speckle.length ) ]

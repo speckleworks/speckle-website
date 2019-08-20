@@ -18,7 +18,6 @@ export default {
   },
   data( ) {
     return {
-      navBar: false
     }
   },
   methods: {

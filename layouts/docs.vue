@@ -1,18 +1,8 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-navigation-drawer app v-model='$store.state.navbar'>
+    <v-navigation-drawer app clipped v-model='navbar'>
       <v-container mt-2>
-        <v-autocomplete
-          return-object
-          solo
-          hide-no-data
-          append-icon="search"
-          label="Search"
-          :items='$store.state.docs.flat'
-          item-text="name"
-          item-value="name"
-          :filter="searchFilter"
-          v-on:input="$router.push($event.slug)">
+        <v-autocomplete return-object solo hide-no-data append-icon="search" label="Search" :items='$store.state.docs.flat' item-text="name" item-value="name" :filter="searchFilter" v-on:input="$router.push($event.slug)">
           <template slot="item" slot-scope="directories">
             <div>
               {{directories.item.attributes.title}}
@@ -34,7 +24,7 @@
     <v-content>
       <v-container v-if='frontmatter'>
         <v-layout justify-center row wrap>
-          <v-flex xs12 sm10 lg6 class=' mb-4' xxxv-if='frontmatter'>
+          <v-flex xs12 sm10 lg6 class='my-4 py-3'>
             <div class='display-2 font-weight-thin mb-4'>
               {{frontmatter.attributes.title}}
             </div>
@@ -45,7 +35,7 @@
           </v-flex>
         </v-layout>
         <v-layout justify-center row wrap>
-          <v-flex xs11 sm10 lg6>
+          <v-flex xs12 sm10 lg6>
             <nuxt />
           </v-flex>
         </v-layout>
@@ -75,15 +65,13 @@ export default {
     Toolbar,
     Directory
   },
+  watch: {},
   data( ) {
     return {
-      navBar: true
+      navbar: false
     }
   },
   computed: {
-    // navBar( ) {
-    //   return this.$store.state.navbar
-    // },
     frontmatter( ) {
       return this.$store.getters[ 'docs/getDoc' ]( this.$route.path )
     },
@@ -97,15 +85,25 @@ export default {
       localStorage.setItem( 'dark', this.$store.state.dark )
     },
     searchFilter( item, queryText, itemText ) {
-      if (item.name.toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1)
+      if ( item.name.toLocaleLowerCase( ).indexOf( queryText.toLocaleLowerCase( ) ) > -1 )
         return true
-      if (item.path.replace(/\\\//g, " ").toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1)
+      if ( item.path.replace( /\\\//g, " " ).toLocaleLowerCase( ).indexOf( queryText.toLocaleLowerCase( ) ) > -1 )
         return true
-      if (item.attributes.summary.toLocaleLowerCase().indexOf(queryText.toLocaleLowerCase()) > -1)
+      if ( item.attributes.summary.toLocaleLowerCase( ).indexOf( queryText.toLocaleLowerCase( ) ) > -1 )
         return true
 
       return false
     }
+  },
+  mounted( ) {
+    this.$bus.$on( 'toggle-nav', ( ) => {
+      this.navbar = !this.navbar
+    } )
+    if ( this.$vuetify.breakpoint.xs === true )
+      this.navbar = false
+    else
+      this.navbar = true
   }
 }
+
 </script>

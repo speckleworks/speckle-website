@@ -82,7 +82,8 @@ export default {
    */
   plugins: [
     '@/plugins/vuetify',
-    { ssr: false, src: '~plugins/init' }
+    { ssr: false, src: '~plugins/init' },
+    '@/plugins/bus',
   ],
 
   /*
@@ -137,5 +138,5 @@ export default {
   },
   router: {
     base: '/'
-  } 
+  }
 }

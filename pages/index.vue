@@ -128,7 +128,7 @@
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex id='gettingStarted' xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5' :style="{ backgroundImage: `url('@/assets/splashes/screenshots.png')` }">
+        <v-flex id='gettingStarted' xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5' >
           <v-hover>
             <v-card slot-scope="{ hover }" class='transparent elevation-0'>
               <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
