@@ -11,7 +11,7 @@
       <v-spacer class='hidden-sm-and-down'></v-spacer>
       <v-toolbar-items>
         <v-btn small flat to='/' class='xxxfont-weight-light'>HOME</v-btn>
-        <v-btn small flat to='/docs/essentials/introduction/what' class='xxxfont-weight-light'>DOCS</v-btn>
+        <v-btn small flat to='/docs/essentials/start' class='xxxfont-weight-light'>DOCS</v-btn>
         <v-btn small flat to='/blog' class='xxxfont-weight-light'>BLOG</v-btn>
       </v-toolbar-items>
       <v-btn icon small depressed round @click='toggleDark' xxxclass='hidden-sm-and-down'>

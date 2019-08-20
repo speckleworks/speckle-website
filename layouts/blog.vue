@@ -11,7 +11,7 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn small flat to='/'>HOME</v-btn>
-        <v-btn small flat to='/docs/essentials/introduction/what'>DOCS</v-btn>
+        <v-btn small flat to='/docs/essentials/start'>DOCS</v-btn>
         <v-btn small flat to='/blog'>BLOG</v-btn>
         <v-btn icon small depressed round @click='toggleDark'>
           <v-icon small>wb_sunny</v-icon>
