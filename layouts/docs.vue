@@ -1,6 +1,6 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-navigation-drawer app v-model='navBar'>
+    <v-navigation-drawer app v-model='$store.state.navbar'>
       <v-container mt-2>
         <v-autocomplete
           return-object
@@ -30,20 +30,7 @@
         <!-- End nav -->
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app x-inverted-scroll class='elevation-0'>
-      <v-toolbar-side-icon @click.native='navBar=!navBar'></v-toolbar-side-icon>
-      <v-toolbar-items>
-      </v-toolbar-items>
-      <v-spacer></v-spacer>
-      <v-toolbar-items>
-        <v-btn small flat to='/' class='xxxfont-weight-light'>HOME</v-btn>
-        <v-btn small flat to='/docs/essentials/start' class='xxxfont-weight-light'>DOCS</v-btn>
-        <v-btn small flat to='/blog' class='xxxfont-weight-light'>BLOG</v-btn>
-        <v-btn icon small depressed round @click='toggleDark'>
-          <v-icon small>wb_sunny</v-icon>
-        </v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
+    <Toolbar side-icon></Toolbar>
     <v-content>
       <v-container v-if='frontmatter'>
         <v-layout justify-center row wrap>
@@ -69,7 +56,7 @@
 </template>
 <script>
 import Footer from '~/components/footer.vue'
-import MyToolbar from '~/components/toolbar.vue'
+import Toolbar from '~/components/toolbar.vue'
 import Directory from '~/components/directory.vue'
 
 export default {
@@ -85,7 +72,7 @@ export default {
   },
   components: {
     Footer,
-    MyToolbar,
+    Toolbar,
     Directory
   },
   data( ) {
