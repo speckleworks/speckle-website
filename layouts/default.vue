@@ -1,6 +1,7 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-toolbar app class='elevation-0'>
+    <Toolbar></Toolbar>
+  <!--   <v-toolbar app class='elevation-0'>
       <v-toolbar-items>
         <v-btn small flat class='hidden-xs' @click="$vuetify.goTo('#top-content')">
           &nbsp;
@@ -17,7 +18,7 @@
       <v-btn icon small depressed round @click='toggleDark' xxxclass='hidden-sm-and-down'>
         <v-icon small>wb_sunny</v-icon>
       </v-btn>
-    </v-toolbar>
+    </v-toolbar> -->
     <v-content id='top-content'>
       <nuxt />
     </v-content>
@@ -26,9 +27,12 @@
 </template>
 <script>
 import Footer from '~/components/footer.vue'
+import Toolbar from '~/components/toolbar.vue'
+
 export default {
   components: {
-    Footer
+    Footer,
+    Toolbar
   },
   data( ) {
     return {
