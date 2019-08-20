@@ -2,10 +2,10 @@
   <v-toolbar app :class='`${$store.state.dark ? "royal-bg" : ""}`' :dark='$store.state.dark'>
     <v-toolbar-side-icon @click.native='toggleNavBar()' :style='`opacity: ${sideIcon ? "1" :"0"}`'></v-toolbar-side-icon>
     <v-toolbar-title class="hidden-sm-and-down font-weight-light text-uppercase" @click='randomize()'>
-      <v-btn small icon class='transparent' to='/'><v-icon small>home</v-icon></v-btn>
+      <v-btn small depressed flat icon class='transparent' to='/'><v-icon small>home</v-icon></v-btn>
       <span style="user-select: none;">{{title}}</span>
     </v-toolbar-title>
-    <v-spacer class='xxxhidden-sm-and-down'></v-spacer>
+    <v-spacer></v-spacer>
     <v-toolbar-items>
       <v-btn small flat to='/'>HOME</v-btn>
       <v-btn small flat to='/docs/essentials/start'>DOCS</v-btn>
