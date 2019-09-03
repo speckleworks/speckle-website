@@ -6,6 +6,6 @@ function getDark( ) {
 }
 
 export default ( { app: { store, router } } ) => {
-  store.state.dark = getDark( )
+  // store.state.dark = getDark( )
   // store.commit('SET_DARK', getDark())
 }
