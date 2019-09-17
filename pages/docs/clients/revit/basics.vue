@@ -36,7 +36,7 @@ order: 1
 
   ![gh](~/assets/docs/clients/revit/gh.png) {.my-4}
 
-  You can also, of course, view it online, and categorize/group it by pretty much any paramter property!
+  You can also, of course, view it online, and categorize/group it by pretty much any parameter property!
 
   ![revit](~/assets/docs/clients/revit/online.png) {.my-4}
 

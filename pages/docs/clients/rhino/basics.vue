@@ -31,7 +31,7 @@ order: 1
   ![sender](~/assets/docs/clients/rhino/sender-short.gif) {.my-4 .elevation-10}
 
 
-  Receivers can be created by clicking on the big plus button in the lower right hand corner, and selecting "new receiver". First select the server you want to receive a stream from, then search for one or simply directly input the streamId. In rhino, receivers do not "bake" geometry. You need to do that manually! Some things to note:
+  Receivers can be created by clicking on the big plus button in the lower right hand corner, and selecting "new receiver". First select the server you want to receive a stream from, then search for one or simply directly input the streamId. In Rhino, receivers do not "bake" geometry. You need to do that manually! Some things to note:
   - Speckle will try and respect the original sender's layer structure
   - If you bake the stream again, it will replace its previous geometry. In case you want to keep a copy, duplicate the layers first!
   - Too many updates? You can always pause the receiver, and update whenever you want.
