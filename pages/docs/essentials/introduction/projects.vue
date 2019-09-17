@@ -9,7 +9,7 @@ order: 5
 
   There are two different permissions associated with each stream:
   - Projects: users with `read` access to projects will be able to see the project while users with `write` access will be able to add and remove streams and other users from the project.
-  - Streams: users will automatically have `read` or `write` access to all streams within the project accordingly. If a user has a seperate permission level in a stream, the higher permission level applies.
+  - Streams: users will automatically have `read` or `write` access to all streams within the project accordingly. If a user has a separate permission level in a stream, the higher permission level applies.
 
   <br>
 

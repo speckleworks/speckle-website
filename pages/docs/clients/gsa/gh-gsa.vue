@@ -19,7 +19,7 @@ order: 2
 
   ![ghToGsaProperties](~/assets/docs/clients/gsa/ghToGsaProperties.png)
 
-  Using this pattern, it is possible to create a full fidelity model from Grasshoper for use in GSA (and other structural programs). A demo Grasshopper file can be downloaded [here](/docs/clients/gsa/ghdemo.gh). This model includes everything required to run the analysis: section properties, material properties, loading, analysis tasks, etc. Make sure to set your Rhino units to Millimeters before opening the file and sending the model.
+  Using this pattern, it is possible to create a full fidelity model from Grasshopper for use in GSA (and other structural programs). A demo Grasshopper file can be downloaded [here](/docs/clients/gsa/ghdemo.gh). This model includes everything required to run the analysis: section properties, material properties, loading, analysis tasks, etc. Make sure to set your Rhino units to Millimeters before opening the file and sending the model.
 
   ![ghToGsaFull](~/assets/docs/clients/gsa/ghToGsaFull.png)
 </template>
