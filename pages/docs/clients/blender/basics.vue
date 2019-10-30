@@ -9,7 +9,9 @@ order: 1
   ![speckle blender](~/assets/docs/clients/blender/kebab.png) {.elevation-0}
 
   Speckle has a [Blender](https://www.blender.org/) 2.8 plugin, developed and maintained by [Tom Svilans](http://tomsvilans.com) ([Github](https://github.com/tsvilans)). Installation instructions and documentation can be found in the github repo.
-
+  
+  Blender rocks!
+  
   <div class='text-xs-center'>
     <v-btn color='primary' round href='https://github.com/speckleworks/SpeckleBlender'>
       Speckle Blender <v-icon right>arrow_right_alt</v-icon>
