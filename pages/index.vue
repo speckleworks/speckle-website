@@ -13,7 +13,7 @@
           </h2>
           <br>
           <v-btn large round color='primary' class='mt-5' @click="$vuetify.goTo('#features')">Read more</v-btn>
-          <v-btn large flat round small color='primary' class='mt-5' @click="$vuetify.goTo('#gettingStarted')">Getting Started</v-btn>
+          <v-btn large flat round small color='primary' class='mt-5' to='/docs/essentials/start'>Getting Started</v-btn>
           <v-btn large flat round small color='primary' class='mt-5' href='https://github.com/speckleworks' target='_blank'>Github <v-icon right>arrow_right_alt</v-icon>
           </v-btn>
         </v-flex>

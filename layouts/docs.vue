@@ -1,6 +1,8 @@
 <template>
   <v-app :dark='$store.state.dark'>
-    <v-navigation-drawer app clipped v-model='navbar'>
+    <v-navigation-drawer app clipped right v-model='navbar'>
+      <v-container mt-2 style='height:60px;' class='hidden-lg-and-up'>
+      </v-container>
       <v-container mt-2>
         <v-autocomplete return-object solo hide-no-data append-icon="search" label="Search" :items='$store.state.docs.flat' item-text="name" item-value="name" :filter="searchFilter" v-on:input="$router.push($event.slug)">
           <template slot="item" slot-scope="directories">
@@ -36,7 +38,9 @@
         </v-layout>
         <v-layout justify-center row wrap>
           <v-flex xs12 sm10 lg6>
+            <!-- This is where content is injected -->
             <nuxt />
+            <!-- End content injection -->
           </v-flex>
         </v-layout>
       </v-container>
@@ -68,7 +72,8 @@ export default {
   watch: {},
   data( ) {
     return {
-      navbar: false
+      navbar: false,
+      alert: true
     }
   },
   computed: {
