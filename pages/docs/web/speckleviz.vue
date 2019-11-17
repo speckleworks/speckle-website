@@ -86,7 +86,7 @@ order: 0
   <v-card tile height="360" class="mt-3 mb-5" width="640" :elevation="10" color="black">
   <iframe         
     align="top"
-    height="360"
+    height="382"
     width="640"
     frameborder="0"
     style="border:0"
