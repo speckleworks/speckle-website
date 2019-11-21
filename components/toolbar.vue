@@ -2,7 +2,7 @@
   <v-toolbar prominent app clipped-right :class='`${$store.state.dark ? "" : ""}`' style='z-index: 20' :dark='$store.state.dark'>
     <v-toolbar-items class="hidden-sm-and-down-xxx" >
       <v-btn flat to='/'>
-        <v-img src='https://discourse.speckle.works/uploads/default/original/1X/f1fb686b7d35d7e4130e915d50faa6482efa285d.png' width='20'></v-img>&nbsp;&nbsp;
+        <v-img src='https://discourse.speckle.works/uploads/default/original/1X/25cc7f19595c444b111cff766d2310034f9efa79.png' width='20'></v-img>&nbsp;&nbsp;
         Speckle
       </v-btn>
       <v-btn flat to='/docs/essentials/start'>Docs</v-btn>
