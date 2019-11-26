@@ -13,6 +13,9 @@ date: 2019-11-21
 
   ![auth](~/assets/blog/speakers.png)
 
+  # 🎥 {.font-weight-light .display-2 .my-5 .text-xs-center}
+  # [Live streaming](https://meet.arup.com/matteo.cominetti/70Z2MBRS) {.font-weight-light .display-2 .my-5 .text-xs-center}
+
 ## Intro {.font-weight-light .my-5 }
 
 **5.30 - 6.00** Arrivals and Networking 🍸
@@ -21,7 +24,7 @@ date: 2019-11-21
 
 **6.15 - 6.30** Introduction - Latest Features Sprint (Dimitrie & Matteo)
 
-## Talks {.font-weight-light .my-5 }
+## Talks - Session 1 {.font-weight-light .my-5 }
 
 **6.30 - 6.45** Arup Carbon: an Embodied Carbon Estimation Tool (Tom Bunn, Arup)
 
@@ -32,6 +35,8 @@ date: 2019-11-21
 **7.15 - 7.30** Under The Cloud: Design, Build & Operation (Tim Hoffeler, CAD-Development)
 
 ## Break 🍸 {.font-weight-light .my-5 }
+
+## Talks - Session 2 {.font-weight-light .my-5 }
 
 **7.45 - 8.00** Speckle Admin & Grasshopper Projects (Matthew Swaidan, Woods Bagot)
 
