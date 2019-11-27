@@ -31,27 +31,31 @@ for the users to authenticate with the server.
 
 
 * Initial send is easy: send it all! The client may provide a means for the user to 
-select certain elements to send, or provide a filter to only send matching elements.
+   select certain elements to send, or provide a filter to only send matching elements.
 * On subsequent sends, the client should only send added, modified or removed elements to the speckle server.
 * The client should keep track of what it has sent between native application session (e.g. after closing
-and re-openning the file).
+  and re-openning the file).
 * Each Speckle element sent should have the application_id set. If an element in the 
-native application has a specified speckle application_id, it must be preserved on send. 
-If the object has no tagged application id, the sending client can assign one.
+  native application has a specified speckle application_id, it must be preserved on send. 
+  If the object has no tagged application id, the sending client can assign one.
+* Create a version of the stream on each manual send. If the client is continuously sending changes
+  the server will periodically freeze changes without any client intervention.
+* When sending manually to a stream, the client should allow the user to add a descriptive commit message.
+
 
 ## Receiving
 
 
 * The client must tag all objects it creates with the stream ID that it came from and the element application_id.
-These tags must be persistent in the native application file and persist across file closing and openings.
+  These tags must be persistent in the native application file and persist across file closing and openings.
 * The client is responsible for keeping the elements in the application in sync with each update to the stream.
 * When an incoming object already exists in the native application (as determined by a matching application_id), 
-the client should whenever possible update the object’s properties - *not* delete and recreate the object. 
-This is to preserve any changes made downstream in the native application to properties not set by the incoming speckle stream. 
+  the client should whenever possible update the object’s properties - *not* delete and recreate the object. 
+  This is to preserve any changes made downstream in the native application to properties not set by the incoming speckle stream. 
 * When an object is deleted from a speckle stream, the client must delete that object from the application
 * The client should only modify the objects it has created.
 * The client may provide an option for the user to specify that only certain properties of the elements be
-updated into the native application (e.g. only update section sizes of a beam, not geometry).
+  updated into the native application (e.g. only update section sizes of a beam, not geometry).
 
 
 </template>
