@@ -1,6 +1,6 @@
 <template>
-  <v-footer height="auto" :dark='background === "" ? false : true'>
-    <v-container fluid grid-list-xl pt-5 :class="`${background}`">
+  <v-footer height="auto" >
+    <v-container fluid grid-list-xl pt-5 >
       <v-layout justify-center row wrap>
         <v-flex xs8>
           <v-layout align-center style='height:520px' row wrap class='mb-5 xx-text-xs-center'>
@@ -14,7 +14,7 @@
               </v-btn>
               <v-btn large round color='' style='width: 200px' class='mt-1' href='https://discourse.speckle.works' target='_blank'>Forum <v-icon right>speaker_notes</v-icon>
               </v-btn>
-              <div class='subheading mt-5 pt-5 text-none text--white'>
+              <div class='subheading mt-5 pt-5 text-none'>
                 <router-link :class='background==="" ? "":"footer-link"' to='/'>Home</router-link> •
                 <router-link :class='background==="" ? "":"footer-link"' to='/docs/essentials/introduction/what'>Docs</router-link> •
                 <router-link :class='background==="" ? "":"footer-link"' to='/blog'>Blog</router-link> •
@@ -48,7 +48,7 @@ export default {
 </script>
 <style>
 .footer-link {
-  color: #D8D8D8 !important;
+  color: #686868 !important;
 }
 
 </style>

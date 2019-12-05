@@ -5,7 +5,7 @@ export const state = ( ) => ( {
   dark: false,
   navbar: true,
   slackInviteUrl: 'https://speckle-works.slack.com/join/shared_invite/enQtNjY5Mzk2NTYxNTA4LTU4MWI5ZjdhMjFmMTIxZDIzOTAzMzRmMTZhY2QxMmM1ZjVmNzJmZGMzMDVlZmJjYWQxYWU0MWJkYmY3N2JjNGI',
-
+  contributors: [ ]
 } )
 
 export const mutations = {
@@ -15,6 +15,10 @@ export const mutations = {
   SET_DARK: state => status => {
     console.log( state, status )
     state.dark = status
+  },
+  ADD_CONTRIBUTOR( state, contributor ) {
+    // console.log( contributor )
+    state.contributors.push( contributor )
   }
 }
 
@@ -25,7 +29,8 @@ export const actions = {
       this.dispatch( "docs/loadDocs", DocsFromDir( "docs" ) )
     }
   },
+
   setDark( ) {
     this.commit( 'SET_DARK' )
-  }
+  },
 }

@@ -8,10 +8,10 @@
       <div class='hidden-sm-and-down' style="height: 100%">
         <template v-for='item in menuItems'>
           <v-btn flat :to='item.link' v-if='item.local'>{{item.name}}</v-btn>
-          <v-btn flat :href='item.link' target="_blank" v-else>{{item.name}} &nbsp;<v-icon small>open_in_new</v-icon></v-btn>
+          <v-btn flat color='grey' :href='item.link' target="_blank" v-else>{{item.name}} &nbsp;<v-icon small>open_in_new</v-icon></v-btn>
         </template>
       </div>
-      <div class='hidden-sm-and-up' style="height: 100%">
+      <div class='hidden-md-and-up' style="height: 100%">
         <v-menu offset-y >
           <template v-slot:activator="{ on }">
             <v-btn flat block v-on="on">
@@ -52,6 +52,11 @@ export default {
         {
           name: "Blog",
           link: "/blog",
+          local: true
+        },
+        {
+          name: "About / Contact",
+          link: "/about",
           local: true
         },
         {
