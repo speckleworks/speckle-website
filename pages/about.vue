@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-container grid-xl class='mt-5'>
-      <v-layout row wrap px-5 mt-5>
+    <v-container grid-xl class='mt-5 pa-0'>
+      <v-layout row wrap px-5 mt-5 py-0>
         <!--         <v-flex xs12 py-4 style='min-height:10vh' xxxclass='text-xs-center'>
           <h1 class='display-3 font-weight-light xxx-text-uppercase'>
             Speckle is the open source data platform for aec.
@@ -69,7 +69,7 @@
   data(){
     return {
       orgUrl: 'https://api.github.com/orgs/speckleworks',
-      token: '61ac82a88049badadd524ed1de4db67544a2981a',
+      token: 'xxx',
       members: []
     }
   },
@@ -79,22 +79,24 @@
     },
   },
   async mounted() {
-    if( this.$store.state.contributors.length !== 0 ) return
-    let orgUrl = `https://api.github.com/orgs/speckleworks`
-    let token = `61ac82a88049badadd524ed1de4db67544a2981a`
-    try {
-      let listOfMembers = await this.$axios.$get( `${orgUrl}/members`, {
-        headers: { 'Authorization': ` token ${token}` }
-      } )
-      console.log( listOfMembers )
-      listOfMembers.forEach( async mem => {
-        let contributor = await this.$axios.$get( mem.url, { headers: { 'Authorization': ` token ${token}` } } )
-        // console.log( contributor )
-        this.$store.commit( 'ADD_CONTRIBUTOR', contributor )
-      } )
-    } catch ( err ) {
-      console.log( err )
-    }
+    // if( this.$store.state.contributors.length !== 0 ) return
+    // let orgUrl = `https://api.github.com/orgs/speckleworks`
+    // let token = `xxx`
+    // try {
+    //   let listOfMembers = await this.$axios.$get( `${orgUrl}/members`, {
+    //     headers: { 'Authorization': ` token ${token}` }
+    //   } )
+    //   console.log( listOfMembers )
+    //   listOfMembers.forEach( async mem => {
+    //     let contributor = await this.$axios.$get( mem.url, { headers: { 'Authorization': ` token ${token}` } } )
+    //     // console.log( contributor )
+    //     this.$store.commit( 'ADD_CONTRIBUTOR', contributor )
+    //   } )
+    // } catch ( err ) {
+    //   console.log( err )
+    // }
+
+    // console.log(this.$store.state.contributors)
   }
 }
 </script>
