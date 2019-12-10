@@ -103,7 +103,7 @@ export default {
   markdownit: {
     preset: 'default',
     linkify: true,
-    breaks: true,
+    breaks: false,
     use: [
       'markdown-it-attrs',
       'markdown-it-meta',
