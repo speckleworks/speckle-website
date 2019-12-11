@@ -2,23 +2,18 @@
   <div>
     <v-container grid-xl class='mt-5 pa-0'>
       <v-layout row wrap px-5 mt-5 py-0>
-        <!--         <v-flex xs12 py-4 style='min-height:10vh' xxxclass='text-xs-center'>
-          <h1 class='display-3 font-weight-light xxx-text-uppercase'>
-            Speckle is the open source data platform for aec.
-          </h1>
-          <p class='display-1 font-weight-light mt-4 '>
-            What does this mean?
-            Speckle provides a method of liberating data from one platform to another in a quick, manageable, and efficient way. With Speckle, you can:
-
-            Connect to various design software to extract and provide the design data you need <br>
-            Manage who has access to your data through link sharing, permission, and project organizations<br>
-            Coordinate and collaborate with others by streaming project data between people<br>
-            Extend the platform to create custom third party applications and workflows that works for you<br>
-          </p>
-        </v-flex> -->
-        <v-flex xs12 mt-5 py-4 style='min-height:10vh'>
+        <v-flex xs12 mt-5 py-4 style='min-height:10vh' xxxclass='text-xs-center'>
           <h1 class='display-2 font-weight-light xxx-text-uppercase'>
-            <b>Questions?</b> Send us an <span class='primary--text'><a class='link' href="mailto:hello@speckle.works">email</a></span>.
+            What is <span class='primary--text'>Speckle?</span>
+            <!-- Speckle is </router-link></span> -->
+          </h1>
+          <p class='headline font-weight-light mt-4 '>
+            Read the <router-link class='flink' to='/docs/essentials/introduction/what'>short version of the long story here</router-link>!
+          </p>
+        </v-flex>
+        <v-flex xs12 py-4 style='min-height:10vh'>
+          <h1 class='display-2 font-weight-light xxx-text-uppercase'>
+            Still having <b>questions?</b> Send us an <span class='primary--text'><a class='link' href="mailto:hello@speckle.works">email</a></span>.
           </h1>
         </v-flex>
         <v-flex xs12 py-4 style='min-height:10vh' xxxclass='text-xs-center'>
@@ -136,6 +131,10 @@
   opacity: 1;
   position: absolute;
   width: 100%;
+}
+
+.flink {
+  text-decoration: none;
 }
 
 </style>

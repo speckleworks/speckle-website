@@ -18,15 +18,20 @@ export const mutations = {
     state.dark = status
   },
 }
+let calledContribs = false
 
 export const actions = {
   async nuxtServerInit( ) {
     if ( process.server ) {
       this.dispatch( "blog/loadPosts", BlogFromDir( "blog" ) )
       this.dispatch( "docs/loadDocs", DocsFromDir( "docs" ) )
-      let test = await getContributors()
-      console.log(test.length)
+
+      if ( calledContribs ) return
+
+      let test = await getContributors( )
+      console.log( test.length )
       this.dispatch( "generic/loadContribs", { contributors: test } )
+      calledContribs = true
 
       // let token = process.env.GHPAT
       // let orgUrl = `https://api.github.com/orgs/speckleworks`
