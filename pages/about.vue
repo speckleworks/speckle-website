@@ -29,14 +29,14 @@
             Speckle has received contributions from many people from all corners of the world. Here are some of them, in no particular order:
           </p>
           <v-layout row wrap>
-            <v-flex xs12 sm6 md4 lg3 v-for='member in $store.state.contributors' :key='member.name' xxxstyle='min-height: 120px; max-height: 120px;' class='mb-2'>
+            <v-flex xs12 sm6 md4 lg3 v-for='member in contributors' :key='member.name' xxxstyle='min-height: 120px; max-height: 120px;' class='mb-2'>
               <v-card class='ma-2 pa-2' :href='`https://github.com/${member.login}`' target='_blank'>
                 <v-avatar size="36px" class='mr-4'>
                   <img v-if="member.avatar_url" :src="member.avatar_url" alt="Avatar">
                   <v-icon v-else color="primary">person</v-icon>
                 </v-avatar>
                 {{member.name ? member.name : member.login}}
-           <!--      <p class='small caption mt-2'>
+                <!--      <p class='small caption mt-2'>
                   {{member.bio}}
                 </p> -->
               </v-card>
@@ -77,8 +77,13 @@
     posts( ) {
       return this.$store.getters[ 'blog/getPosts' ].slice(0,3)
     },
+    contributors() {
+      return this.$store.getters['generic/getContributors']
+    }
   },
   async mounted() {
+    // console.log(this.context.env.GHPAT)
+
     // if( this.$store.state.contributors.length !== 0 ) return
     // let orgUrl = `https://api.github.com/orgs/speckleworks`
     // let token = `xxx`
