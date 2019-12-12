@@ -92,7 +92,8 @@ export default {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/dotenv'
   ],
   /*
    ** Axios module configuration

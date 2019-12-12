@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark='$store.state.dark'>
+  <v-app>
     <Toolbar></Toolbar>
     <v-content id='top-content'>
       <nuxt />

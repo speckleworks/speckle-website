@@ -20,7 +20,7 @@ export const mutations = {
 }
 
 export const actions = {
-  loadDocs( { commit }, {docsTree, flatArr} ) {
+  loadDocs( { commit }, { docsTree, flatArr } ) {
     commit( "setTree", docsTree )
     commit( "setFlat", flatArr)
   }
