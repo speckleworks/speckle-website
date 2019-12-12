@@ -50,7 +50,7 @@ order: 3
 
   ## Writing your own blocks
 
-  To write your own block, you will only need to create a [lambda function](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) for the Speckle admin and add your function to the list of loaded functions [here](https://github.com/speckleworks/SpeckleAdmin/blob/master/src/lambda/_lambdaSettings.js). Each function needs to support both GET and POST API calls:
+  To write your own block, you will only need to create a [lambda function](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) for the Speckle admin and add your function to the list of loaded functions [here](https://github.com/speckleworks/SpeckleAdmin/blob/master/src/store/lambda/_lambdaSettings.js). Each function needs to support both GET and POST API calls:
   - The GET API call will return information regarding the function:
     - `name`: name of block
     - `description`: description of block
@@ -67,7 +67,7 @@ order: 3
   <br>
   <br>
 
-  Processor will automatically generate the UI given the body of the GET API call. It is possible to override the UI of the block (see [here](https://github.com/speckleworks/SpeckleAdmin/blob/master/src/lambda/component/arupCompute.vue) for an example). The vue component must take two properties:
+  Processor will automatically generate the UI given the body of the GET API call. It is possible to override the UI of the block (see [here](https://github.com/speckleworks/SpeckleAdmin/blob/master/src/store/lambda/component/arupCompute.vue) for an example). The vue component must take two properties:
   - `block`: the body of the GET request
   - `params`: an object who's keys are the block parameter names and the value is the input which will be passed to the lambda function when run
   
@@ -75,7 +75,7 @@ order: 3
   
   Additionally, it is the responsibility of the component to emit an `update-param` event when a value in the `params` object is updated.
 
-  For examples of lambda functions, please see the [GitHub source code](https://github.com/speckleworks/SpeckleAdmin/tree/master/src/lambda). 
+  For examples of lambda functions, please see the [GitHub source code](https://github.com/speckleworks/SpeckleAdmin/tree/master/src/store/lambda). 
 </template>
 <script>
 export default {
