@@ -9,6 +9,12 @@ date: 2019-11-01
 
 <template lang='md'>
 
+<div class='text-xs-center my-4'>
+  <v-btn large color='primary' outline round to='/blog/londonmeetup-recording/'>
+    Check out the recording of the meetup! <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+</div>
+
   ![auth](~/assets/blog/community.png)
 
   We're organising a community meetup in London, on the 27th of November 2019. Join if you want to hear more about what we've been up to, shape up the roadmap, interact with the community, or simply find out what Speckle actually is - this is your chance: 6pm-9pm, 27th of November @Arup London.

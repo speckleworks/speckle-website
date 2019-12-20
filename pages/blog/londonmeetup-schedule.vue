@@ -14,7 +14,7 @@ date: 2019-11-21
   ![auth](~/assets/blog/speakers.png)
 
   # 🎥 {.font-weight-light .display-2 .my-5 .text-xs-center}
-  # [Live streaming](https://meet.arup.com/matteo.cominetti/70Z2MBRS) {.font-weight-light .display-2 .my-5 .text-xs-center}
+  # [Recording](https://speckle.systems/blog/londonmeetup-recording/) {.font-weight-light .display-2 .my-5 .text-xs-center}
 
 ## Intro {.font-weight-light .my-5 }
 
@@ -58,8 +58,8 @@ date: 2019-11-21
   What is this about? We're organising a community meetup in London, on the 27th of November 2019. Join if you want to hear more about what we've been up to, shape up the roadmap, interact with the community, or simply find out what Speckle actually is - this is your chance: 6pm-9pm, 27th of November @Arup London.
 
 <div class='text-xs-center my-4'>
-  <v-btn large color='primary' outline round href='https://www.eventbrite.co.uk/e/speckle-community-meetup-tickets-77280460939' target="_blank">
-    Join The Waiting List <v-icon right>arrow_right_alt</v-icon>
+  <v-btn large color='primary' outline round to='/blog/londonmeetup-recording/'>
+    Check out the recording of the meetup! <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
 </div>
 
