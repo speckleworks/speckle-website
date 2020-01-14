@@ -21,7 +21,7 @@ order: 1
 
   ## Sending Data
 
-  To send data, you first need to create a sender client by clicking the big friendly blue button on top. You will be promted to choose a server and provide a stream name. If you don't have any servers/accounts to choose from, at the moment you can't create them here - so follow the guides for Grasshopper or Rhino up to the account creation step, and come back.
+To send data, you first need to create a sender client by clicking the big friendly blue button on top. You will be promted to choose a server and provide a stream name. If you don't have any servers/accounts to choose from, at the moment you can't create them here - so follow the guides for Grasshopper or Rhino up to the account creation step, and come back.
 
   ![revit](~/assets/docs/clients/revit/send-revit.gif) {.my-4 .elevation-10}
 
@@ -29,6 +29,26 @@ order: 1
   - You can always add or remove your current element selection from a specific sender.
   - You'll always need to click the "push" button on a stream in order to send an update. Speckle will try and notify you when it thinks it's the right time to do so!
   - Forgot what you're sending? There's a button to focus & select the objects that are attached to the specific stream, right next to the add/remove buttons.
+
+## Receiving Data
+
+Receiving data in Speckle for Revit is pretty simple, just create a receiver, select the stream to receive and click pull. There's a catch though, only some native Revit element types are supported, currently these are:
+
+- GridLine
+- Level
+- Floor
+- Column
+- Wall
+- Beam
+- Brace
+- Shaft
+- Room
+- Topography
+- FamilyInstance (buggy)
+
+These elements can come from Revit, otherwise, **if you'd like to send them from Rhino/Grasshopper, have a look at how to generate them using the [Schema Builder](/docs/clients/grasshopper/schema-builder)**.
+
+  ![revit](~/assets/docs/clients/revit/receive-revit.gif) {.my-4 .elevation-10}
 
   ## Onwards {.my-4 }
 
@@ -63,6 +83,7 @@ order: 1
 
   For more detailed instructions on how to use Speckle with Grasshopper, check out this [section](/docs/clients/grasshopper/basics). For more information on how to use the [3d viewer, read about it here](/docs/webapp/viewer)!
 </template>
+
 <script>
 export default {
   layout: 'docs',

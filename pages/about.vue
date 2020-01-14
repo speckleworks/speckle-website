@@ -63,7 +63,7 @@
   },
   data(){
     return {
-      orgUrl: 'https://api.github.com/orgs/speckleworks',
+      //orgUrl: 'https://api.github.com/orgs/speckleworks',
       token: 'xxx',
       members: []
     }

@@ -19,6 +19,23 @@ order: 3
 
   ![schemaBuilder](~/assets/docs/clients/grasshopper/schema-builder/schemaBuilder.gif) {.my-4 .elevation-10}
 
+  ### Speckle Elements
+  The Speckle Elements is a kit included in the default Speckle installation, you can use to create building elements for use in BIM software as Revit.
+
+  ![speckleElements](~/assets/docs/clients/grasshopper/schema-builder/speckleElements.png) {.my-4 .elevation-10}
+
+The sequence below shows how to send some columns from Grasshopper to Revit.
+
+  ![speckleSchemaBuilder](~/assets/docs/clients/grasshopper/schema-builder/speckleSchemaBuilder.gif) {.my-4 .elevation-10}
+
+   <v-alert type='info' :value='true' class='my-4' color='primary'>
+    Remember to set the right units both in Grasshopper and Revit.
+  </v-alert>
+
+   <v-alert type='info' :value='true' class='my-4' color='primary'>
+    If you want to edit previously created elements instead of recreating them each time in Revit, you need to assign an `ApplicationId` to each as in the example above.
+  </v-alert>
+
   ## Modifying Speckle objects
   The modify component allows you to change the properties of a Speckle object. Similar to the object creation, default properties are automatically exposed, with additional properties hidden in the `overwrite custom properties` menu option. **The modify component will only change properties which have inputs.**
 
