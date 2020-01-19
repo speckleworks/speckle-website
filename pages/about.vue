@@ -46,6 +46,15 @@
             Speckle was started by <a href="https://twitter.com/idid">Dimitrie</a> in November 2015 as instrumentation for his research in digital design communication. The rest is history.
           </p>
         </v-flex>
+        <v-flex xs12 py-4 style='min-height:10vh' xxxclass='text-xs-center'>
+          <h1 class='display-2 font-weight-light xxx-text-uppercase'>
+            <b>Speckle</b> <span class='primary--text'>Brand Collateral</span>
+          </h1>
+          <p class='headline font-weight-light mt-5'>
+            Spread the love! If you're building on top of Speckle, we would love for you to show that somewhere in your project 👉 <a href="https://drive.google.com/file/d/1cR2PmNdpiRpegXTAbtZCWSz3JBJoLbLB/view?usp=sharing">get here the Speckle Logo</a>!
+          </p>
+          <p class='caption'>Click on the download archive button in the top right corner.</p>
+        </v-flex>
       </v-layout>
     </v-container>
   </div>
