@@ -60,6 +60,11 @@ export default {
           local: true
         },
         {
+          name: "Admin",
+          link:  "https://app.speckle.systems",
+          local: false
+        },
+        {
           name: "Github",
           link: "https://github.com/speckleworks",
           local: false

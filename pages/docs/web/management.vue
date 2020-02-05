@@ -17,10 +17,10 @@ order: 0
 
   <br>
 
-  This interface is called Speckle admin, and it can be found usually at the root of your Speckle server address. If you have a test account on the Hestia server, you can find it here:
+  This interface is called Speckle admin, and it can be found usually at the root of your Speckle server address. There is also an always-up-to-date Speckle admin web app that you can use with any Speckle server (if accessible and with https):
 
   <div class='text-xs-center my-4'>
-  <v-btn color='primary' round href='https://hestia.speckle.works' target="_blank">
+  <v-btn color='primary' round href='https://app.speckle.systems' target="_blank">
     Speckle Admin <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>
