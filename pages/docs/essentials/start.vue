@@ -22,11 +22,11 @@ order: 1
   </v-alert>
   
   <p></p>
-  Server sorted, you can use the always-up-to-date Speckle admin web app to register a new account, or you can do so also when using the clients for the first time (see below).
+  Server sorted, you can use the always-up-to-date Speckle web app to register a new account, or you can do so also when using the clients for the first time (see below).
 
 
     <div class='text-xs-center my-4'>
-  <v-btn color='primary' round large href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
+  <v-btn color='primary' round large href='https://app.speckle.systems' target="_blank">
     Speckle Admin <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>

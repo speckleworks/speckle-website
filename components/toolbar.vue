@@ -60,7 +60,7 @@ export default {
           local: true
         },
         {
-          name: "Admin",
+          name: "Web App",
           link:  "https://app.speckle.systems",
           local: false
         },

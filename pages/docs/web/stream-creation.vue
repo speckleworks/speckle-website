@@ -12,8 +12,8 @@ order: 2
   Creating streams online is useful for various purposes, such as centralising in one place project parameters and pulling them out afterwards in Grasshopper or Dynamo to drive your parametric models. You can do this from the online interface!
 
   <div class='text-xs-center my-4'>
-  <v-btn color='primary' round href='https://hestia.speckle.works' target="_blank">
-    Speckle Admin <v-icon right>arrow_right_alt</v-icon>
+  <v-btn color='primary' round href='https://app.speckle.systems' target="_blank">
+    Speckle Web App <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>
 

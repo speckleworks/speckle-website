@@ -10,7 +10,7 @@ order: 1
   </v-alert>
 
   <div class='text-xs-center my-4'>
-  <v-btn large color='primary' depressed round href='https://hestia.speckle.works/#/view/BBnqvGqP_e' target='_blank'>
+  <v-btn large color='primary' depressed round href='https://app.speckle.systems/#/view/BCiZ-ggPn?s=eyJzZXJ2ZXIiOiJodHRwczovL2hlc3RpYS5zcGVja2xlLndvcmtzL2FwaSIsImNhbWVyYSI6eyJ0YXJnZXQiOlszMy40MDYwMDcwODEyNzAyMiwyMS44MjEyNTM4MDYzNTI2MTUsMjcuMjAwMDAwNzYyOTM5NDUzXSwicG9zaXRpb24iOls1Ny43MjczNjg4NjkyODEyOCw5Ni44NzAzMjkyMDk2Nzg0MywzNy42MTE1NjYxNjgxMjA1OTZdLCJyb3RhdGlvbiI6Wy0xLjQzMjk0NjA5NDYyNjY5MTYsMC4zMTA2MDg0NDgxMDgyMjI0NywzLjA5OTIxNjg0NDIwMzg1Ml19LCJncm91cHMiOnsia2V5IjoiQTEudmFsdWUuMkQgRWxlbWVudCBEaXNwbGFjZW1lbnRfdmVydGV4Lnx1fCJ9fQ' target='_blank'>
     Example <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>

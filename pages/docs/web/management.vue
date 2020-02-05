@@ -17,11 +17,11 @@ order: 0
 
   <br>
 
-  This interface is called Speckle admin, and it can be found usually at the root of your Speckle server address. There is also an always-up-to-date Speckle admin web app that you can use with any Speckle server (if accessible and with https):
+  This interface is called Speckle web app, and it can be found usually at the root of your Speckle server address. There is also an always-up-to-date Speckle web app that you can use with any Speckle server (if accessible and with https):
 
   <div class='text-xs-center my-4'>
   <v-btn color='primary' round href='https://app.speckle.systems' target="_blank">
-    Speckle Admin <v-icon right>arrow_right_alt</v-icon>
+    Speckle Web App <v-icon right>arrow_right_alt</v-icon>
   </v-btn>
   </div>
 
@@ -31,7 +31,7 @@ order: 0
 
   ## Managing Streams
 
-  Within in the [streams section](https://hestia.speckle.works/#/streams) you can search for and manage your streams. There's a bunch of functionality that we'll let you discover! Below there's some hints towards what you can do and what insights you can get.
+  Within in the [streams section](https://app.speckle.systems/#/streams) you can search for and manage your streams. There's a bunch of functionality that we'll let you discover! Below there's some hints towards what you can do and what insights you can get.
 
   ![detail](~/assets/docs/essentials/introduction/management-streamsall.png)
 
@@ -83,7 +83,7 @@ order: 0
 
   ## Managing Projects
 
-  Within the [projects section](https://hestia.speckle.works/#/projects) you can search for and manage your projects. To create a project:
+  Within the [projects section](https://app.speckle.systems/#/projects) you can search for and manage your projects. To create a project:
   - Go to the project overview page
   - Click the friendly blue button in the lower right corner
   - Edit the description, tags, etc. if you wish to do so
@@ -100,7 +100,7 @@ order: 0
 
   ## Archive
 
-  The archive is a place where all your deleted resources go. Any projects or streams you archive will automatically appear within the [archive section](https://hestia.speckle.works/#/archive). From here, archived items can be permanently deleted.
+  The archive is a place where all your deleted resources go. Any projects or streams you archive will automatically appear within the [archive section](https://app.speckle.systems/#/archive). From here, archived items can be permanently deleted.
 </template>
 <script>
 export default {
