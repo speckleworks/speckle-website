@@ -7,10 +7,36 @@ order: 1
 <template lang='md'>
 
   <!-- ![clients](~/assets/docs/various/screenshots.png) -->
+  # 1. Register {.font-weight-thin .display-1 .my-4}
 
-  # 1. Download {.font-weight-thin .display-1 .my-4}
+  To use Speckle you'll need a Speckle server and an account on that server. If you or your company don't have <a href="/docs/developers/deploy-server">deployed your own</a>, you can just use the "community server", hestia.
 
-  In order to use speckle, you will need to have some authoring software installed on your computer. We currently have integrations for **Grasshopper, Dynamo, Rhino, and Revit (early alpha!)** - either of those should do. It also helps to have a friend next to you, as it's much more fun to send data to each other rather than play ping-pong alone!
+  The address of hestia is:
+
+    ```js
+
+  "https://hestia.speckle.works"
+  ```
+     <v-alert type='warning' :value='true' class='my-4' color='primary'>
+    Please be aware that the test server, Hestia, comes with absolutely no guarantees of any sort. While it has had stellar uptime record so far, please do not rely on it for anything remotely important!
+  </v-alert>
+  
+  <p></p>
+  Server sorted, you can use the always-up-to-date Speckle admin web app to register a new account, or you can do so also when using the clients for the first time (see below).
+
+
+    <div class='text-xs-center my-4'>
+  <v-btn color='primary' round large href='https://github.com/speckleworks/SpeckleInstaller/releases/latest' target="_blank">
+    Speckle Admin <v-icon right>arrow_right_alt</v-icon>
+  </v-btn>
+  </div>
+
+
+
+
+  # 2. Download {.font-weight-thin .display-1 .my-4}
+
+  To send data via Speckle, you will need to have some authoring/analysis software installed on your computer. We currently have integrations for **Grasshopper, Dynamo, Rhino, GSA, Blender, Revit (beta) and Excel (beta)** - either of those should do. It also helps to have a friend next to you, as it's much more fun to send data to each other rather than play ping-pong alone!
 
   <!-- ### The Speckle Clients Installer {.font-weight-thin-xx .my-4} -->
 
@@ -25,22 +51,6 @@ order: 1
   <!-- ### Getting Started Guides {.font-weight-thin-xx .my-4} -->
 
   You will need to download and run the `SpeckleInstaller.exe` file from the link above. This will install the latest release of the clients and once it is succesful, you should be able to open the speckle plugins from the software you've installed it for.
-
-  # 2. Register {.font-weight-thin .display-1 .my-4}
-
-  When you first use Speckle you will be prompted to create an account with a speckle server.
-
-
-  Speckle can be deployed by anybody anywhere they want. Hence, there's no single Speckle where you can register an account; perhaps your company already runs a server - ask around! Nevertheless, in case you just want to test things out, you can register with the "community server", hestia.
-
-  ```js
-
-  "https://hestia.speckle.works"
-  ```
-
-   <v-alert type='warning' :value='true' class='my-4' color='primary'>
-    Please be aware that the test server, Hestia, comes with absolutely no guarantees of any sort. While it has had stellar uptime record so far, please do not rely on it for anything remotely important!
-  </v-alert>
 
   # 3. Read The Docs {.font-weight-thin .display-1 .my-4}
 
