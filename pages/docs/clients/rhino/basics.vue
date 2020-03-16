@@ -39,6 +39,8 @@ order: 1
 
   ![receiver](~/assets/docs/clients/rhino/receiving-short.gif) {.my-4 .elevation-10}
 
+  
+  **Tip!** When receiving, you can unfold the "layers" of the data coming in. These layers can be turned on/off individually using the icon next to each layer. To toggle them all on or off at the same time, just double click on any of the eye icons!
 
   ## Beyond Rhino {.my-4}
 
