@@ -62,11 +62,13 @@ order: 1
 
   Specifically, a different type of UI will pop up, which allows you to filter objects based on a specified numeric range. So, for example, if your objects have a `volume` property, or an `Air Flow` property, which is expressed by a number, the viewer will allow you to filter the current objects in a way that feels more appropriate given the nature of the property.
 
-  ## Inspecting objects
+  ## Manipulating selected objects
 
-  Finally, you can inspect any object's properties and fields, one by one. First, go to the last tab in the viewer controls. Next, select an object from the viewer by simply... clicking on it! If you want to look at multiple objects at the same time, hold down left shift and click some more objects!
+  Finally, you can inspect any object's properties and fields, one by one. First, go to the third tab in the viewer controls. Next, select an object from the viewer by simply... clicking on it! If you want to look at multiple objects at the same time, hold down left shift and click some more objects!
 
   ![3d viewer groups](~/assets/docs/webapp/viewer/object-properties.png)
+
+  At the top, you have three buttons to hide/isolate selected objects, unhide all hidden objects.
 
   You can now unfold in the tree view to the left to inspect whatever metadata and other properties are associated with this object. That's it - this covers pretty much all the things the Speckle viewer can do for you (so far).
 </template>
