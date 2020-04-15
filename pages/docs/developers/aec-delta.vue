@@ -18,7 +18,7 @@ order: 1
   ```
   <br>
 
-  - [StreamApplyDelta.js](https://github.com/speckleworks/SpeckleServer/blob/master/app/api/streams/StreamApplyDelta.js) enables the application of a delta onto an existing Stream. The delta response resulting from `StreamGetDelta` - a diffing between Stream A and Stream B - can be "applied" onto Stream A. In other words, the newly created objects (between both Streams) will be added to Stream A, the deleted objects (between both Streams) will be deleted from Stream A, and the common objects (between both Streams) will remain untouched. As a result, Stream A contains the same objects than Stream B (if the delta has been calculated between both Streams, of course). You can call `StreamApplyDelta` like so:
+  - [StreamApplyDelta.js](https://github.com/speckleworks/SpeckleServer/blob/master/app/api/streams/StreamApplyDelta.js) enables the application of a delta (formatted like the response from `StreamGetDelta`) onto an existing Stream. The delta response resulting from `StreamGetDelta` - a diffing between Stream A and Stream B - can be "applied" onto Stream A. In other words, the newly created objects (between both Streams) will be added to Stream A, the deleted objects (between both Streams) will be deleted from Stream A, and the common objects (between both Streams) will remain untouched. As a result, Stream A contains the same objects than Stream B (if the delta has been calculated between both Streams, of course). You can call `StreamApplyDelta` like so:
 
   <br>
 
