@@ -44,9 +44,10 @@
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Rhino</v-chip>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Grasshopper</v-chip>
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Dynamo</v-chip>
+                  <v-chip large label outline color='primary' xxxclass='elevation-5'>Blender</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Revit (WIP)</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>GSA (WIP)</v-chip>
-                  <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Blender</v-chip>
+                  <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Unity (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
 <!--               <v-slide-x-transition>
@@ -90,10 +91,11 @@
                   <h1 class='display-1 font-weight-light'>Coordinate</h1>
                   <h3 class='text-uppercase mt-3 subheading font-weight-medium primary--text'>Data Informed Discussions</h3>
                   <p class='grey--text text--darken-1 mt-3'>From viewing multiple data streams online to advanced querying, Speckle allows you to coordinate and gather insights on your project's data footprint.</p>
-                  <v-chip large label outline color='primary' xxxclass='elevation-5'>Online 3d Viewer</v-chip>
+                  <v-chip large label outline color='primary' xxxclass='elevation-5'>Web 3D Viewer</v-chip>
                   <!-- <v-chip large label outline color='primary' xxxclass='elevation-5'>Filter, Sort</v-chip> -->
                   <v-chip large label outline color='primary' xxxclass='elevation-5'>Queries (API)</v-chip>
                   <v-chip large label outline>Data History (API)</v-chip>
+                  <v-chip large label outline>Mobile 3D Viewer (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
   <!--             <v-slide-x-transition>
