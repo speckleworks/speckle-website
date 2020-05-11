@@ -48,6 +48,7 @@
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Revit (WIP)</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>GSA (WIP)</v-chip>
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Unity (WIP)</v-chip>
+                  <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Unreal Engine (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
 <!--               <v-slide-x-transition>
