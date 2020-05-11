@@ -11,9 +11,14 @@ order: 2
   </v-alert>
 
   <v-alert type='info' :value='true' class='my-4' color='primary'>
-    The Unreal Engine plugin is distributed and maintained by <a class='white--text' href='https://www.mobiusnode.io/' target='_blank'>mobiusnode</a>. To install it, <a class='white--text' href='https://github.com/mobiusnode/SpeckleUnreal' target='_blank'>head over the SpeckleUnreal repo</a>.
+    The Unreal Engine plugin is distributed and maintained by <a class='white--text' href='https://www.mobiusnode.io/' target='_blank'>mobiusnode</a>.
   </v-alert>
-  
+
+  <div class='text-xs-center'>
+    <v-btn color='primary' round href='https://github.com/mobiusnode/SpeckleUnreal'>
+      SpeckleUnreal <v-icon right>arrow_right_alt</v-icon>
+    </v-btn>
+  </div>
 </template>
 <script>
 export default {

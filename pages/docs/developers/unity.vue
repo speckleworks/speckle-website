@@ -13,7 +13,12 @@ order: 2
   [![](~/assets/docs/developers/speckleUnity.png)](https://speckleworks.github.io/SpeckleUnity/)
 
   Thanks to [Jakir Hussain](https://github.com/PabloTheDolphin), the SpeckleUnity documentation now (1) exists and (2) can [be found here!](https://speckleworks.github.io/SpeckleUnity/)
-
+  
+  <div class='text-xs-center'>
+    <v-btn color='primary' round href='https://github.com/speckleworks/SpeckleUnity'>
+      SpeckleUnity <v-icon right>arrow_right_alt</v-icon>
+    </v-btn>
+  </div>
 </template>
 <script>
 export default {
