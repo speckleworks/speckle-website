@@ -6,7 +6,7 @@ order: 1
 ---
 <template lang='md'>
   <v-alert type='error' :value='true' class='my-4' color='primary'>
-    The Revit plugin is WIP. Use it, have fun, but thinks may break. Or in other words, HIC SVNT DRACONES.
+    The Revit plugin is WIP. Use it, have fun, but things may break. Or in other words, HIC SVNT DRACONES.
   </v-alert>
 
   Currently, the Revit plugin does rather well at getting your data out of Revit. It does less well at getting data into Revit, but we're working on it! With that in mind, let's go through the basics of using it as a data extractor, and integrating it further with the wider Speckle ecosystem.
