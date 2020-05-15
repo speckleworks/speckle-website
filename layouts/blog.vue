@@ -61,7 +61,6 @@
 <script>
 import Footer from '~/components/footer.vue'
 import Toolbar from '~/components/toolbar.vue'
-
 export default {
   head( ) {
     if ( !this.frontmatter ) return { title: 'Speckle Blog' }
