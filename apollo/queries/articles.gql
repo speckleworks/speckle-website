@@ -1,23 +1,24 @@
-query Articles  {  
-  articles (
-    sort:"id:desc", 
-    where: {
-    	published: true
-  	}) {
+query Articles {
+  articles(sort: "id:desc", where: { published: true }) {
     id
     slug
     title
     published
     summary
     date
-    categories { name }
-    body
-    image { formats }
+    categories {
+      name
+    }
+    image {
+      formats
+    }
     author {
       name
       title
       company
-      avatar { formats }
+      avatar {
+        formats
+      }
     }
   }
 }

@@ -78,9 +78,6 @@
     }
   },
   computed: {
-    posts( ) {
-      return this.$store.getters[ 'blog/getPosts' ].slice(0,3)
-    },
     contributors() {
       return this.$store.getters['generic/getContributors']
     }

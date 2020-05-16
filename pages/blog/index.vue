@@ -39,14 +39,6 @@ export default {
     };
   },
   layout: "blog",
-  computed: {
-    // posts( ) {
-    //   return this.$store.getters[ 'blog/getPosts' ]
-    // },
-    topics() {
-      return this.$store.getters["blog/getTopics"];
-    }
-  },
   apollo: {
     articles: {
       prefetch: true,

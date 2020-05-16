@@ -1,7 +1,7 @@
 <template>
   <v-app :dark="$store.state.dark">
     <Toolbar></Toolbar>
-    <v-content>
+    <v-content v-if="article">
       <v-container>
         <v-layout justify-center row wrap>
           <v-flex xs12 sm10 md8 lg6 class="mb-4">
@@ -28,12 +28,11 @@
           </v-flex>
         </v-layout>
         <v-layout justify-center row wrap>
-          <v-flex xs12 sm10 md8 lg6 v-html="$md.render(article.body)"></v-flex>
+          <v-flex xs12 sm10 md8 lg6 v-html="$md.render(article.content)"></v-flex>
           <v-flex xs12></v-flex>
-          <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
+          <!-- <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
             <v-layout row wrap>
               <v-flex xs12 my-5>
-                <!-- <v-divider></v-divider> -->
               </v-flex>
               <v-flex xs6 v-if="nextPrevious.next" class="text-xs-left">
                 <v-icon large>keyboard_arrow_left</v-icon>
@@ -50,8 +49,8 @@
                 </div>
               </v-flex>
             </v-layout>
-            <!-- {{nextPrevious}} -->
-          </v-flex>
+            {{nextPrevious}}
+          </v-flex> -->
         </v-layout>
       </v-container>
     </v-content>
@@ -80,15 +79,15 @@ export default {
     }
   },
   head() {
-    if (!this.frontmatter) return { title: "Speckle Blog" };
+    if (!this.article) return { title: "Speckle Blog" };
     return {
-      title: `Speckle Blog / ${this.frontmatter.attributes.title}`,
+      title: `Speckle Blog / ${this.article.title}`,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: "description",
           name: "description",
-          content: this.frontmatter.attributes.summary
+          content: this.article.summary
         }
       ]
     };
@@ -102,14 +101,11 @@ export default {
       return this.articles[0];
     },
     nextPrevious() {
-      return this.$store.getters["blog/getNext"](this.$route.path);
+      // return this.$store.getters["blog/getNext"](this.$route.path);
     },
     // frontmatter() {
     //   return this.$store.getters["blog/getPost"](this.$route.path);
     // },
-    date() {
-      return new Date(this.frontmatter.attributes.date).toLocaleDateString();
-    }
   },
   methods: {
     toggleDark() {

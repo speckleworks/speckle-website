@@ -26,10 +26,9 @@
           </v-flex>
           <v-flex xs12>
           </v-flex>
-          <v-flex xs12 sm10 md8 lg6 v-if='nextPrevious.index!==-1' mb-5>
+          <!-- <v-flex xs12 sm10 md8 lg6 v-if='nextPrevious.index!==-1' mb-5>
             <v-layout row wrap>
               <v-flex xs12 my-5>
-                <!-- <v-divider></v-divider> -->
               </v-flex>
               <v-flex xs6 v-if='nextPrevious.next' class='text-xs-left'>
                 <v-icon large>keyboard_arrow_left</v-icon>
@@ -51,7 +50,7 @@
               </v-flex>
             </v-layout>
             <!-- {{nextPrevious}} -->
-          </v-flex>
+          </v-flex> -->
         </v-layout>
       </v-container>
     </v-content>
@@ -78,14 +77,11 @@ export default {
   },
   computed: {
     nextPrevious() {
-      return this.$store.getters[ 'blog/getNext' ]( this.$route.path )
+      //return this.$store.getters[ 'blog/getNext' ]( this.$route.path )
     },
     frontmatter( ) {
-      return this.$store.getters[ 'blog/getPost' ]( this.$route.path )
+     // return this.$store.getters[ 'blog/getPost' ]( this.$route.path )
     },
-    date(){
-      return new Date(this.frontmatter.attributes.date).toLocaleDateString()
-    }
   },
   methods: {
     toggleDark( ) {
