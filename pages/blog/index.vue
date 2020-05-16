@@ -22,7 +22,7 @@
           </span> 
         </v-card-text>
         <v-card-actions class="card-actions">
-          <v-list two-line>
+          <v-list two-line color="transparent">
             <!-- <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader> -->
             <v-list-tile class="grow">
               <v-list-tile-avatar v-if="article.author.avatar">

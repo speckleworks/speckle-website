@@ -1,20 +1,19 @@
 <template>
   <v-app :dark="$store.state.dark">
     <Toolbar></Toolbar>
-    <v-content v-if="article">
+    <v-content v-if="article" grid-list-xl text-xs-center>
       <v-container>
-        <v-layout justify-center row wrap>
-          <v-flex xs12 sm10 md8 lg6 class="mb-4">
+        <v-layout row wrap>
+          <v-flex xs10 offset-xs1>
             <div class="display-1 font-weight-thin mb-4">
               <v-btn round small depressed color class="mx-0 px-2" to="/blog">
                 <v-icon left small>arrow_back</v-icon>Blog &nbsp;&nbsp;
               </v-btn>
             </div>
-            <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
-            <div class="grey--text subheading">
-              by
-              <b>{{article.author.name}}</b> •
-              <i>{{article.date}}</i> •
+          </v-flex>
+          <v-flex xs10 offset-xs1>
+            <v-card :class="`elevation-${hover ? 12 : 2} pa-5`">
+              <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
               <v-chip
                 color="grey"
                 outline
@@ -23,14 +22,27 @@
                 v-for="category in article.categories"
                 :key="category.name"
               >{{category.name}}</v-chip>
-            </div>
-            <v-divider class="mt-2 mb-4"></v-divider>
-          </v-flex>
-        </v-layout>
-        <v-layout justify-center row wrap>
-          <v-flex xs12 sm10 md8 lg6 v-html="$md.render(article.content)"></v-flex>
-          <v-flex xs12></v-flex>
-          <!-- <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
+              <div class="grey--text subheading">
+                <v-list two-line>
+                  <!-- <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader> -->
+                  <v-list-tile class="grow">
+                    <v-list-tile-avatar v-if="article.author.avatar">
+                      <img :src="strapiBaseUri+article.author.avatar.formats.thumbnail.url" />
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title>{{article.author.name}}</v-list-tile-title>
+                      <v-list-tile-sub-title>{{ article.date | moment("MMMM Do YYYY") }}</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </div>
+              <v-divider class="mt-2 mb-4"></v-divider>
+              <!-- </v-flex> -->
+              <!-- </v-layout> -->
+              <!-- <v-layout justify-center row wrap> -->
+              <div v-html="$md.render(article.content)"></div>
+              <!-- <v-flex xs12></v-flex> -->
+              <!-- <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
             <v-layout row wrap>
               <v-flex xs12 my-5>
               </v-flex>
@@ -50,7 +62,10 @@
               </v-flex>
             </v-layout>
             {{nextPrevious}}
-          </v-flex> -->
+              </v-flex>-->
+              <!-- </v-layout> -->
+            </v-card>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
@@ -102,7 +117,7 @@ export default {
     },
     nextPrevious() {
       // return this.$store.getters["blog/getNext"](this.$route.path);
-    },
+    }
     // frontmatter() {
     //   return this.$store.getters["blog/getPost"](this.$route.path);
     // },
