@@ -82,6 +82,7 @@ export default {
      */
     plugins: [
         '@/plugins/vuetify',
+        '@/plugins/moment',
         { ssr: false, src: '~plugins/init' },
         '@/plugins/bus',
     ],
