@@ -19,12 +19,9 @@ export const mutations = {
 
 export const actions = {
   loadContribs( { commit }, { contributors } ) {
-    console.log('setting contributors - server side')
-
     commit( "setContributors", contributors )
   },
   addContrib( { commit }, { contrib } ) {
-    console.log('adding contributor - server side')
     commit( "addContributor", contrib )
   }
 }
