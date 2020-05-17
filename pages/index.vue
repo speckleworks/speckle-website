@@ -172,7 +172,7 @@
               <span class='display-1 font-weight-light'>Blog</span><br>
               <span class='caption'>Infrequent updates from Speckle HQ</span>
             </v-flex>
-            <v-flex xs12 v-for='post in posts' :key='post.attributes.title' class='px-4'>
+            <!-- <v-flex xs12 v-for='post in posts' :key='post.attributes.title' class='px-4'>
               <v-hover>
                 <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 0} pa-3`" :to='post.href'>
                   <v-card-text>
@@ -184,7 +184,7 @@
                   </v-card-text>
                 </v-card>
               </v-hover>
-            </v-flex>
+            </v-flex> -->
             <v-flex xs12>
               <v-card class='transparent elevation-0'>
                 <v-card-text>
@@ -221,11 +221,6 @@
       ]
     }
   },
-  computed: {
-    posts( ) {
-      return this.$store.getters[ 'blog/getPosts' ].slice(0,3)
-    },
-  }
 }
 </script>
 <style type="text/css">
