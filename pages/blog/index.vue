@@ -59,7 +59,7 @@
           <v-card slot-scope="{ hover }" dark color='primary' :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`" height="100%" href='mailto:hello@speckle.systems'>
             <v-layout align-center fill-height>
               <v-flex>
-                <div class='display-1 font-weight-thin my-4'>Psst! Have an idea about an article?</div>
+                <div class='display-1 font-weight-thin my-4'>Psst! Have an idea for an article?</div>
                 <div class='subheading'>We are keen to feature tutorials, insights, case studies! Let us know by dropping us an email at hello@speckle.systems.</div>
               </v-flex>
             </v-layout>
