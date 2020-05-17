@@ -31,10 +31,10 @@
       </v-layout>
     </v-container>
     <v-container grid-list-xl xx-fluid xxxmt-5>
-      <v-layout row wrap justify-center xxxid='features'>
+      <v-layout row wrap justify-center>
         <v-flex xs12 sm9 md6 xl4>
           <v-hover>
-            <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
+            <v-card slot-scope="{ hover }" class="pa-3 elevation-0">
               <v-responsive :aspect-ratio='4/2.5'>
                 <v-card-text>
                   <v-icon large color='grey lighten-2'>usb</v-icon>
@@ -51,17 +51,12 @@
                   <v-chip large label outline color='xxx-primary' xxxclass='elevation-5'>Unreal Engine (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
-<!--               <v-slide-x-transition>
-                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
-                  <v-img :src='require("@/assets/splashes/better-interop.png")' contain></v-img>
-                </div>
-              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
         <v-flex xs12 sm9 md6 xl4>
           <v-hover>
-            <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
+            <v-card slot-scope="{ hover }" class="pa-3 elevation-0">
               <v-responsive :aspect-ratio='4/2.5'>
                 <v-card-text>
                   <v-icon large color='grey lighten-2'>supervisor_account</v-icon>
@@ -74,18 +69,13 @@
                   <v-chip large label outline>Stakeholder Network (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
-<!--               <v-slide-x-transition>
-                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
-                  <v-img :src='$store.state.dark ? require("@/assets/splashes/manage-dark.png") : require("@/assets/splashes/manage.png")' contain></v-img>
-                </div>
-              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
         <v-flex xs12 style='height: 1px' class='ma-0 pa-0'></v-flex>
         <v-flex xs12 sm9 md6 xl4>
           <v-hover>
-            <v-card slot-scope="{ hover }" :class="`${hover ? 'v-card--reveal-back' : ''} elevation-${hover ? 0 : 0} pa-3`">
+            <v-card slot-scope="{ hover }" class="pa-3 elevation-0">
               <v-responsive :aspect-ratio='4/2.5'>
                 <v-card-text>
                   <v-icon large color='grey lighten-2'>multiline_chart</v-icon>
@@ -99,17 +89,12 @@
                   <v-chip large label outline>Mobile 3D Viewer (WIP)</v-chip>
                 </v-card-text>
               </v-responsive>
-  <!--             <v-slide-x-transition>
-                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
-                  <v-img :src='$store.state.dark ? require("@/assets/splashes/coordinate-dark.png") : require("@/assets/splashes/coordinate.png")' contain></v-img>
-                </div>
-              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
         <v-flex xs12 sm9 md6 xl4>
           <v-hover>
-            <v-card slot-scope="{ hover }" :class="`${hover ? '' : 'xxxtransparent'} elevation-${hover ? 0 : 0} pa-3`">
+            <v-card slot-scope="{ hover }" class="pa-3 elevation-0">
               <v-responsive :aspect-ratio='4/2.5'>
                 <v-card-text class='xxx-text-xs-center'>
                   <v-icon large color='grey lighten-1'>code</v-icon>
@@ -123,35 +108,80 @@
                   <v-chip large label outline color='' xxxclass='elevation-5'>MEP Reporting</v-chip>
                 </v-card-text>
               </v-responsive>
-<!--               <v-slide-x-transition>
-                <div v-if="hover" class="d-flex transition-fast-in-fast-out lighten-2 v-card--reveal display-3 white--text" style="height: 100%; z-index: 1000">
-                  <v-img :src='require("@/assets/splashes/carbon.png")' contain></v-img>
-                </div>
-              </v-slide-x-transition> -->
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex id='gettingStarted' xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5' >
+      </v-layout>
+      <v-layout row wrap>
+        <v-flex id='nada' xs12 sm12 md12 lg12 xl9 class='pt-5'>
+          <!-- <v-flex class='display-3 font-weight-thin'>Blog</v-flex> -->
+          <v-layout row wrap class=''>
+            <v-flex v-for='(article, index) in latestArticles' :key='article.id' class='xs12 sm6 md4 lg4  pl-3 pb-3 elevation-0'>
+              <v-hover>
+                <pre>{{article}}</pre>
+                <v-card align-end v-if="article" slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 10 : 1} card-outer`" :to="{ name: 'blog-slug', params: {slug: article.slug} }">
+                  <v-img v-if="article.image && article.image.formats" :src="strapiBaseUri + article.image.formats.small.url" height="200px">
+                  </v-img>
+                  <v-img v-else height="200px">
+                    <div class="fill-height repeating-gradient"></div>
+                  </v-img>
+                  <v-card-text class='text-left'>
+                    <div class='title font-weight-thin py-3'>{{article.title}}</div>
+                    <span class='grey--text text--darken-2'>{{ article.summary }}</span>
+                    <br>&nbsp;
+                    <br>
+                    <span class='grey--text subheading'>
+                      <v-chip color='primary' outline small style='margin-top:0px;' v-for='category in article.categories' :key='category.name'>{{category.name}}</v-chip>
+                    </span>
+                  </v-card-text>
+                  <v-card-actions class="card-actions">
+                    <v-list two-line color="transparent">
+                      <v-list-tile class="grow">
+                        <v-list-tile-avatar v-if="article.author.avatar">
+                          <img :src="strapiBaseUri+article.author.avatar.formats.thumbnail.url">
+                        </v-list-tile-avatar>
+                        <v-list-tile-content>
+                          <v-list-tile-title>{{article.author.name}}</v-list-tile-title>
+                          <v-list-tile-sub-title>{{ article.date | moment("MMMM Do YYYY") }}</v-list-tile-sub-title>
+                        </v-list-tile-content>
+                      </v-list-tile>
+                    </v-list>
+                  </v-card-actions>
+                </v-card>
+              </v-hover>
+            </v-flex>
+            <v-flex class='xs12 sm6 md4 lg4  pl-3 pb-3 elevation-0'>
+              <v-hover>
+                <v-card dark color='primary' slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 10 : 1} card-outer white-text text-white pa-4`" to="/blog">
+                  <v-layout align-center style='height:100%' row wrap>
+                    <!-- <v-card-text class='text-left'> -->
+                      <v-flex class='display-1 font-weight-thin xs12'>
+                        Checkout The Speckle Blog <v-icon large style='ml-0 '>arrow_forward</v-icon>
+                      </v-flex>
+                      <v-flex class='subheading font-weight-thin xs12'>
+                        The latest updates, announcements, and tutorials from the Speckle team.
+                      </v-flex>
+                    <!-- </v-card-text> -->
+                  </v-layout>
+                </v-card>
+              </v-hover>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+        <!--         <v-flex id='gettingStarted' xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5'>
           <v-hover>
             <v-card slot-scope="{ hover }" class='transparent elevation-0'>
-              <!-- <v-parallax xxxheight='800' :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-parallax> -->
-              <!-- <v-img :style='`opacity: ${hover ? 0.42 : 0.84}; transition: all 1s ease;`'  :src='$store.state.dark ? require("@/assets/splashes/viewer-dark.png") : require("@/assets/splashes/viewer-light.png")'></v-img> -->
               <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/splashes/screenshots.png")'></v-img>
-                <div class="d-flex v-card--reveal-btn" style="height: 100%;">
-                  <v-flex xs12>
-                    <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/essentials/start'>
-                      <v-icon left large>local_library</v-icon>Getting Started
-                    </v-btn>
-<!--                     <div class='caption'>
-                      <v-btn icon small href='https://hestia.speckle.works/#/view/qHzcdZVGk' target="_blank">
-                        <v-icon small>open_in_new</v-icon>
-                      </v-btn>
-                    </div> -->
-                  </v-flex>
-                </div>
+              <div class="d-flex v-card--reveal-btn" style="height: 100%;">
+                <v-flex xs12>
+                  <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/essentials/start'>
+                    <v-icon left large>local_library</v-icon>Getting Started
+                  </v-btn>
+                </v-flex>
+              </div>
             </v-card>
           </v-hover>
-        </v-flex>
+        </v-flex> -->
       </v-layout>
       <v-layout justify-center class='mt-5 py-5'>
         <v-flex class='text-xs-center px-4 my-5'>
@@ -180,6 +210,7 @@
   </div>
 </template>
 <script>
+  import articlesQuery from "~/apollo/queries/articles"
   export default {
   head() {
     return {
@@ -190,13 +221,36 @@
       ]
     }
   },
+  apollo: {
+    articles: {
+      prefetch: true,
+      query: articlesQuery
+    }
+  },
+  computed:{
+    latestArticles() {
+      return this.articles.slice(0,2)
+    }
+  },
+  data( ) {
+    return {
+      articles: [],
+      strapiBaseUri: process.env.strapiBaseUri
+    }
+  }
 }
 </script>
 <style type="text/css">
+.repeating-gradient {
+  background: linear-gradient(90deg, #FFFFFF 12px, transparent 1%) center, linear-gradient(#FFFFFF 12px, transparent 1%) center, #0A66FF;
+  background-size: 14px 14px;
+}
+
 .v-card--reveal-back {
   /*transform: translateX(-50px) translateY(-50px);*/
   /*position: relative;*/
 }
+
 .v-card--reveal {
   align-items: center;
   bottom: 0px;
@@ -208,6 +262,7 @@
   z-index: 100;
   background: white;
 }
+
 .v-card--reveal-btn {
   align-items: center;
   bottom: 0;
