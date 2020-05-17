@@ -2,29 +2,13 @@
   <v-app :dark="$store.state.dark">
     <Toolbar></Toolbar>
     <v-content>
-      <v-container grid-list-md text-xs-center>
+      <v-container grid-list-md>
         <v-layout justify-center row wrap>
-          <!-- <v-flex xs12 sm10 md8 lg6 class='mb-4' v-if='frontmatter'>
-            <div class='display-1 font-weight-thin mb-4'>
-              <v-btn round small depressed color='' class='mx-0 px-2' to='/blog'>
-                <v-icon left small>arrow_back</v-icon>Blog &nbsp;&nbsp;
-              </v-btn>
-            </div>
-            <div class='display-2 font-weight-thin mb-4'>
-              {{frontmatter.attributes.title}}
-            </div>
-            <div class='grey--text subheading'>
-              by <b>{{frontmatter.attributes.author}}</b> • <i>{{date}}</i> •
-              <v-chip color='grey' outline small style='margin-top:-2px;' v-for='topic in frontmatter.attributes.tags' :key='topic'>{{topic}}</v-chip>
-            </div>
-            <v-divider class='mt-2 mb-4'></v-divider>
-          </v-flex>-->
         </v-layout>
         <v-layout justify-center row wrap>
           <v-flex>
             <nuxt />
           </v-flex>
-
           <!-- <v-flex xs12 sm10 md8 lg6 v-if='nextPrevious.index!==-1' mb-5>
             <v-layout row wrap>
               <v-flex xs12 my-5>
@@ -49,7 +33,7 @@
               </v-flex>
             </v-layout>
            {{nextPrevious}}
-         </v-flex> 
+         </v-flex>
           -->
         </v-layout>
       </v-container>
@@ -58,7 +42,7 @@
   </v-app>
 </template>
 <script>
-import Footer from "~/components/footer.vue";
+  import Footer from "~/components/footer.vue";
 import Toolbar from "~/components/toolbar.vue";
 export default {
   head() {

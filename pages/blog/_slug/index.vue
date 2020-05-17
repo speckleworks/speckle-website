@@ -123,10 +123,6 @@ export default {
     // },
   },
   methods: {
-    toggleDark() {
-      this.$store.commit("TOGGLE_DARK");
-      localStorage.setItem("dark", this.$store.state.dark);
-    }
   }
 };
 </script>
