@@ -1,11 +1,4 @@
 <template lang='md'>
-  <!-- <v-flex class='my-5'> -->
-  <!-- <div class='display-3 font-weight-thin text-xs-center'>
-      Speckle Blog
-    </div>
-    <div class='grey--text subheading text-xs-center'>The latest updates, announcements, and tutorials from the Speckle team.</div>
-  </v-flex> -->
-  <!--  -->
   <v-layout row wrap class='mt-5'>
     <v-flex class='xs12 sm12 md8 lg8 pl-3 pb-3 elevation-0'>
       <div class='display-3 font-weight-thin'>
@@ -95,7 +88,7 @@ export default {
   },
   methods: {
     selectTopic( topic ) {
-      if(this.selectedTopic === topic ) {
+      if ( this.selectedTopic === topic ) {
         this.selectedTopic = null
         return
       }

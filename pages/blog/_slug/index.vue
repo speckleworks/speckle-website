@@ -1,5 +1,5 @@
 <template>
-  <v-app :dark="$store.state.dark">
+  <v-app>
     <Toolbar></Toolbar>
     <v-content v-if="article" grid-list-xl text-xs-center>
       <v-container>
@@ -12,7 +12,7 @@
             </div>
           </v-flex>
           <v-flex xs10 offset-xs1>
-            <v-card :class="`elevation-${hover ? 12 : 2} pa-5`">
+            <v-card class="elevation-4 pa-4">
               <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
               <v-chip
                 color="grey"
@@ -40,7 +40,7 @@
               <!-- </v-flex> -->
               <!-- </v-layout> -->
               <!-- <v-layout justify-center row wrap> -->
-              <div v-html="$md.render(article.content)"></div>
+              <v-card-text v-html="$md.render(article.content)"></v-card-text>
               <!-- <v-flex xs12></v-flex> -->
               <!-- <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
             <v-layout row wrap>
@@ -103,6 +103,30 @@ export default {
           hid: "description",
           name: "description",
           content: this.article.summary
+        },{
+          hid: "og:url",
+          name: "og.url",
+          content: `https://speckle.sytems/blog/${this.article.slug}`
+        },{
+          hid: "og:title",
+          name: "og:title",
+          content: this.article.title
+        },{
+          hid: "og:description",
+          name: "og:description",
+          content: this.article.summary
+        },{
+          hid: "og:image",
+          name: "og:image",
+          content: this.article.image ? process.env.strapiBaseUri + this.article.image.formats.small.url : '/spksplash.png'
+        },{
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image"
+        },{
+          hid: "og:site_name",
+          name: "og:site_name",
+          content: "Speckle, The AEC Data Platform"
         }
       ]
     };
