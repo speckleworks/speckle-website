@@ -104,10 +104,6 @@ export default {
           name: "description",
           content: this.article.summary
         },{
-          hid: "og:url",
-          name: "og.url",
-          content: `https://speckle.sytems/blog/${this.article.slug}`
-        },{
           hid: "og:title",
           name: "og:title",
           content: this.article.title
