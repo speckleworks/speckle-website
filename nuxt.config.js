@@ -118,8 +118,8 @@ export default {
   markdownit: {
     preset: 'default',
     linkify: true,
-    breaks: true,
-    injected: true,
+    breaks: false,
+    injected: false,
     use: [
       'markdown-it-attrs',
       'markdown-it-meta',
@@ -151,21 +151,9 @@ export default {
   },
   generate: {
     subFolders: true,
-    // routes: [ '/blog/goodnews', '/blog/oasysgsa' ]
     async routes( ) {
-      let test = await axios.post( `https://strapi.speckle.works/graphql`, { query: "{ articles { slug } }" } )
-      // throw new Error( JSON.stringify( test.data ) )
-      let myRoutes = test.data.data.articles.map( art => `/blog/${art.slug}` )
-      return myRoutes
-      // return axios.post( `https://strapi.speckle.works/graphql`, { query: "{ articles { slug } }" } )
-      //   .then( ( res ) => {
-      //     console.log( res )
-      //     const routes = res.data.articles.map( ( article ) => {
-      //       return '/blog/' + article.slug
-      //     } )
-      //     callback( null, routes )
-      //   } )
-      //   .catch( callback )
+      let articlesReq = await axios.post( `https://strapi.speckle.works/graphql`, { query: "{ articles { slug } }" } )
+      return articlesReq.data.data.articles.map( art => `/blog/${art.slug}` )
     }
   },
   router: {

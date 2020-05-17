@@ -166,37 +166,6 @@
         </v-flex>
       </v-layout>
       <v-layout row wrap justify-center class='py-5'>
-        <v-flex xs12 md6 xl4>
-          <v-layout row wrap>
-            <v-flex xs12 md12 class='px-4 my-3 text-xs-center text-md-left'>
-              <span class='display-1 font-weight-light'>Blog</span><br>
-              <span class='caption'>Infrequent updates from Speckle HQ</span>
-            </v-flex>
-            <!-- <v-flex xs12 v-for='post in posts' :key='post.attributes.title' class='px-4'>
-              <v-hover>
-                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 0} pa-3`" :to='post.href'>
-                  <v-card-text>
-                    <span class='title font-weight-thin'>{{post.attributes.title}}</span><br>
-                    by {{post.attributes.author}} on <b>{{new Date(post.attributes.date).toLocaleDateString()}}</b>
-                    <br>&nbsp;
-                    <br>
-                    <span class='grey--text text--darken-2'>{{post.attributes.summary}}</span>
-                  </v-card-text>
-                </v-card>
-              </v-hover>
-            </v-flex> -->
-            <v-flex xs12>
-              <v-card class='transparent elevation-0'>
-                <v-card-text>
-                  <v-btn flat round small color='primary' class='my-3' to='/blog'>older news</v-btn>
-                  <v-btn flat round small color='primary' class='my-3' href='https://mailchi.mp/8cc51c53d86d/speckle' target='_blank'>
-                    newsletter
-                  </v-btn>
-                </v-card-text>
-              </v-card>
-            </v-flex>
-          </v-layout>
-        </v-flex>
         <v-flex xs12 md6 xl4 class='px-4 my-3 text-xs-center text-md-left'>
           <span class='display-1 font-weight-light'>Speckle Tweets</span><br>
           <span class='caption'>Promoting the community's work with speckle!</span>

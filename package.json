@@ -23,6 +23,7 @@
     "front-matter": "^3.0.2",
     "graphql": "^15.0.0",
     "highlight.js": "^9.15.8",
+    "markdown-it": "^10.0.0",
     "markdown-it-attrs": "^2.4.1",
     "markdown-it-highlightjs": "^3.0.0",
     "markdown-it-meta": "0.0.1",

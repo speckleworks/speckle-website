@@ -7,7 +7,7 @@
       <div class='grey--text subheading'>The latest updates, announcements, and tutorials from the Speckle team. Do you want to write something for Speckle? Get in touch with your tutorial idea/draft at hello [@] speckle [dot] sytems!</div>
       <div>
         <div class='title my-4 font-weight-thin'>Categories</div>
-        <v-btn :color="`${selectedTopic === topic ? 'primary':''}`" :class="`${index===0 ? 'ml-0' : ''}`" v-for='(topic, index) in allCategories' @click='selectTopic(topic)'>{{topic}} <span v-if='selectedTopic===topic'>&nbsp;&nbsp;<v-icon>close</v-icon></span></v-btn>
+        <v-btn :color="`${selectedTopic === topic ? 'primary':''}`" :class="`${true ? 'ml-0' : ''}`" v-for='(topic, index) in allCategories' @click='selectTopic(topic)' :key="topic">{{topic}} <span v-if='selectedTopic===topic'>&nbsp;&nbsp;<v-icon>close</v-icon></span></v-btn>
       </div>
       <div class='my-4'>
         <div class='title my-4 font-weight-thin'>Connect</div>
@@ -22,7 +22,7 @@
     <v-flex v-for='(article, index) in filteredArticles' :key='article.id' class='xs12 sm6 md4 lg4  pl-3 pb-3 elevation-0'>
       <v-hover>
         <pre>{{article}}</pre>
-        <v-card v-if="article" slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 12 : 1} card-outer`" :to="{ name: 'blog-slug', params: {slug: article.slug} }">
+        <v-card v-if="article" slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 10 : 1} card-outer`" :to="{ name: 'blog-slug', params: {slug: article.slug} }">
           <v-img v-if="article.image && article.image.formats" :src="strapiBaseUri + article.image.formats.small.url" height="200px">
           </v-img>
           <v-img v-else height="200px">

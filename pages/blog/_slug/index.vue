@@ -14,14 +14,7 @@
           <v-flex xs10 offset-xs1>
             <v-card class="elevation-4 pa-4">
               <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
-              <v-chip
-                color="grey"
-                outline
-                small
-                style="margin-top:-2px;"
-                v-for="category in article.categories"
-                :key="category.name"
-              >{{category.name}}</v-chip>
+              <v-chip color="grey" outline small style="margin-top:-2px;" v-for="category in article.categories" :key="category.name">{{category.name}}</v-chip>
               <div class="grey--text subheading">
                 <v-list two-line>
                   <!-- <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader> -->
@@ -40,7 +33,7 @@
               <!-- </v-flex> -->
               <!-- </v-layout> -->
               <!-- <v-layout justify-center row wrap> -->
-              <v-card-text v-html="$md.render(article.content)"></v-card-text>
+              <v-card-text v-html="content"></v-card-text>
               <!-- <v-flex xs12></v-flex> -->
               <!-- <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
             <v-layout row wrap>
@@ -73,9 +66,12 @@
   </v-app>
 </template>
 <script>
-import Footer from "~/components/footer.vue";
+  import Footer from "~/components/footer.vue";
 import Toolbar from "~/components/toolbar.vue";
 import articleQuery from "~/apollo/queries/article";
+const attrs = require('markdown-it-attrs')
+const highlight = require( 'markdown-it-highlightjs' )
+const md = require( 'markdown-it' )().use( attrs ).use( highlight )
 
 export default {
   data() {
@@ -134,6 +130,9 @@ export default {
   computed: {
     article() {
       return this.articles[0];
+    },
+    content() {
+      return md.render( this.articles[0].content )
     },
     nextPrevious() {
       // return this.$store.getters["blog/getNext"](this.$route.path);
