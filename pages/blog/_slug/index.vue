@@ -75,7 +75,7 @@
             </v-card>
           </v-flex>
 
-          <v-flex class="xs10 offset-xs1 elevation-0 mb-5 mt-3">
+          <v-flex class="sm10 offset-sm1 lg8 offset-lg2 elevation-0 mb-5 mt-3">
             <v-hover>
               <v-card
                 slot-scope="{ hover }"
@@ -118,6 +118,8 @@ const md = require("markdown-it")()
     h4: "font-weight: 100;margin-top: 16px; margin-bottom: 16px;",
     pre: "margin-bottom: 16px;",
     ul: "margin-bottom: 16px;",
+    img: "margin-left:auto; diaply:block;",
+
   });
 
 export default {
