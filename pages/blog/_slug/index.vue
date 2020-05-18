@@ -75,7 +75,7 @@
             </v-card>
           </v-flex>
 
-          <v-flex class="xs10 offset-xs1 elevation-0 mb-5">
+          <v-flex class="xs10 offset-xs1 elevation-0 mb-5 mt-3">
             <v-hover>
               <v-card
                 slot-scope="{ hover }"
@@ -83,6 +83,7 @@
                 color="primary"
                 :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`"
                 height="100%"
+                href='mailto:hello@speckle.systems'
               >
                 <v-layout align-center fill-height>
                   <v-flex>
@@ -90,44 +91,6 @@
                     <div
                       class="subheading"
                     >We are keen to feature tutorials, insights, case studies! Have something you'd like to share? Get in touch!</div>
-                    <v-flex class="mt-4 mb-3">
-                      <v-btn
-                        outline
-                        small
-                        xxx-color="primary"
-                        xxx-style="width: 200px"
-                        class="ml-0"
-                        href="mailto:speckle.systems"
-                        target="_blank"
-                      >Email</v-btn>
-                      <v-btn
-                        outline
-                        small
-                        xxx-color="primary"
-                        xxx-style="width: 200px"
-                        class="ml-0"
-                        href="https://twitter.com/speckle_works"
-                        target="_blank"
-                      >Twitter</v-btn>
-                      <v-btn
-                        outline
-                        small
-                        xxx-color="primary"
-                        xxx-style="width: 200px"
-                        class
-                        :href="$store.state.slackInviteUrl"
-                        target="_blank"
-                      >Slack</v-btn>
-                      <v-btn
-                        outline
-                        small
-                        xxx-color="primary"
-                        xxx-style="width: 200px"
-                        class
-                        href="https://discourse.speckle.works"
-                        target="_blank"
-                      >Forum</v-btn>
-                    </v-flex>
                   </v-flex>
                 </v-layout>
               </v-card>
