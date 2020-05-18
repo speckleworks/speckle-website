@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Toolbar></Toolbar>
-    <v-content v-if="article" grid-list-xl text-xs-center>
+    <v-content v-if="article" grid-list-xl text-xs-center class="blogpost">
       <v-container>
         <v-layout row wrap>
           <v-flex xs10 offset-xs1>
@@ -12,10 +12,9 @@
             </div>
           </v-flex>
           <v-flex xs10 offset-xs1>
-            <v-card class="elevation-4 pa-4">
+            <v-card class="elevation-4 pa-5 mb-3">
               <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
-              <v-chip color="grey" outline small style="margin-top:-2px;" v-for="category in article.categories" :key="category.name">{{category.name}}</v-chip>
-              <div class="grey--text subheading">
+              <div class="grey--text subheading author">
                 <v-list two-line>
                   <!-- <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader> -->
                   <v-list-tile class="grow">
@@ -24,12 +23,21 @@
                     </v-list-tile-avatar>
                     <v-list-tile-content>
                       <v-list-tile-title>{{article.author.name}}</v-list-tile-title>
-                      <v-list-tile-sub-title>{{ article.date | moment("MMMM Do YYYY") }}</v-list-tile-sub-title>
+                      <v-list-tile-sub-title>{{ article.date | moment("MMMM Do YYYY") }}               <v-chip
+                color="grey"
+                outline
+                small
+                style="margin-top:-2px;"
+                v-for="category in article.categories"
+                :key="category.name"
+              >{{category.name}}</v-chip></v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
               </div>
+
               <v-divider class="mt-2 mb-4"></v-divider>
+
               <!-- </v-flex> -->
               <!-- </v-layout> -->
               <!-- <v-layout justify-center row wrap> -->
@@ -59,19 +67,79 @@
               <!-- </v-layout> -->
             </v-card>
           </v-flex>
+
+          <v-flex class="xs10 offset-xs1 elevation-0 mb-5">
+            <v-hover>
+              <v-card
+                slot-scope="{ hover }"
+                dark
+                color="primary"
+                :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`"
+                height="100%"
+              >
+                <v-layout align-center fill-height>
+                  <v-flex>
+                    <div class="display-1 font-weight-thin my-4">Psst! Have an idea for an article?</div>
+                    <div
+                      class="subheading"
+                    >We are keen to feature tutorials, insights, case studies! Have something you'd like to share? Get in touch!</div>
+                    <v-flex class="mt-4 mb-3">
+                      <v-btn
+                        outline
+                        small
+                        xxx-color="primary"
+                        xxx-style="width: 200px"
+                        class="ml-0"
+                        href="mailto:speckle.systems"
+                        target="_blank"
+                      >Email</v-btn>
+                      <v-btn
+                        outline
+                        small
+                        xxx-color="primary"
+                        xxx-style="width: 200px"
+                        class="ml-0"
+                        href="https://twitter.com/speckle_works"
+                        target="_blank"
+                      >Twitter</v-btn>
+                      <v-btn
+                        outline
+                        small
+                        xxx-color="primary"
+                        xxx-style="width: 200px"
+                        class
+                        :href="$store.state.slackInviteUrl"
+                        target="_blank"
+                      >Slack</v-btn>
+                      <v-btn
+                        outline
+                        small
+                        xxx-color="primary"
+                        xxx-style="width: 200px"
+                        class
+                        href="https://discourse.speckle.works"
+                        target="_blank"
+                      >Forum</v-btn>
+                    </v-flex>
+                  </v-flex>
+                </v-layout>
+              </v-card>
+            </v-hover>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-content>
-    <Footer></Footer>
   </v-app>
 </template>
 <script>
-  import Footer from "~/components/footer.vue";
+import Footer from "~/components/footer.vue";
 import Toolbar from "~/components/toolbar.vue";
 import articleQuery from "~/apollo/queries/article";
-const attrs = require('markdown-it-attrs')
-const highlight = require( 'markdown-it-highlightjs' )
-const md = require( 'markdown-it' )().use( attrs ).use( highlight )
+const attrs = require("markdown-it-attrs");
+const highlight = require("markdown-it-highlightjs");
+const md = require("markdown-it")()
+  .use(attrs)
+  .use(highlight);
 
 export default {
   data() {
@@ -99,23 +167,30 @@ export default {
           hid: "description",
           name: "description",
           content: this.article.summary
-        },{
+        },
+        {
           hid: "og:title",
           name: "og:title",
           content: this.article.title
-        },{
+        },
+        {
           hid: "og:description",
           name: "og:description",
           content: this.article.summary
-        },{
+        },
+        {
           hid: "og:image",
           name: "og:image",
-          content: this.article.image ? process.env.strapiBaseUri + this.article.image.formats.small.url : '/spksplash.png'
-        },{
+          content: this.article.image
+            ? process.env.strapiBaseUri + this.article.image.formats.small.url
+            : "/spksplash.png"
+        },
+        {
           hid: "twitter:card",
           name: "twitter:card",
           content: "summary_large_image"
-        },{
+        },
+        {
           hid: "og:site_name",
           name: "og:site_name",
           content: "Speckle, The AEC Data Platform"
@@ -132,7 +207,7 @@ export default {
       return this.articles[0];
     },
     content() {
-      return md.render( this.articles[0].content )
+      return md.render(this.articles[0].content);
     },
     nextPrevious() {
       // return this.$store.getters["blog/getNext"](this.$route.path);
@@ -141,9 +216,18 @@ export default {
     //   return this.$store.getters["blog/getPost"](this.$route.path);
     // },
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 <style type="text/css" scoped>
+.blogpost {
+  margin-top: -50px;
+}
+.author {
+  margin-top: -20px;
+  margin-left: -15px;
+}
+.author .v-chip {margin-top:1px !important; }
+.author .v-chip:first-child {margin-left: 20px;}
+.v-list__tile__sub-title{height: 25px;}
 </style>
