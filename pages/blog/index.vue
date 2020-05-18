@@ -33,11 +33,11 @@
               <span class='grey--text text--darken-2'>{{ article.summary }}</span>
               <br>&nbsp;
               <br>
-              <span class='grey--text subheading'>
+              <span class='grey--text subheading' v-if="article.categories">
                 <v-chip color='primary' outline small style='margin-top:0px;' v-for='category in article.categories' :key='category.name'>{{category.name}}</v-chip>
               </span>
             </v-card-text>
-            <v-card-actions class="card-actions">
+            <v-card-actions class="card-actions" v-if="article.author">
               <v-list two-line color="transparent">
                 <!-- <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader> -->
                 <v-list-tile class="grow">
@@ -73,42 +73,45 @@
   frontmatter
 -->
 <script>
-import articlesQuery from "~/apollo/queries/articles"
+import articlesQuery from "~/apollo/queries/articles";
 
 export default {
   computed: {
-    filteredArticles( ) {
-      if ( this.selectedTopic ) {
-        return this.articles.filter( art => -1 !== art.categories.findIndex( c => c.name === this.selectedTopic ) )
+    filteredArticles() {
+      if (this.selectedTopic) {
+        return this.articles.filter(
+          art =>
+            -1 !== art.categories.findIndex(c => c.name === this.selectedTopic)
+        );
       }
-      return this.articles
+      return this.articles;
     },
-    allCategories( ) {
-      let cats = [ ]
-      this.articles.forEach( art => {
-        cats.push( ...art.categories.map( c => c.name ) )
-      } )
+    allCategories() {
+      let cats = [];
+      this.articles.forEach(art => {
+        cats.push(...art.categories.map(c => c.name));
+      });
 
-      return [ ...new Set( cats ) ]
+      return [...new Set(cats)];
     }
   },
-  data( ) {
+  data() {
     return {
-      articles: [ ],
+      articles: [],
       selectedTopic: null,
       strapiBaseUri: process.env.strapiBaseUri
     };
   },
   methods: {
-    selectTopic( topic ) {
-      if ( this.selectedTopic === topic ) {
-        this.selectedTopic = null
-        return
+    selectTopic(topic) {
+      if (this.selectedTopic === topic) {
+        this.selectedTopic = null;
+        return;
       }
-      this.selectedTopic = topic
+      this.selectedTopic = topic;
     },
-    clearTopic( ) {
-      this.selectedTopic = null
+    clearTopic() {
+      this.selectedTopic = null;
     }
   },
   layout: "blog",
@@ -119,7 +122,6 @@ export default {
     }
   }
 };
-
 </script>
 <style scoped>
 .card-outer {
@@ -144,8 +146,8 @@ export default {
 }
 
 .repeating-gradient {
-  background: linear-gradient(90deg, #FFFFFF 12px, transparent 1%) center, linear-gradient(#FFFFFF 12px, transparent 1%) center, #0A66FF;
+  background: linear-gradient(90deg, #ffffff 12px, transparent 1%) center,
+    linear-gradient(#ffffff 12px, transparent 1%) center, #0a66ff;
   background-size: 14px 14px;
 }
-
 </style>
