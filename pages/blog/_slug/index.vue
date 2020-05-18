@@ -4,14 +4,14 @@
     <v-content v-if="article" grid-list-xl text-xs-center class="blogpost">
       <v-container>
         <v-layout row wrap>
-          <v-flex sm10 offset-sm1>
+          <v-flex sm10 offset-sm1 lg8 offset-lg2>
             <div class="display-1 font-weight-thin mb-4">
               <v-btn round small depressed color class="mx-0 px-2" to="/blog">
                 <v-icon left small>arrow_back</v-icon>Blog &nbsp;&nbsp;
               </v-btn>
             </div>
           </v-flex>
-          <v-flex sm10 offset-sm1>
+          <v-flex sm10 offset-sm1 lg8 offset-lg2>
             <v-card
               :class="{'pa-5': $vuetify.breakpoint.smAndUp,'pa-3': $vuetify.breakpoint.xs, 'elevation-4 mb-3':''}"
             >
@@ -165,7 +165,7 @@ export default {
           name: "og:image",
           property: "og:image",
           content: this.article.image
-            ? process.env.strapiBaseUri + this.article.image.formats.small.url
+            ? (this.article.image.formats ? (process.env.strapiBaseUri + this.article.image.formats.small.url) : (process.env.strapiBaseUri + this.article.image.url))
             : "/spksplash.png"
         },
         {

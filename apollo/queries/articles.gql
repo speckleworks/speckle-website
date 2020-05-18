@@ -11,6 +11,7 @@ query Articles {
     }
     image {
       formats
+      url
     }
     author {
       name

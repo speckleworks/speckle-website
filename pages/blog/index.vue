@@ -23,7 +23,9 @@
       <v-flex :key='article.id' class='xs12 sm6 md4 lg4 pl-3 pb-3 elevation-0'>
         <v-hover>
           <v-card v-if="article" slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 10 : 1} card-outer`" :to="{ name: 'blog-slug', params: {slug: article.slug} }">
-            <v-img v-if="article.image && article.image.formats" :src="strapiBaseUri + article.image.formats.small.url" height="200px">
+            <v-img v-if="article.image && article.image.formats" :src="strapiBaseUri + article.image.formats.small.url" height="200px"> </v-img>
+            <!-- gif don't have 'format' -->
+            <v-img v-else-if="article.image && article.image.url" :src="strapiBaseUri + article.image.url" height="200px">
             </v-img>
             <v-img v-else height="200px">
               <div class="fill-height repeating-gradient"></div>

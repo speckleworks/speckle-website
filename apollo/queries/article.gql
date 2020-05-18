@@ -12,6 +12,7 @@ query Articles($slug: String!) {
     content
     image {
       formats
+      url
     }
     author {
       name
