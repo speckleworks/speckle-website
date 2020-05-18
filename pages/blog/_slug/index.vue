@@ -4,17 +4,19 @@
     <v-content v-if="article" grid-list-xl text-xs-center class="blogpost">
       <v-container>
         <v-layout row wrap>
-          <v-flex xs10 offset-xs1>
+          <v-flex sm10 offset-sm1>
             <div class="display-1 font-weight-thin mb-4">
               <v-btn round small depressed color class="mx-0 px-2" to="/blog">
                 <v-icon left small>arrow_back</v-icon>Blog &nbsp;&nbsp;
               </v-btn>
             </div>
           </v-flex>
-          <v-flex xs10 offset-xs1>
-            <v-card class="elevation-4 pa-5 mb-3">
+          <v-flex sm10 offset-sm1>
+            <v-card
+              :class="{'pa-5': $vuetify.breakpoint.smAndUp,'pa-3': $vuetify.breakpoint.xs, 'elevation-4 mb-3':''}"
+            >
               <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
-              <div class="grey--text subheading author">
+              <div class="grey--text subheading author" v-if="article.author">
                 <v-list two-line>
                   <!-- <v-subheader v-if="item.header" :key="item.header">{{ item.header }}</v-subheader> -->
                   <v-list-tile class="grow">
@@ -23,14 +25,19 @@
                     </v-list-tile-avatar>
                     <v-list-tile-content>
                       <v-list-tile-title>{{article.author.name}}</v-list-tile-title>
-                      <v-list-tile-sub-title>{{ article.date | moment("MMMM Do YYYY") }}               <v-chip
-                color="grey"
-                outline
-                small
-                style="margin-top:-2px;"
-                v-for="category in article.categories"
-                :key="category.name"
-              >{{category.name}}</v-chip></v-list-tile-sub-title>
+                      <v-list-tile-sub-title>
+                        {{ article.date | moment("MMMM Do YYYY") }}
+                        <span v-if="article.categories">
+                          <v-chip
+                            color="grey"
+                            outline
+                            small
+                            style="margin-top:-2px;"
+                            v-for="category in article.categories"
+                            :key="category.name"
+                          >{{category.name}}</v-chip>
+                        </span>
+                      </v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
@@ -137,9 +144,18 @@ import Toolbar from "~/components/toolbar.vue";
 import articleQuery from "~/apollo/queries/article";
 const attrs = require("markdown-it-attrs");
 const highlight = require("markdown-it-highlightjs");
+const markdownStyle = require('markdown-it-style');
 const md = require("markdown-it")()
   .use(attrs)
-  .use(highlight);
+  .use(highlight)
+  .use(markdownStyle, {
+    h1: "font-weight: 100;margin-top: 24px; margin-bottom: 24px;",
+    h2: "font-weight: 100;margin-top: 24px; margin-bottom: 24px;",
+    h3: "font-weight: 100;margin-top: 20px; margin-bottom: 20px;",
+    h4: "font-weight: 100;margin-top: 16px; margin-bottom: 16px;",
+    pre: "margin-bottom: 16px;",
+    ul: "margin-bottom: 16px;",
+  });
 
 export default {
   data() {
@@ -232,7 +248,13 @@ export default {
   margin-top: -20px;
   margin-left: -15px;
 }
-.author .v-chip {margin-top:1px !important; }
-.author .v-chip:first-child {margin-left: 20px;}
-.v-list__tile__sub-title{height: 25px;}
+.author .v-chip {
+  margin-top: 1px !important;
+}
+.author .v-chip:first-child {
+  margin-left: 20px;
+}
+.v-list__tile__sub-title {
+  height: 25px;
+}
 </style>
