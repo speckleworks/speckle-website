@@ -182,21 +182,25 @@ export default {
         {
           hid: "description",
           name: "description",
+          property: "description",
           content: this.article.summary
         },
         {
           hid: "og:title",
           name: "og:title",
+          property: "og:title",
           content: this.article.title
         },
         {
           hid: "og:description",
           name: "og:description",
+          property: "og:description",
           content: this.article.summary
         },
         {
           hid: "og:image",
           name: "og:image",
+          property: "og:image",
           content: this.article.image
             ? process.env.strapiBaseUri + this.article.image.formats.small.url
             : "/spksplash.png"
@@ -209,6 +213,7 @@ export default {
         {
           hid: "og:site_name",
           name: "og:site_name",
+          property: "og:site_name",
           content: "Speckle, The AEC Data Platform"
         }
       ]
