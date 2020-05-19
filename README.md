@@ -17,6 +17,7 @@ $ npm run dev
 $ npm run build
 $ npm start
 
-# generate static project
+# generate static project & test locallynpx http-server ./dist
 $ npm run generate
+$ npx http-server ./dist
 ```

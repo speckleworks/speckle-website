@@ -15,6 +15,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/blog": "0.0.1-6",
     "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/feed": "^1.1.0",
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/markdownit": "^1.2.5",
     "cookie-universal-nuxt": "^2.0.16",
