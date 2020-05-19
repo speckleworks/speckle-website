@@ -66,7 +66,7 @@ export default {
                 rel: 'alternate',
                 type: 'application/rss+xml',
                 href: 'feed.xml',
-                title: 'RSS 2.0'
+                title: 'Speckle Blog'
 
             },
 

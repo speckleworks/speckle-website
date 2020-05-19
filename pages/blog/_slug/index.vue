@@ -83,7 +83,7 @@
                 color="primary"
                 :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`"
                 height="100%"
-                href='mailto:hello@speckle.systems'
+                href="mailto:hello@speckle.systems"
               >
                 <v-layout align-center fill-height>
                   <v-flex>
@@ -107,7 +107,7 @@ import Toolbar from "~/components/toolbar.vue";
 import articleQuery from "~/apollo/queries/article";
 const attrs = require("markdown-it-attrs");
 const highlight = require("markdown-it-highlightjs");
-const markdownStyle = require('markdown-it-style');
+const markdownStyle = require("markdown-it-style");
 const md = require("markdown-it")()
   .use(attrs)
   .use(highlight)
@@ -118,8 +118,7 @@ const md = require("markdown-it")()
     h4: "font-weight: 100;margin-top: 16px; margin-bottom: 16px;",
     pre: "margin-bottom: 16px;",
     ul: "margin-bottom: 16px;",
-    img: "margin-left:auto; diaply:block;",
-
+    img: "margin-left:auto; diaply:block;"
   });
 
 export default {
@@ -145,11 +144,24 @@ export default {
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
+          hid: "title",
+          name: "title",
+          property: "title",
+          content: this.article.title
+        },
+        {
           hid: "description",
           name: "description",
           property: "description",
           content: this.article.summary
         },
+        {
+          hid: "og:site_name",
+          name: "og:site_name",
+          property: "og:site_name",
+          content: "Speckle, The AEC Data Platform"
+        },
+        //FACEBOOK
         {
           hid: "og:title",
           name: "og:title",
@@ -167,19 +179,58 @@ export default {
           name: "og:image",
           property: "og:image",
           content: this.article.image
-            ? (this.article.image.formats ? (process.env.strapiBaseUri + this.article.image.formats.small.url) : (process.env.strapiBaseUri + this.article.image.url))
+            ? this.article.image.formats
+              ? process.env.strapiBaseUri + this.article.image.formats.small.url
+              : process.env.strapiBaseUri + this.article.image.url
             : "/spksplash.png"
         },
         {
+          hid: "og:url",
+          name: "og:url",
+          property: "og:url",
+          content: `${this.strapiBaseUri}${this.article.title}`
+        },
+        {
+          hid: "og:type",
+          name: "og:type",
+          property: "og:type",
+          content: "website"
+        },
+
+        //TWITTER
+        {
           hid: "twitter:card",
           name: "twitter:card",
+          property: "twitter:card",
           content: "summary_large_image"
         },
         {
-          hid: "og:site_name",
-          name: "og:site_name",
-          property: "og:site_name",
-          content: "Speckle, The AEC Data Platform"
+          hid: "twitter:title",
+          name: "twitter:title",
+          property: "twitter:title",
+          content: `Speckle Blog / ${this.article.title}`
+        },
+        {
+          hid: "twitter:url",
+          name: "twitter:url",
+          property: "twitter:url",
+          content: `${this.strapiBaseUri}${this.article.title}`
+        },
+        {
+          hid: "twitter:description",
+          name: "twitter:description",
+          property: "twitter:description",
+          content: this.article.summary
+        },
+        {
+          hid: "twitter:image",
+          name: "twitter:image",
+          property: "twitter:image",
+          content: this.article.image
+            ? this.article.image.formats
+              ? process.env.strapiBaseUri + this.article.image.formats.small.url
+              : process.env.strapiBaseUri + this.article.image.url
+            : ""
         }
       ]
     };
