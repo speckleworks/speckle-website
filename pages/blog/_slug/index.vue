@@ -188,7 +188,7 @@ export default {
           hid: "og:url",
           name: "og:url",
           property: "og:url",
-          content: `${this.strapiBaseUri}${this.article.title}`
+          content: `${this.strapiBaseUri}${this.article.slug}`
         },
         {
           hid: "og:type",
@@ -214,7 +214,7 @@ export default {
           hid: "twitter:url",
           name: "twitter:url",
           property: "twitter:url",
-          content: `${this.strapiBaseUri}${this.article.title}`
+          content: `${this.strapiBaseUri}${this.article.slug}`
         },
         {
           hid: "twitter:description",
