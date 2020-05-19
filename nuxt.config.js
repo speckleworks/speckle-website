@@ -62,6 +62,13 @@ export default {
                 rel: 'stylesheet',
                 href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
             },
+            {
+                rel: 'alternate',
+                type: 'application/rss+xml',
+                href: 'feed.xml',
+                title: 'RSS 2.0'
+
+            },
 
         ]
     },
