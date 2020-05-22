@@ -18,7 +18,7 @@
         "@nuxtjs/feed": "^1.1.0",
         "@nuxtjs/google-analytics": "^2.3.0",
         "@nuxtjs/markdownit": "^1.2.5",
-        "cookie-universal-nnpm uxt": "^2.0.16",
+        "cookie-universal-nuxt": "^2.0.16",
         "cross-env": "^5.2.0",
         "directory-tree": "^2.2.3",
         "front-matter": "^3.0.2",
