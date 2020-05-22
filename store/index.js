@@ -28,9 +28,7 @@ export const actions = {
 
             if (calledContribs) return
 
-            let test = await getContributors()
-            console.log(test.length)
-            this.dispatch("generic/loadContribs", { contributors: test })
+            this.dispatch("generic/loadContribs", { contributors: await getContributors() })
             calledContribs = true
 
             // let token = process.env.GHPAT
