@@ -4,9 +4,15 @@
       <v-layout justify-center row wrap>
         <v-flex xs8>
           <v-layout align-center style='height:520px' row wrap class='mb-5 xx-text-xs-center'>
+            <v-flex  xs8 offset-xs2 class='text-xs-center'>
+              <!-- NEWSLETTER START -->
+              <iframe class="mj-w-res-iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.mailjet.com/widget/iframe/5q9H/xzG" width="100%"></iframe>
+              <script type="text/javascript" src="https://app.mailjet.com/statics/js/iframeResizer.min.js"></script>
+              <!-- NEWSLETTER END -->
+            </v-flex>
             <v-flex xs12 class='text-xs-center'>
               <div class='subheading mb-5'>
-                Join the Speckle Community via the channels below!
+                And join the Speckle Community via the channels below!
               </div>
               <v-btn large round color='' style='width: 200px' class='mt-1' href='https://twitter.com/speckle_works' target='_blank'>Twitter <v-icon right>share</v-icon>
               </v-btn>
