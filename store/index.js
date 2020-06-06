@@ -72,7 +72,6 @@ let getContributors = async() => new Promise(async(resolve, reject) => {
             let contributor = await axios.get(`${baseUrl}/user?user=${mem.login}`)
             c.push(contributor.data)
         }
-        console.log(c.length)
         resolve(c)
 
         // listOfMembers.forEach( async mem => {
