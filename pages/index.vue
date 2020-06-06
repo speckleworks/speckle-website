@@ -195,7 +195,7 @@
           </v-btn>
         </v-flex>
       </v-layout>
-      <v-layout row wrap justify-center class='py-5'>
+      <!-- <v-layout row wrap justify-center class='py-5'>
         <v-flex xs12 md6 xl4 class='px-4 my-3 text-xs-center text-md-left'>
           <span class='display-1 font-weight-light'>Speckle Tweets</span><br>
           <span class='caption'>Promoting the community's work with speckle!</span>
@@ -205,7 +205,7 @@
             <a v-if='$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
           </v-card>
         </v-flex>
-      </v-layout>
+      </v-layout> -->
     </v-container>
   </div>
 </template>

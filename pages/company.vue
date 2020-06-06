@@ -7,7 +7,7 @@
         </v-flex>
 
         <v-flex xs12 py-4 style="min-height:10vh" xxxclass="text-xs-center">
-          <h1 class="display-1 font-weight-light xxx-text-uppercase">
+          <h1 class="display-1 font-weight-light xxx-text-uppercase" id="about">
             <strong>About</strong>
           </h1>
           <p class="headline font-weight-light mt-5">
@@ -31,7 +31,7 @@
         </v-flex>
 
         <v-flex xs12 py-4 style="min-height:10vh" xxxclass="text-xs-center">
-          <h1 class="display-1 font-weight-light xxx-text-uppercase">
+          <h1 class="display-1 font-weight-light xxx-text-uppercase" id="team">
             <strong>Team</strong>
           </h1>
         </v-flex>

@@ -17,7 +17,7 @@
         Speckle
       </v-btn>
       <template v-for="(item, i) in menuItems">
-        <v-menu open-on-hover offset-y :key="i" v-if="item.items">
+        <v-menu open-on-hover offset-y :key="i" v-if="item.items" >
           <template v-slot:activator="{ on }">
             <v-btn flat v-on="on">
               {{item.name}}&nbsp;
@@ -25,7 +25,7 @@
             </v-btn>
           </template>
 
-          <v-list>
+          <v-list  class="pr-3">
             <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
               <menu-item :item="subitem"></menu-item>
             </v-list-tile>
@@ -34,6 +34,7 @@
         <menu-item v-else :item="item" :key="i"></menu-item>
       </template>
     </v-toolbar-items>
+
     <!-- MOBILE MENU -->
     <v-toolbar-items class="hidden-md-and-up">
       <v-menu offset-y>
@@ -47,9 +48,9 @@
             <v-icon>arrow_drop_down</v-icon>
           </v-btn>
         </template>
-        <v-list>
+        <v-list class="pr-3">
           <v-list-tile v-for="(item, i) in menuItems" :key="i">
-            <v-menu open-on-hover offset-x v-if="item.items">
+            <v-menu open-on-hover offset-x v-if="item.items" >
               <template v-slot:activator="{ on }">
                 <v-btn flat v-on="on">
                   {{item.name}}&nbsp;
@@ -57,7 +58,7 @@
                 </v-btn>
               </template>
 
-              <v-list>
+              <v-list >
                 <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
                   <menu-item :item="subitem"></menu-item>
                 </v-list-tile>
@@ -66,16 +67,17 @@
             <menu-item v-else :item="item"></menu-item>
           </v-list-tile>
         </v-list>
-
-        <!-- <v-card class="elevation-0">
-          <v-btn large block flat to="/">Home</v-btn>
-          <template v-for="(item, i) in menuItems">
-            <menu-item :item="item" :key="i"></menu-item>
-          </template>
-        </v-card>-->
       </v-menu>
     </v-toolbar-items>
-    <v-spacer v-if="sideIcon"></v-spacer>
+    <v-spacer></v-spacer>
+    <v-btn
+      class="github-button"
+      href="https://github.com/speckleworks/speckleserver"
+      data-size="large"
+      data-show-count="true"
+      aria-label="Star speckleworks/speckleserver on GitHub"
+    >Star us on GitHub!</v-btn>
+
     <v-toolbar-side-icon @click.native="toggleNavBar()" v-if="sideIcon"></v-toolbar-side-icon>
   </v-toolbar>
 </template>
@@ -108,7 +110,18 @@ export default {
         {
           name: "Company",
           link: "/company",
-          local: true
+          items: [
+            {
+              name: "About",
+              link: "/company#about",
+              local: true
+            },
+            {
+              name: "Team",
+              link: "/company#team",
+              local: true
+            }
+          ]
         },
         {
           name: "Community",
@@ -118,6 +131,16 @@ export default {
               name: "Contributors",
               link: "/contributors",
               local: true
+            },
+            {
+              name: "Twitter",
+              link: "https://twitter.com/speckle_works",
+              local: false
+            },
+            {
+              name: "Slack",
+              link: "$store.state.slackInviteUrl",
+              local: false
             },
             {
               name: "Forum",
@@ -146,6 +169,11 @@ export default {
               local: false
             }
           ]
+        },
+        {
+          name: "Web App",
+          link: "https://app.speckle.systems",
+          local: false
         }
 
         // {
@@ -153,11 +181,7 @@ export default {
         //   link: "/about",
         //   local: true
         // },
-        // {
-        //   name: "Web App",
-        //   link: "https://app.speckle.systems",
-        //   local: false
-        // },
+
         //
       ]
     };
@@ -175,6 +199,11 @@ export default {
         Math.floor(Math.random() * this.speckle.length)
       ];
     }
+  },
+  mounted() {
+    let githubscript = document.createElement("script");
+    githubscript.setAttribute("src", "https://buttons.github.io/buttons.js");
+    document.head.appendChild(githubscript);
   }
 };
 </script>
