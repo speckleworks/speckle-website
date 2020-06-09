@@ -17,7 +17,7 @@
         Speckle
       </v-btn>
       <template v-for="(item, i) in menuItems">
-        <v-menu open-on-hover offset-y :key="i" v-if="item.items" >
+        <v-menu open-on-hover offset-y :key="i" v-if="item.items">
           <template v-slot:activator="{ on }">
             <v-btn flat v-on="on">
               {{item.name}}&nbsp;
@@ -25,7 +25,7 @@
             </v-btn>
           </template>
 
-          <v-list  class="pr-3">
+          <v-list class="pr-3">
             <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
               <menu-item :item="subitem"></menu-item>
             </v-list-tile>
@@ -50,7 +50,7 @@
         </template>
         <v-list class="pr-3">
           <v-list-tile v-for="(item, i) in menuItems" :key="i">
-            <v-menu open-on-hover offset-x v-if="item.items" >
+            <v-menu open-on-hover offset-x v-if="item.items">
               <template v-slot:activator="{ on }">
                 <v-btn flat v-on="on">
                   {{item.name}}&nbsp;
@@ -58,7 +58,7 @@
                 </v-btn>
               </template>
 
-              <v-list >
+              <v-list>
                 <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
                   <menu-item :item="subitem"></menu-item>
                 </v-list-tile>
@@ -159,8 +159,13 @@ export default {
               local: true
             },
             {
-              name: "Blog",
-              link: "/blog",
+              name: "Speckle Insider",
+              link: "/blog/insider-speckle2",
+              local: true
+            },
+            {
+              name: "Write for Speckle",
+              link: "/blog/to-do",
               local: true
             },
             {
@@ -169,6 +174,11 @@ export default {
               local: false
             }
           ]
+        },
+        {
+          name: "Blog",
+          link: "/blog",
+          local: true
         },
         {
           name: "Web App",

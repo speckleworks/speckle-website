@@ -45,7 +45,7 @@
           <v-layout align-top row wrap class="mb-5">
             <v-flex xs12 sm6 md3 v-for="(item, i) in menuItems" :key="i" style="height:100%">
               <v-list class="footer-list">
-                <v-subheader class="ml-4" >{{item.name}}</v-subheader>
+                <v-subheader class="ml-4">{{item.name}}</v-subheader>
                 <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
                   <menu-item :item="subitem"></menu-item>
                 </v-list-tile>
@@ -101,7 +101,7 @@ export default {
         {
           name: "Community",
           items: [
-                        {
+            {
               name: "Contributors",
               link: "/contributors",
               local: true
@@ -134,6 +134,16 @@ export default {
             {
               name: "Blog",
               link: "/blog",
+              local: true
+            },
+            {
+              name: "Speckle Insider",
+              link: "/blog/insider-speckle2",
+              local: true
+            },
+            {
+              name: "Write for Speckle",
+              link: "/blog/to-do",
               local: true
             },
             {
