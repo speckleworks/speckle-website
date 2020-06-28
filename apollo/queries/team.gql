@@ -1,0 +1,13 @@
+query TeamMembers {
+  users(sort: "id:asc", where: { teamMember: true }) {
+    id
+    name
+    title
+    company
+    bio
+    teamMember
+    avatar {
+      formats
+    }
+  }
+}

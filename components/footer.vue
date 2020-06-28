@@ -21,31 +21,13 @@
               ></script>
               <!-- NEWSLETTER END -->
             </v-flex>
-
-            <!-- <v-flex xs12 class='text-xs-center'>
-              <div class='subheading mb-5'>
-                And join the Speckle Community via the channels below!
-              </div>
-              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://twitter.com/speckle_works' target='_blank'>Twitter <v-icon right>share</v-icon>
-              </v-btn>
-              <v-btn large round color='' style='width: 200px' class='mt-1' :href='$store.state.slackInviteUrl' target='_blank'>Slack <v-icon right>question_answer</v-icon>
-              </v-btn>
-              <v-btn large round color='' style='width: 200px' class='mt-1' href='https://discourse.speckle.works' target='_blank'>Forum <v-icon right>speaker_notes</v-icon>
-              </v-btn>
-              <div class='subheading mt-5 pt-5 text-none'>
-                <router-link :class='background==="" ? "":"footer-link"' to='/'>Home</router-link> •
-                <router-link :class='background==="" ? "":"footer-link"' to='/docs/essentials/introduction/what'>Docs</router-link> •
-                <router-link :class='background==="" ? "":"footer-link"' to='/blog'>Blog</router-link> •
-                <a :class='background==="" ? "":"footer-link"' href='https://github.com/speckleworks' target="_blank">Github</a>
-              </div>
-            </v-flex>-->
           </v-layout>
         </v-flex>
         <v-flex xs12 md8>
           <v-layout align-top row wrap class="mb-5">
             <v-flex xs12 sm6 md3 v-for="(item, i) in menuItems" :key="i" style="height:100%">
               <v-list class="footer-list">
-                <v-subheader class="ml-4">{{item.name}}</v-subheader>
+                <p class="ml-4 text-xs-center grey--text text--darken-1"><b>{{item.name}}</b></p>
                 <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
                   <menu-item :item="subitem"></menu-item>
                 </v-list-tile>
@@ -88,12 +70,12 @@ export default {
           items: [
             {
               name: "About",
-              link: "/company#about",
+              link: "/company/about",
               local: true
             },
             {
               name: "Team",
-              link: "/company#team",
+              link: "/company/team",
               local: true
             }
           ]
@@ -141,11 +123,11 @@ export default {
               link: "/blog/insider-speckle2",
               local: true
             },
-            {
-              name: "Write for Speckle",
-              link: "/blog/to-do",
-              local: true
-            },
+            // {
+            //   name: "Write for Speckle",
+            //   link: "/blog/to-do",
+            //   local: true
+            // },
             {
               name: "Github",
               link: "https://github.com/speckleworks",

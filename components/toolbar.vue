@@ -102,23 +102,23 @@ export default {
           link: "/product",
           local: true
         },
-        {
-          name: "Use Cases",
-          link: "/use-cases",
-          local: true
-        },
+        // {
+        //   name: "Use Cases",
+        //   link: "/use-cases",
+        //   local: true
+        // },
         {
           name: "Company",
           link: "/company",
           items: [
             {
               name: "About",
-              link: "/company#about",
+              link: "/company/about",
               local: true
             },
             {
               name: "Team",
-              link: "/company#team",
+              link: "/company/team",
               local: true
             }
           ]
@@ -163,11 +163,11 @@ export default {
               link: "/blog/insider-speckle2",
               local: true
             },
-            {
-              name: "Write for Speckle",
-              link: "/blog/to-do",
-              local: true
-            },
+            // {
+            //   name: "Write for Speckle",
+            //   link: "/blog/to-do",
+            //   local: true
+            // },
             {
               name: "Github",
               link: "https://github.com/speckleworks",
