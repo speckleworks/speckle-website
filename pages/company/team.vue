@@ -16,8 +16,8 @@
           px-2
           py-4
           style="min-height:10vh"
-          v-for="teamMember in teamMembers"
-          :key="teamMember.id"
+          v-for="(teamMember, index) in teamMembers"
+          :key="index"
         >
           <v-card class="pa-3" height="100%">
             <center>
@@ -51,8 +51,8 @@
           px-2
           py-4
           style="min-height:10vh"
-          v-for="advisor in advisors"
-          :key="advisor.id"
+          v-for="(advisor, index) in advisors"
+          :key="index"
         >
           <v-card class="pa-3" height="100%">
             <center>
