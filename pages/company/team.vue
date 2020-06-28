@@ -19,7 +19,7 @@
           v-for="(teamMember, index) in teamMembers"
           :key="index"
         >
-          <v-card class="pa-3" height="100%">
+          <v-card class="pa-3" height="100%" v-if="teamMember">
             <center>
               <v-avatar size="100" class="mt-3">
                 <img
@@ -54,7 +54,7 @@
           v-for="(advisor, index) in advisors"
           :key="index"
         >
-          <v-card class="pa-3" height="100%">
+          <v-card class="pa-3" height="100%" v-if="advisor">
             <center>
               <v-avatar size="100" class="mt-3">
                 <img :src="strapiBaseUri+advisor.avatar.formats.thumbnail.url" :alt="advisor.name" />
