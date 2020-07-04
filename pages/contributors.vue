@@ -7,20 +7,23 @@
             Project <span class='primary--text'>Contributors</span>
           </h1>
           <p class='headline font-weight-light mt-4 '>
-            Speckle has received contributions from many people from all corners of the world. Here are some of them, in no particular order:
+            Speckle has received contributions & ❤️ from many people from all corners of the world 🌍
           </p>
           <v-layout row wrap>
-            <v-flex xs12 sm6 md4 lg3 v-for='member in contributors' :key='member.name' xxxstyle='min-height: 120px; max-height: 120px;' class='mb-2'>
-              <v-card class='ma-2 pa-2' :href='`https://github.com/${member.login}`' target='_blank'>
-                <v-avatar size="36px" class='mr-4'>
-                  <img v-if="member.avatar_url" :src="member.avatar_url" alt="Avatar">
-                  <v-icon v-else color="primary">person</v-icon>
-                </v-avatar>
-                {{member.name ? member.name : member.login}}
-                <!--      <p class='small caption mt-2'>
-                  {{member.bio}}
-                </p> -->
-              </v-card>
+            <v-flex xs12 sm6 md4 lg3 v-for='member in contributors' :key='member.name'>
+              <v-hover>
+                <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 10 : 1} pa-2 ma-2 mb-2`" :href='`https://github.com/${member.login}`' target='_blank'>
+                  <center>
+                    <v-avatar size="80" class="mt-3">
+                      <img v-if="member.avatar_url" :src="member.avatar_url" alt="Avatar">
+                      <v-icon v-else color="primary">person</v-icon>
+                    </v-avatar>
+                  </center>
+                  <v-card-text class='text-xs-center'>
+                    {{member.name ? member.name : member.login}}
+                  </v-card-text>
+                </v-card>
+              </v-hover>
             </v-flex>
           </v-layout>
         </v-flex>

@@ -97,31 +97,15 @@ export default {
       speckle: ["speckle ✨", "spackle 👷🏽‍♂️", "spock le 🖖", "speck 🥓"],
       title: "speckle",
       menuItems: [
-        {
-          name: "Product",
-          link: "/product",
-          local: true
-        },
         // {
-        //   name: "Use Cases",
-        //   link: "/use-cases",
+        //   name: "Product",
+        //   link: "/product",
         //   local: true
         // },
         {
-          name: "Company",
-          link: "/company",
-          items: [
-            {
-              name: "About",
-              link: "/company/about",
-              local: true
-            },
-            {
-              name: "Team",
-              link: "/company/team",
-              local: true
-            }
-          ]
+          name: "About",
+          link: "/about",
+          local: true
         },
         {
           name: "Community",

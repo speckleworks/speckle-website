@@ -15,16 +15,26 @@
       </v-layout>
       <v-layout justify-center row wrap>
         <v-flex xs12 md8>
-          <v-layout align-top row wrap class="mb-5">
+          <v-layout align-top row wrap class="my-5">
             <v-flex xs6 sm6 md3 v-for="(item, i) in menuItems" :key="i">
-              <!-- <v-list class="footer-list"> -->
-              <p class="grey--text text--darken-1"><b>{{item.name}}</b></p>
-              <v-divider class='mb-3'></v-divider>
+              <template v-if='item.name!==""'>
+                <p class="grey--text text--darken-1"><b>{{item.name}}</b></p>
+                <v-divider class='mb-3'></v-divider>
+              </template>
               <p v-for="(subitem, ii) in item.items" :key="ii">
-                <a :href='subitem.link'>{{subitem.name}}</a>&nbsp;&nbsp;<v-icon small v-if='!subitem.local'>open_in_new</v-icon>
-                <!-- <menu-item :item="subitem"></menu-item> -->
+                <template v-if='item.name!==""'>
+                  <a :href='subitem.link'>{{subitem.name}}</a>&nbsp;&nbsp;<v-icon small v-if='!subitem.local'>open_in_new</v-icon>
+                </template>
+                <template v-else>
+                  <p class="" >
+                    <a :href='subitem.link' style="text-decoration: none;">
+                      <b>{{subitem.name}}</b>
+                    </a>
+                    <v-icon small v-if='subitem.name.toLowerCase()==="home"' style='top: -2px;position: relative; margin-right: 4px;'>home</v-icon>
+                  </p>
+                  <v-divider class='mb-3'></v-divider>
+                </template>
               </p>
-              <!-- </v-list> -->
             </v-flex>
           </v-layout>
         </v-flex>
@@ -50,17 +60,19 @@ export default {
   data( ) {
     return {
       menuItems: [ {
-          name: "Company",
+          name: "",
+          link: '/',
+          local: true,
           items: [ {
-              name: "About",
-              link: "/company/about",
+              name: "Home",
+              link: "/",
               local: true
-            },
-            {
-              name: "Team",
-              link: "/company/team",
+            }, {
+              name: "About",
+              link: "/about",
               local: true
             }
+
           ]
         },
         {
