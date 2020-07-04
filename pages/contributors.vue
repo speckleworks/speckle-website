@@ -2,8 +2,7 @@
   <div>
     <v-container grid-xl class='mt-5 pa-0'>
       <v-layout row wrap px-5 mt-5 py-0>
-      
-        <v-flex xs12 py-4 pb-5 style='min-height:10vh' xxxclass='text-xs-center'>
+        <v-flex xs12 py-4 pb-5 style='min-height:20vh' xxxclass='text-xs-center'>
           <h1 class='display-2 font-weight-light xxx-text-uppercase'>
             Project <span class='primary--text'>Contributors</span>
           </h1>
@@ -25,7 +24,6 @@
             </v-flex>
           </v-layout>
         </v-flex>
-
       </v-layout>
     </v-container>
   </div>

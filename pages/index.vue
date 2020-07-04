@@ -30,8 +30,8 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container grid-list-xl xx-fluid xxxmt-5>
-      <v-layout row wrap>
+    <v-container grid-list-xl>
+      <v-layout row wrap justify-center>
         <v-flex id='nada' xs12 sm12 md12 lg12 xl9 class='pt-5'>
           <!-- <v-flex class='display-3 font-weight-thin'>Blog</v-flex> -->
           <v-layout row wrap class=''>
@@ -69,17 +69,17 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex class='xs12 sm6 md4 lg4  pl-3 pb-3 elevation-0'>
+            <v-flex class='xs12 sm12 md4 lg4  pl-3 pb-3 elevation-0'>
               <v-hover>
                 <v-card dark color='primary' slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 10 : 1} card-outer white-text text-white pa-4`" to="/blog">
                   <v-layout align-center style='height:100%' row wrap>
                     <!-- <v-card-text class='text-left'> -->
-                      <v-flex class='display-1 font-weight-thin xs12'>
-                        Checkout The Speckle Blog <v-icon large style='ml-0 '>arrow_forward</v-icon>
-                      </v-flex>
-                      <v-flex class='subheading font-weight-thin xs12'>
-                        The latest updates, announcements, and tutorials from the Speckle team.
-                      </v-flex>
+                    <v-flex class='display-1 font-weight-thin xs12'>
+                      Checkout The Speckle Blog <v-icon large style='ml-0 '>arrow_forward</v-icon>
+                    </v-flex>
+                    <v-flex class='subheading font-weight-thin xs12'>
+                      The latest updates, announcements, and tutorials from the Speckle team.
+                    </v-flex>
                     <!-- </v-card-text> -->
                   </v-layout>
                 </v-card>
@@ -87,20 +87,6 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <!--         <v-flex id='gettingStarted' xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5'>
-          <v-hover>
-            <v-card slot-scope="{ hover }" class='transparent elevation-0'>
-              <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/splashes/screenshots.png")'></v-img>
-              <div class="d-flex v-card--reveal-btn" style="height: 100%;">
-                <v-flex xs12>
-                  <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/essentials/start'>
-                    <v-icon left large>local_library</v-icon>Getting Started
-                  </v-btn>
-                </v-flex>
-              </div>
-            </v-card>
-          </v-hover>
-        </v-flex> -->
       </v-layout>
       <v-layout justify-center class='mt-5 py-5'>
         <v-flex class='text-xs-center px-4 my-5'>
@@ -114,17 +100,6 @@
           </v-btn>
         </v-flex>
       </v-layout>
-      <!-- <v-layout row wrap justify-center class='py-5'>
-        <v-flex xs12 md6 xl4 class='px-4 my-3 text-xs-center text-md-left'>
-          <span class='display-1 font-weight-light'>Speckle Tweets</span><br>
-          <span class='caption'>Promoting the community's work with speckle!</span>
-          <v-card style='max-height: 760px; overflow-y: scroll;' class='mt-4'>
-            <a v-if='!$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <a v-if='$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
-          </v-card>
-        </v-flex>
-      </v-layout> -->
     </v-container>
   </div>
 </template>
@@ -163,11 +138,6 @@
 .repeating-gradient {
   background: linear-gradient(90deg, #FFFFFF 12px, transparent 1%) center, linear-gradient(#FFFFFF 12px, transparent 1%) center, #0A66FF;
   background-size: 14px 14px;
-}
-
-.v-card--reveal-back {
-  /*transform: translateX(-50px) translateY(-50px);*/
-  /*position: relative;*/
 }
 
 .v-card--reveal {
