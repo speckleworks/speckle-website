@@ -21,7 +21,7 @@
                 <p class="grey--text text--darken-1"><b>{{item.name}}</b></p>
                 <v-divider class='mb-3'></v-divider>
               </template>
-              <p v-for="(subitem, ii) in item.items" :key="ii">
+              <div v-for="(subitem, ii) in item.items" :key="ii">
                 <template v-if='item.name!==""'>
                   <a :href='subitem.link'>{{subitem.name}}</a>&nbsp;&nbsp;<v-icon small v-if='!subitem.local'>open_in_new</v-icon>
                 </template>
@@ -34,7 +34,7 @@
                   </p>
                   <v-divider class='mb-3'></v-divider>
                 </template>
-              </p>
+              </div>
             </v-flex>
           </v-layout>
         </v-flex>
