@@ -30,8 +30,8 @@
         </v-flex>
       </v-layout>
     </v-container>
-    <v-container grid-list-xl xx-fluid xxxmt-5>
-      <v-layout row wrap>
+    <v-container grid-list-xl>
+      <v-layout row wrap justify-center>
         <v-flex id='nada' xs12 sm12 md12 lg12 xl9 class='pt-5'>
           <!-- <v-flex class='display-3 font-weight-thin'>Blog</v-flex> -->
           <v-layout row wrap class=''>
@@ -69,17 +69,17 @@
                 </v-card>
               </v-hover>
             </v-flex>
-            <v-flex class='xs12 sm6 md4 lg4  pl-3 pb-3 elevation-0'>
+            <v-flex class='xs12 sm12 md4 lg4  pl-3 pb-3 elevation-0'>
               <v-hover>
                 <v-card dark color='primary' slot-scope="{ hover }" height="100%" :class="`elevation-${hover ? 10 : 1} card-outer white-text text-white pa-4`" to="/blog">
                   <v-layout align-center style='height:100%' row wrap>
                     <!-- <v-card-text class='text-left'> -->
-                      <v-flex class='display-1 font-weight-thin xs12'>
-                        Checkout The Speckle Blog <v-icon large style='ml-0 '>arrow_forward</v-icon>
-                      </v-flex>
-                      <v-flex class='subheading font-weight-thin xs12'>
-                        The latest updates, announcements, and tutorials from the Speckle team.
-                      </v-flex>
+                    <v-flex class='display-1 font-weight-thin xs12'>
+                      Checkout The Speckle Blog <v-icon large style='ml-0 '>arrow_forward</v-icon>
+                    </v-flex>
+                    <v-flex class='subheading font-weight-thin xs12'>
+                      The latest updates, announcements, and tutorials from the Speckle team.
+                    </v-flex>
                     <!-- </v-card-text> -->
                   </v-layout>
                 </v-card>
@@ -87,44 +87,90 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <!--         <v-flex id='gettingStarted' xs12 sm12 md12 lg12 xl9 class='text-xs-center xxmt-5 pt-5'>
-          <v-hover>
-            <v-card slot-scope="{ hover }" class='transparent elevation-0'>
-              <v-img :style='`opacity: ${hover ? 0.42 : 1}; transition: all 1s ease;`' :src='require("@/assets/splashes/screenshots.png")'></v-img>
-              <div class="d-flex v-card--reveal-btn" style="height: 100%;">
-                <v-flex xs12>
-                  <v-btn large color='primary' class='my-3 pa-4 elevation-5' style="height:210px; width:210px; xxxposition: relative; xxxmargin-top:-50%" to='/docs/essentials/start'>
-                    <v-icon left large>local_library</v-icon>Getting Started
-                  </v-btn>
-                </v-flex>
-              </div>
-            </v-card>
-          </v-hover>
-        </v-flex> -->
       </v-layout>
-      <v-layout justify-center class='mt-5 py-5'>
-        <v-flex class='text-xs-center px-4 my-5'>
-          <span class='display-3 font-weight-light xxx-text-uppercase'>
+      <v-layout justify-center class='mt-5 px-5' row wrap>
+        <v-flex sx12 class='text-xs-center px-4 mt-5'>
+          <span class='display-3 font-weight-light'>
             Your design. <span class='primary--text font-weight-thin'>Your data.</span>
           </span>
-          <br>Speckle is easily deployed on the cloud provider of your choice, or on premise.
-          <br>
+        </v-flex>
+      </v-layout>
+      <v-layout justify-center>
+        <v-flex xs12 sm8 lg6 class='text-xs-center'>
+          <p class='subheading grey--text'>
+            Speckle is Open Source, so you always have a choice and can adapt it to any data sovereignty requirements. You can deploy it on your favourite cloud provider's infrastructure, or on premise, under your supervision.
+          </p>
           <v-btn flat round color='primary' class='my-3 ' to='/blog/ownyourdata'>
             <v-icon left>arrow_right_alt</v-icon>Read more <v-icon right>arrow_right_alt</v-icon>
           </v-btn>
         </v-flex>
       </v-layout>
-      <!-- <v-layout row wrap justify-center class='py-5'>
-        <v-flex xs12 md6 xl4 class='px-4 my-3 text-xs-center text-md-left'>
-          <span class='display-1 font-weight-light'>Speckle Tweets</span><br>
-          <span class='caption'>Promoting the community's work with speckle!</span>
-          <v-card style='max-height: 760px; overflow-y: scroll;' class='mt-4'>
-            <a v-if='!$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            <a v-if='$store.state.dark' class="twitter-timeline" data-lang="en" data-dnt="true" data-theme="dark" href="https://twitter.com/speckle_works?ref_src=twsrc%5Etfw">Tweets by speckle_works</a>
+    </v-container>
+    <v-container grid-list-xl>
+      <v-layout row wrap align-center>
+        <v-flex sm6 xs12>
+          <v-card class='align-center elevation-0 transparent text-xs-center text-lg-right'>
+            <v-card-text class='display-2 font-weight-light text-xs-center text-lg-right'>
+              Connect & Curate
+            </v-card-text>
+            <v-card-text>
+              <p class='subheading grey--text'>Speckle integrates with some of the most popular AEC software tools:</p>
+              <!--               <router-link v-for='item in integrations' xxxcolor='primary white--text' :key='item.name'  :to='item.link'>
+                <v-chip>{{item.name}}</v-chip>
+              </router-link> -->
+              <v-btn v-for='item in integrations' small depressed round color='grey lighten-2' :key='item.name' :to='item.link' :target='item.local ? "" : "_blank"'>
+                {{item.name}}
+                <v-icon small v-if='!item.local'>open_in_new</v-icon>
+              </v-btn>
+            </v-card-text>
           </v-card>
         </v-flex>
-      </v-layout> -->
+        <v-flex sm6 xs12>
+          <v-img height='500' contain :src='require("~/assets/main/interop.svg")'></v-img>
+        </v-flex>
+        <v-flex sm6 xs12>
+          <v-card class='align-center elevation-0 transparent text-xs-center text-lg-right'>
+            <v-card-text class='display-2 font-weight-light text-xs-center text-lg-right'>
+              Web Native
+            </v-card-text>
+            <v-card-text>
+              <p class='subheading grey--text'>
+                Speckle has been built from the internet up. Wether you want to view your models in the browser, or control access permissions and review changes, we've got you covered.
+              </p>
+              <v-btn v-for='item in webFirstFeatures' small depressed round color='grey lighten-2' :key='item.name' :to='item.local ? item.link : ""' :href='!item.local ? item.link : ""' :target='item.local ? "" : "_blank"'>
+                {{item.name}}
+                <v-icon small v-if='!item.local'>open_in_new</v-icon>
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+        <v-flex sm6 xs12>
+          <v-img height='500' contain :src='require("~/assets/main/webfirst.png")'></v-img>
+        </v-flex>
+        <v-flex sm6>
+          <v-card class='align-center elevation-0 transparent text-xs-center text-md-right'>
+            <v-card-text class="display-2 font-weight-light text-xs-center text-md-right">
+              Object Based
+            </v-card-text>
+            <v-card-text>
+              <p class='subheading grey--text'>
+                Say goodbye to files. Speckle gives you object-level control of what you share, infinite versioning history & changelogs.
+              </p>
+              <v-btn v-for='item in objectBasedFeatures' small depressed round color='grey lighten-2' :key='item.name' :to='item.local ? item.link : ""' :href='!item.local ? item.link : ""' :target='item.local ? "" : "_blank"'>
+                {{item.name}}
+                <v-icon small v-if='!item.local'>open_in_new</v-icon>
+              </v-btn>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+        <v-flex sm6>
+          <v-img height='500' contain :src='require("~/assets/main/datanotfiles.svg")'></v-img>
+        </v-flex>
+        <v-flex xs12 class='text-xs-center py-5 my-5'>
+          <v-btn large round small color='primary' class='mt-5' to='/docs/essentials/start'>Ready? Get Started Here!</v-btn>
+          <v-btn large round small color='' class='mt-5' to='/about'>Read more about us</v-btn>
+        </v-flex>
+      </v-layout>
     </v-container>
   </div>
 </template>
@@ -154,7 +200,53 @@
   data( ) {
     return {
       articles: [],
-      strapiBaseUri: process.env.strapiBaseUri
+      strapiBaseUri: process.env.strapiBaseUri,
+      integrations: [ {
+              name: "Grasshopper",
+              link: "/docs/clients/grasshopper/basics",
+              local: true
+            },
+            {
+              name: "Rhino",
+              link: "/docs/clients/rhino/basics",
+              local: true
+            },
+            {
+              name: "Dynamo",
+              link: "/docs/clients/dynamo/basics",
+              local: true
+            },
+            {
+              name: "Revit",
+              link: "/docs/clients/revit/basics",
+              local: true
+            },
+            {
+              name: "Blender",
+              link: "/docs/clients/blender/basics",
+              local: true
+            },
+            {
+              name: "GSA",
+              link: "/docs/clients/gsa/basics",
+              local: true
+            }
+          ],
+      webFirstFeatures: [{
+        name: "Example 3d Model ",
+        link: "https://app.speckle.systems/#/view/-W8RE5y4P?s=eyJzZXJ2ZXIiOiJodHRwczovL2hlc3RpYS5zcGVja2xlLndvcmtzL2FwaSIsImNhbWVyYSI6eyJ0YXJnZXQiOlsxNC42MTYxNTM5MDM5NjExOTEsMC45MTY5ODc0NjI2NDUxNzAzLDcuNjAwNjU2MjcxNjcyNDY3NV0sInBvc2l0aW9uIjpbNS43NDU0MDU5MzQzODI1OTEsMjMuMjgyNDUyMjE5Njc5NTA2LDE0Ljg2NjIzNDE3NzUxNTY4XSwicm90YXRpb24iOlstMS4yNTY2OTM3NjY4NTE3MDcsLTAuMzYwNzE3MDE2NDY5ODM4LC0zLjAyNzQzNDQzOTg5ODU1NThdfSwiZ3JvdXBzIjp7ImtleSI6InBhcmFtZXRlcnMuRmFtaWx5IGFuZCBUeXBlIn19",
+        local:false
+      },
+      {name:'Web 3D Viewer', link:'/docs/web/viewer', local:true},
+      {name:'Data Flow Graph', link:'/docs/web/speckleviz', local:true},
+      {name:'Permissions Management', link:'/docs/web/management', local:true},
+      ],
+      objectBasedFeatures: [
+      {name:'API Docs', link:'/docs/developers/api-specs', local:true},
+      {name:'Create Your Own Object Models', link:'/docs/developers/object-models', local:true},
+      {name:'Deltas & Diffing', link:'docs/developers/aec-delta', local:true},
+      {name:'Source Code', link:'https://github.com/speckleworks', local:false},
+      ]
     }
   }
 }
@@ -163,11 +255,6 @@
 .repeating-gradient {
   background: linear-gradient(90deg, #FFFFFF 12px, transparent 1%) center, linear-gradient(#FFFFFF 12px, transparent 1%) center, #0A66FF;
   background-size: 14px 14px;
-}
-
-.v-card--reveal-back {
-  /*transform: translateX(-50px) translateY(-50px);*/
-  /*position: relative;*/
 }
 
 .v-card--reveal {

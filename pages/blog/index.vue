@@ -79,40 +79,40 @@ import articlesQuery from "~/apollo/queries/articles";
 
 export default {
   computed: {
-    filteredArticles() {
-      if (this.selectedTopic) {
+    filteredArticles( ) {
+      if ( this.selectedTopic ) {
         return this.articles.filter(
           art =>
-            -1 !== art.categories.findIndex(c => c.name === this.selectedTopic)
+          -1 !== art.categories.findIndex( c => c.name === this.selectedTopic )
         );
       }
       return this.articles;
     },
-    allCategories() {
-      let cats = [];
-      this.articles.forEach(art => {
-        cats.push(...art.categories.map(c => c.name));
-      });
+    allCategories( ) {
+      let cats = [ ];
+      this.articles.forEach( art => {
+        cats.push( ...art.categories.map( c => c.name ) );
+      } );
 
-      return [...new Set(cats)];
+      return [ ...new Set( cats ) ];
     }
   },
-  data() {
+  data( ) {
     return {
-      articles: [],
+      articles: [ ],
       selectedTopic: null,
       strapiBaseUri: process.env.strapiBaseUri
     };
   },
   methods: {
-    selectTopic(topic) {
-      if (this.selectedTopic === topic) {
+    selectTopic( topic ) {
+      if ( this.selectedTopic === topic ) {
         this.selectedTopic = null;
         return;
       }
       this.selectedTopic = topic;
     },
-    clearTopic() {
+    clearTopic( ) {
       this.selectedTopic = null;
     }
   },
@@ -124,6 +124,7 @@ export default {
     }
   }
 };
+
 </script>
 <style scoped>
 .card-outer {
@@ -152,4 +153,5 @@ export default {
     linear-gradient(#ffffff 12px, transparent 1%) center, #0a66ff;
   background-size: 14px 14px;
 }
+
 </style>
