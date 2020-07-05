@@ -77,24 +77,6 @@
               </template>
             </template>
           </v-list>
-          <!--           <v-list>
-            <v-list-tile v-for="(item, i) in menuItems" :key="i">
-              <v-menu open-on-hover offset-x v-if="item.items">
-                <template v-slot:activator="{ on }">
-                  <v-btn flat v-on="on">
-                    {{item.name}}&nbsp;
-                    <v-icon small>arrow_drop_down</v-icon>
-                  </v-btn>
-                </template>
-                <v-list>
-                  <v-list-tile v-for="(subitem, ii) in item.items" :key="ii">
-                    <menu-item :item="subitem"></menu-item>
-                  </v-list-tile>
-                </v-list>
-              </v-menu>
-              <menu-item v-else :item="item"></menu-item>
-            </v-list-tile>
-          </v-list> -->
         </v-card>
       </v-menu>
     </v-toolbar-items>

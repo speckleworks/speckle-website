@@ -88,16 +88,67 @@
           </v-layout>
         </v-flex>
       </v-layout>
-      <v-layout justify-center class='mt-5 py-5'>
-        <v-flex class='text-xs-center px-4 my-5'>
-          <span class='display-3 font-weight-light xxx-text-uppercase'>
+      <v-layout justify-center class='mt-5 px-5' row wrap>
+        <v-flex sx12 class='text-xs-center px-4 mt-5'>
+          <span class='display-3 font-weight-light'>
             Your design. <span class='primary--text font-weight-thin'>Your data.</span>
           </span>
-          <br>Speckle is easily deployed on the cloud provider of your choice, or on premise.
-          <br>
+        </v-flex>
+        <v-flex xs6 class='text-xs-center'>
+          <p class='subheading grey--text'>
+            Speckle is Open Source, so you always have a choice and can adapt it to any data sovereignty requirements. You can deploy it on your favourite cloud provider's infrastructure, or on premise, under your supervision.
+          </p>
           <v-btn flat round color='primary' class='my-3 ' to='/blog/ownyourdata'>
             <v-icon left>arrow_right_alt</v-icon>Read more <v-icon right>arrow_right_alt</v-icon>
           </v-btn>
+        </v-flex>
+      </v-layout>
+    </v-container>
+    <v-container grid-list-xl>
+      <v-layout row wrap align-center>
+        <v-flex sm6 xs12>
+          <v-card class='align-center elevation-0 transparent text-xs-center text-lg-right'>
+            <v-card-text class='display-2 font-weight-light text-xs-center text-lg-right'>
+              Connect & Curate
+            </v-card-text>
+            <v-card-text>
+              <p class='subheading grey--text'>Speckle integrates with some of the most popular AEC software tools:</p>
+              <v-chip v-for='item in integrations' :to='item.link'>{{item.name}}</v-chip>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+        <v-flex sm6 xs12>
+          <v-img height='500' contain :src='require("~/assets/main/interop.svg")'></v-img>
+        </v-flex>
+        <v-flex sm6>
+          <v-card class='align-center elevation-0 transparent text-xs-center text-md-right'>
+            <v-card-text class="display-2 font-weight-light text-xs-center text-md-right">
+              Object Based
+            </v-card-text>
+            <v-card-text>
+              <p class='subheading grey--text'>
+                Say goodbye to files. Speckle gives you object-level control of what you share, infinite versioning history & changelogs.
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+        <v-flex sm6>
+          <v-img height='500' contain :src='require("~/assets/main/datanotfiles.svg")'></v-img>
+        </v-flex>
+        <v-flex sm6 xs12>
+          <v-card class='align-center elevation-0 transparent text-xs-center text-lg-right'>
+            <v-card-text class='display-2 font-weight-light text-xs-center text-lg-right'>
+              Web Native
+            </v-card-text>
+            <v-card-text>
+              <p class='subheading grey--text'>
+                Speckle has been built from the internet up. Wether you want to view your models in the browser, or control access permissions and review changes, we've got you covered.
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-flex>
+        <v-flex sm6 xs12>
+          <v-img height='500' contain :src='require("~/assets/main/webfirst.svg")'></v-img>
         </v-flex>
       </v-layout>
     </v-container>
@@ -129,7 +180,38 @@
   data( ) {
     return {
       articles: [],
-      strapiBaseUri: process.env.strapiBaseUri
+      strapiBaseUri: process.env.strapiBaseUri,
+      integrations: [ {
+              name: "Speckle for Grasshopper",
+              link: "/docs/clients/grasshopper/basics",
+              local: true
+            },
+            {
+              name: "Speckle for Rhino",
+              link: "/docs/clients/rhino/basics",
+              local: true
+            },
+            {
+              name: "Speckle for Dynamo",
+              link: "/docs/clients/dynamo/basics",
+              local: true
+            },
+            {
+              name: "Speckle for Revit",
+              link: "/docs/clients/revit/basics",
+              local: true
+            },
+            {
+              name: "Speckle for Blender",
+              link: "/docs/clients/blender/basics",
+              local: true
+            },
+            {
+              name: "Speckle for GSA",
+              link: "/docs/clients/gsa/basics",
+              local: true
+            }
+          ]
     }
   }
 }
