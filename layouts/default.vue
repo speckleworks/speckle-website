@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Toolbar></Toolbar>
-    <v-content id='top-content'>
+    <v-content id='xxx-top-content'>
       <nuxt />
     </v-content>
     <Footer></Footer>
