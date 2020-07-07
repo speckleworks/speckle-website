@@ -254,7 +254,7 @@ export default {
         title: "Speckle | About",
         description:
           "About the open-source data platform for automation in AEC and its team.",
-        image: process.env.strapiBaseUri + "/uploads/logo_notext_4383a0aafa.png"
+        image: process.env.strapiBaseUri + "/uploads/Artboard_1_copy_3_f3f7053d48.png"
       },
 
       strapiBaseUri: process.env.strapiBaseUri
