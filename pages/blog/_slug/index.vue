@@ -12,9 +12,7 @@
             </div>
           </v-flex>
           <v-flex sm10 offset-sm1 lg8 offset-lg2>
-            <v-card
-              :class="{'pa-5': $vuetify.breakpoint.smAndUp,'pa-3': $vuetify.breakpoint.xs, 'elevation-4 mb-3':''}"
-            >
+            <v-card :class="{'pa-5': $vuetify.breakpoint.smAndUp,'pa-3': $vuetify.breakpoint.xs, 'elevation-4 mb-3':''}">
               <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
               <div class="grey--text subheading author" v-if="article.author">
                 <v-list two-line>
@@ -28,23 +26,14 @@
                       <v-list-tile-sub-title>
                         {{ article.date | moment("MMMM Do YYYY") }}
                         <span v-if="article.categories">
-                          <v-chip
-                            color="grey"
-                            outline
-                            small
-                            style="margin-top:-2px;"
-                            v-for="category in article.categories"
-                            :key="category.name"
-                          >{{category.name}}</v-chip>
+                          <v-chip color="grey" outline small style="margin-top:-2px;" v-for="category in article.categories" :key="category.name">{{category.name}}</v-chip>
                         </span>
                       </v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
               </div>
-
               <v-divider class="mt-2 mb-4"></v-divider>
-
               <!-- </v-flex> -->
               <!-- </v-layout> -->
               <!-- <v-layout justify-center row wrap> -->
@@ -74,23 +63,13 @@
               <!-- </v-layout> -->
             </v-card>
           </v-flex>
-
           <v-flex class="sm10 offset-sm1 lg8 offset-lg2 elevation-0 mb-5 mt-3">
             <v-hover>
-              <v-card
-                slot-scope="{ hover }"
-                dark
-                color="primary"
-                :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`"
-                height="100%"
-                href="mailto:hello@speckle.systems"
-              >
+              <v-card slot-scope="{ hover }" dark color="primary" :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`" height="100%" href="mailto:hello@speckle.systems">
                 <v-layout align-center fill-height>
                   <v-flex>
                     <div class="display-1 font-weight-thin my-4">Psst! Have an idea for an article?</div>
-                    <div
-                      class="subheading"
-                    >We are keen to feature tutorials, insights, case studies! Have something you'd like to share? Get in touch!</div>
+                    <div class="subheading">We are keen to feature tutorials, insights, case studies! Have something you'd like to share? Get in touch!</div>
                   </v-flex>
                 </v-layout>
               </v-card>
@@ -102,16 +81,18 @@
   </v-app>
 </template>
 <script>
-import Footer from "~/components/footer.vue";
+  import Footer from "~/components/footer.vue";
 import Toolbar from "~/components/toolbar.vue";
 import articleQuery from "~/apollo/queries/article";
 const attrs = require("markdown-it-attrs");
 const highlight = require("markdown-it-highlightjs");
 const markdownStyle = require("markdown-it-style");
+
 const md = require("markdown-it")()
-  .use(attrs)
-  .use(highlight)
-  .use(markdownStyle, {
+  .set( { html:true } )
+  .use( attrs )
+  .use( highlight )
+  .use( markdownStyle, {
     h1: "font-weight: 100;margin-top: 24px; margin-bottom: 24px;",
     h2: "font-weight: 100;margin-top: 24px; margin-bottom: 24px;",
     h3: "font-weight: 100;margin-top: 20px; margin-bottom: 20px;",
@@ -119,7 +100,7 @@ const md = require("markdown-it")()
     pre: "margin-bottom: 16px;",
     ul: "margin-bottom: 16px;",
     img: "margin-left:auto; diaply:block;"
-  });
+  })
 
 export default {
   data() {
@@ -244,7 +225,7 @@ export default {
       return this.articles[0];
     },
     content() {
-      return md.render(this.articles[0].content);
+      return md.render(this.articles[0].content)
     },
     nextPrevious() {
       // return this.$store.getters["blog/getNext"](this.$route.path);
@@ -254,23 +235,28 @@ export default {
     // },
   },
   methods: {}
-};
+}
 </script>
 <style type="text/css" scoped>
-.blogpost {
-  margin-top: -50px;
-}
-.author {
-  margin-top: -20px;
-  margin-left: -15px;
-}
-.author .v-chip {
-  margin-top: 1px !important;
-}
-.author .v-chip:first-child {
-  margin-left: 20px;
-}
-.v-list__tile__sub-title {
-  height: 25px;
-}
+  .blogpost {
+    margin-top: -50px;
+  }
+
+  .author {
+    margin-top: -20px;
+    margin-left: -15px;
+  }
+
+  .author .v-chip {
+    margin-top: 1px !important;
+  }
+
+  .author .v-chip:first-child {
+    margin-left: 20px;
+  }
+
+  .v-list__tile__sub-title {
+    height: 25px;
+  }
+
 </style>
