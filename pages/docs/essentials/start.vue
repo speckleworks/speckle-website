@@ -9,7 +9,7 @@ order: 1
   <!-- ![clients](~/assets/docs/various/screenshots.png) -->
   # 1. Register {.font-weight-thin .display-1 .my-4}
 
-  To use Speckle you'll need a Speckle server and an account on that server. If you or your company don't have <a href="/docs/developers/deploy-server">deployed your own</a>, you can just use the "community server", hestia.
+  To use Speckle you'll need a Speckle server and an account on that server. If you or your company have yet to <a href="/docs/developers/deploy-server">deploy your own</a>, you can just use the "community server", hestia.
 
   The address of hestia is:
 
