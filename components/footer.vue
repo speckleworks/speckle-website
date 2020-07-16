@@ -89,7 +89,7 @@ export default {
             },
             {
               name: "Slack",
-              link: "$store.state.slackInviteUrl",
+              link: this.$store.state.slackInviteUrl,
               local: false
             },
             {
