@@ -81,7 +81,7 @@ These elements can come from Revit, otherwise, **if you'd like to send them from
 
   <br>
 
-  For more detailed instructions on how to use Speckle with Grasshopper, check out this [section](/docs/clients/grasshopper/basics). For more information on how to use the [3d viewer, read about it here](/docs/webapp/viewer)!
+  For more detailed instructions on how to use Speckle with Grasshopper, check out this [section](/docs/clients/grasshopper/basics). For more information on how to use the [3d viewer, read about it here](/docs/web/viewer)!
 </template>
 
 <script>
