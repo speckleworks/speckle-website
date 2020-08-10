@@ -20,7 +20,7 @@
           <h1 class="display-1 font-weight-light xxx-text-uppercase">
             Check some of the latest use cases on 
             <span class="primary--text">
-              <a class="link" href="https://twitter.com/speckle_works">twitter</a>
+              <a class="link" href="https://twitter.com/SpeckleSystems">twitter</a>
             </span> and on our <span class="primary--text">
               <router-link class='flink' to='/blog'>blog</router-link>
             </span>.

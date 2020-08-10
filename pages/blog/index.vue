@@ -11,7 +11,7 @@
       </div>
       <div class='my-4'>
         <div class='title my-4 font-weight-thin'>Connect</div>
-        <v-btn outline small xxx-color='primary' xxx-style='width: 200px' class=' ml-0' href='https://twitter.com/speckle_works' target='_blank'>Twitter
+        <v-btn outline small xxx-color='primary' xxx-style='width: 200px' class=' ml-0' href='https://twitter.com/SpeckleSystems' target='_blank'>Twitter
         </v-btn>
         <v-btn outline small xxx-color='primary' xxx-style='width: 200px' class='' :href='$store.state.slackInviteUrl' target='_blank'>Slack
         </v-btn>

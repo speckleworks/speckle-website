@@ -122,7 +122,7 @@ export default {
             },
             {
               name: "Twitter",
-              link: "https://twitter.com/speckle_works",
+              link: "https://twitter.com/SpeckleSystems",
               local: false
             },
             {
