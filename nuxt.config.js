@@ -48,7 +48,7 @@ export default {
             {
                 hid: 'twitter:site',
                 name: 'twitter:site',
-                content: '@speckle_works'
+                content: '@SpeckleSystems'
             },
             {
                 hid: 'twitter:card',
