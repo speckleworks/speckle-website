@@ -12,7 +12,9 @@
             </div>
           </v-flex>
           <v-flex sm10 offset-sm1 lg8 offset-lg2>
-            <v-card :class="{'pa-5': $vuetify.breakpoint.smAndUp,'pa-3': $vuetify.breakpoint.xs, 'elevation-4 mb-3':''}">
+            <v-card
+              :class="{'pa-5': $vuetify.breakpoint.smAndUp,'pa-3': $vuetify.breakpoint.xs, 'elevation-4 mb-3':''}"
+            >
               <div class="display-2 font-weight-thin mb-4">{{article.title}}</div>
               <div class="grey--text subheading author" v-if="article.author">
                 <v-list two-line>
@@ -26,7 +28,14 @@
                       <v-list-tile-sub-title>
                         {{ article.date | moment("MMMM Do YYYY") }}
                         <span v-if="article.categories">
-                          <v-chip color="grey" outline small style="margin-top:-2px;" v-for="category in article.categories" :key="category.name">{{category.name}}</v-chip>
+                          <v-chip
+                            color="grey"
+                            outline
+                            small
+                            style="margin-top:-2px;"
+                            v-for="category in article.categories"
+                            :key="category.name"
+                          >{{category.name}}</v-chip>
                         </span>
                       </v-list-tile-sub-title>
                     </v-list-tile-content>
@@ -38,6 +47,9 @@
               <!-- </v-layout> -->
               <!-- <v-layout justify-center row wrap> -->
               <v-card-text v-html="content"></v-card-text>
+              <v-divider class="mt-2 mb-4"></v-divider>
+              <div id="discourse-comments"></div>
+
               <!-- <v-flex xs12></v-flex> -->
               <!-- <v-flex xs12 sm10 md8 lg6 v-if="nextPrevious.index!==-1" mb-5>
             <v-layout row wrap>
@@ -65,11 +77,20 @@
           </v-flex>
           <v-flex class="sm10 offset-sm1 lg8 offset-lg2 elevation-0 mb-5 mt-3">
             <v-hover>
-              <v-card slot-scope="{ hover }" dark color="primary" :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`" height="100%" href="mailto:hello@speckle.systems">
+              <v-card
+                slot-scope="{ hover }"
+                dark
+                color="primary"
+                :class="`elevation-${hover ? 20 : 10} card-outer white-text text-white pa-4`"
+                height="100%"
+                href="mailto:hello@speckle.systems"
+              >
                 <v-layout align-center fill-height>
                   <v-flex>
                     <div class="display-1 font-weight-thin my-4">Psst! Have an idea for an article?</div>
-                    <div class="subheading">We are keen to feature tutorials, insights, case studies! Have something you'd like to share? Get in touch!</div>
+                    <div
+                      class="subheading"
+                    >We are keen to feature tutorials, insights, case studies! Have something you'd like to share? Get in touch!</div>
                   </v-flex>
                 </v-layout>
               </v-card>
@@ -80,8 +101,10 @@
     </v-content>
   </v-app>
 </template>
+
+
 <script>
-  import Footer from "~/components/footer.vue";
+import Footer from "~/components/footer.vue";
 import Toolbar from "~/components/toolbar.vue";
 import articleQuery from "~/apollo/queries/article";
 const attrs = require("markdown-it-attrs");
@@ -89,24 +112,24 @@ const highlight = require("markdown-it-highlightjs");
 const markdownStyle = require("markdown-it-style");
 
 const md = require("markdown-it")()
-  .set( { html:true } )
-  .use( attrs )
-  .use( highlight )
-  .use( markdownStyle, {
+  .set({ html: true })
+  .use(attrs)
+  .use(highlight)
+  .use(markdownStyle, {
     h1: "font-weight: 100;margin-top: 24px; margin-bottom: 24px;",
     h2: "font-weight: 100;margin-top: 24px; margin-bottom: 24px;",
     h3: "font-weight: 100;margin-top: 20px; margin-bottom: 20px;",
     h4: "font-weight: 100;margin-top: 16px; margin-bottom: 16px;",
     pre: "margin-bottom: 16px;",
     ul: "margin-bottom: 16px;",
-    img: "margin-left:auto; diaply:block;"
-  })
+    img: "margin-left:auto; diaply:block;",
+  });
 
 export default {
   data() {
     return {
       articles: [],
-      strapiBaseUri: process.env.strapiBaseUri
+      strapiBaseUri: process.env.strapiBaseUri,
     };
   },
   apollo: {
@@ -115,8 +138,8 @@ export default {
       query: articleQuery,
       variables() {
         return { slug: this.$route.params.slug };
-      }
-    }
+      },
+    },
   },
   head() {
     if (!this.article) return { title: "Speckle Blog" };
@@ -128,32 +151,32 @@ export default {
           hid: "title",
           name: "title",
           property: "title",
-          content: this.article.title
+          content: this.article.title,
         },
         {
           hid: "description",
           name: "description",
           property: "description",
-          content: this.article.summary
+          content: this.article.summary,
         },
         {
           hid: "og:site_name",
           name: "og:site_name",
           property: "og:site_name",
-          content: "Speckle, The AEC Data Platform"
+          content: "Speckle, The AEC Data Platform",
         },
         //FACEBOOK
         {
           hid: "og:title",
           name: "og:title",
           property: "og:title",
-          content: this.article.title
+          content: this.article.title,
         },
         {
           hid: "og:description",
           name: "og:description",
           property: "og:description",
-          content: this.article.summary
+          content: this.article.summary,
         },
         {
           hid: "og:image",
@@ -163,19 +186,19 @@ export default {
             ? this.article.image.formats
               ? process.env.strapiBaseUri + this.article.image.formats.small.url
               : process.env.strapiBaseUri + this.article.image.url
-            : "/spksplash.png"
+            : "/spksplash.png",
         },
         {
           hid: "og:url",
           name: "og:url",
           property: "og:url",
-          content: `${this.strapiBaseUri}${this.article.slug}`
+          content: `${this.strapiBaseUri}${this.article.slug}`,
         },
         {
           hid: "og:type",
           name: "og:type",
           property: "og:type",
-          content: "website"
+          content: "website",
         },
 
         //TWITTER
@@ -183,25 +206,25 @@ export default {
           hid: "twitter:card",
           name: "twitter:card",
           property: "twitter:card",
-          content: "summary_large_image"
+          content: "summary_large_image",
         },
         {
           hid: "twitter:title",
           name: "twitter:title",
           property: "twitter:title",
-          content: `Speckle Blog / ${this.article.title}`
+          content: `Speckle Blog / ${this.article.title}`,
         },
         {
           hid: "twitter:url",
           name: "twitter:url",
           property: "twitter:url",
-          content: `${this.strapiBaseUri}${this.article.slug}`
+          content: `${this.strapiBaseUri}${this.article.slug}`,
         },
         {
           hid: "twitter:description",
           name: "twitter:description",
           property: "twitter:description",
-          content: this.article.summary
+          content: this.article.summary,
         },
         {
           hid: "twitter:image",
@@ -211,52 +234,68 @@ export default {
             ? this.article.image.formats
               ? process.env.strapiBaseUri + this.article.image.formats.small.url
               : process.env.strapiBaseUri + this.article.image.url
-            : ""
-        }
-      ]
+            : "",
+        },
+      ],
     };
   },
   components: {
     Footer,
-    Toolbar
+    Toolbar,
   },
   computed: {
     article() {
       return this.articles[0];
     },
     content() {
-      return md.render(this.articles[0].content)
+      return md.render(this.articles[0].content);
     },
     nextPrevious() {
       // return this.$store.getters["blog/getNext"](this.$route.path);
-    }
+    },
     // frontmatter() {
     //   return this.$store.getters["blog/getPost"](this.$route.path);
     // },
   },
-  methods: {}
-}
+  mounted() {
+    if (this.article.canComment) {
+      //discourse comments
+      window.DiscourseEmbed = {
+        discourseUrl: "https://discourse.speckle.works/",
+        discourseEmbedUrl: "https://speckle.systems/blog/" + this.article.slug,
+      };
+
+      var d = document.createElement("script");
+      d.type = "text/javascript";
+      d.async = true;
+      d.src = window.DiscourseEmbed.discourseUrl + "javascripts/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(d);
+    }
+  },
+};
 </script>
 <style type="text/css" scoped>
-  .blogpost {
-    margin-top: -50px;
-  }
+.blogpost {
+  margin-top: -50px;
+}
 
-  .author {
-    margin-top: -20px;
-    margin-left: -15px;
-  }
+.author {
+  margin-top: -20px;
+  margin-left: -15px;
+}
 
-  .author .v-chip {
-    margin-top: 1px !important;
-  }
+.author .v-chip {
+  margin-top: 1px !important;
+}
 
-  .author .v-chip:first-child {
-    margin-left: 20px;
-  }
+.author .v-chip:first-child {
+  margin-left: 20px;
+}
 
-  .v-list__tile__sub-title {
-    height: 25px;
-  }
-
+.v-list__tile__sub-title {
+  height: 25px;
+}
 </style>

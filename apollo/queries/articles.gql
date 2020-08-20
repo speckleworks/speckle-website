@@ -4,6 +4,7 @@ query Articles {
     slug
     title
     published
+    canComment
     summary
     date
     categories {
