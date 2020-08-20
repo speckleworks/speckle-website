@@ -258,7 +258,7 @@ export default {
     // },
   },
   mounted() {
-    if (this.article.canComment) {
+    if (this.article && this.article.canComment) {
       //discourse comments
       window.DiscourseEmbed = {
         discourseUrl: "https://discourse.speckle.works/",
