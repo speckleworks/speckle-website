@@ -12,26 +12,44 @@ export default {
     head: {
         title: pkg.name,
         meta: [
-            { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: pkg.description },
+            {charset: 'utf-8'},
+            {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+            {hid: 'description', name: 'description', content: pkg.description},
+            {
+                hid: 'og:site_name',
+                property: 'og:site_name',
+                content: 'Speckle is the open source data platform for architecture, engineering and construction.'
+            },
+            {
+                hid: 'og:type',
+                property: 'og:type',
+                content: 'website'
+            },
             {
                 hid: `og:image`,
                 property: 'og:image',
-                name: 'og:image',
                 content: `https://speckle.systems/spksplash.png`
+            },
+            {
+                hid: 'og:title',
+                property: 'og:title',
+                content: 'Speckle: The open source data platform for architecture, engineering and construction.'
+            },
+            {
+                hid: 'og:description',
+                property: 'og:description',
+                content: 'A fast, web-scale base for automation, used by some of the most progressive companies in the AEC industry.'
+            },
+            {
+                hid: 'og:url',
+                property: 'og:url',
+                content: 'https://speckle.systems'
             },
             {
                 hid: `twitter:image`,
                 property: 'twitter:image',
                 name: 'twitter:image',
                 content: `https://speckle.systems/spksplash.png`
-            },
-            {
-                hid: 'og:site_name',
-                property: 'og:site_name',
-                name: 'og:site_name',
-                content: 'Speckle is the open source data platform for architecture, engineering and construction.'
             },
             {
                 hid: 'twitter:title',
@@ -57,7 +75,7 @@ export default {
             }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/speckle-min.png' },
+            {rel: 'icon', type: 'image/x-icon', href: '/speckle-min.png'},
             {
                 rel: 'stylesheet',
                 href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
@@ -76,14 +94,14 @@ export default {
     /*
      ** Customize the progress-bar color
      */
-    loading: { color: '#0A66FF' },
+    loading: {color: '#0A66FF'},
 
     /*
      ** Global CSS
      */
     css: [
         '~/assets/style/app.styl',
-        { src: '~/node_modules/highlight.js/styles/dracula.css', lang: 'css' }
+        {src: '~/node_modules/highlight.js/styles/dracula.css', lang: 'css'}
     ],
 
     /*
@@ -92,7 +110,7 @@ export default {
     plugins: [
         '@/plugins/vuetify',
         '@/plugins/moment',
-        { ssr: false, src: '~plugins/init' },
+        {ssr: false, src: '~plugins/init'},
         '@/plugins/bus',
     ],
 
@@ -163,7 +181,7 @@ export default {
     generate: {
         subFolders: true,
         async routes() {
-            let articlesReq = await axios.post(`https://strapi.speckle.works/graphql`, { query: "{ articles { slug } }" })
+            let articlesReq = await axios.post(`https://strapi.speckle.works/graphql`, {query: "{ articles { slug } }"})
             return articlesReq.data.data.articles.map(art => `/blog/${art.slug}`)
         }
     },
