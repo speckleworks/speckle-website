@@ -161,44 +161,38 @@ export default {
         },
         {
           hid: "og:site_name",
-          name: "og:site_name",
           property: "og:site_name",
           content: "Speckle, The AEC Data Platform",
         },
         //FACEBOOK
         {
           hid: "og:title",
-          name: "og:title",
           property: "og:title",
           content: this.article.title,
         },
         {
           hid: "og:description",
-          name: "og:description",
           property: "og:description",
           content: this.article.summary,
         },
         {
           hid: "og:image",
-          name: "og:image",
           property: "og:image",
           content: this.article.image
             ? this.article.image.formats
               ? process.env.strapiBaseUri + this.article.image.formats.small.url
               : process.env.strapiBaseUri + this.article.image.url
-            : "/spksplash.png",
+            : "https://speckle.systems/spksplash.png",
         },
         {
           hid: "og:url",
-          name: "og:url",
           property: "og:url",
-          content: `${this.strapiBaseUri}${this.article.slug}`,
+          content: `https://speckle.systems/${this.article.slug}`,
         },
         {
           hid: "og:type",
-          name: "og:type",
           property: "og:type",
-          content: "website",
+          content: "article",
         },
 
         //TWITTER
@@ -218,7 +212,7 @@ export default {
           hid: "twitter:url",
           name: "twitter:url",
           property: "twitter:url",
-          content: `${this.strapiBaseUri}${this.article.slug}`,
+          content: `https://speckle.systems/${this.article.slug}`,
         },
         {
           hid: "twitter:description",
@@ -234,7 +228,7 @@ export default {
             ? this.article.image.formats
               ? process.env.strapiBaseUri + this.article.image.formats.small.url
               : process.env.strapiBaseUri + this.article.image.url
-            : "",
+            : "https://speckle.systems/spksplash.png",
         },
       ],
     };
