@@ -81,7 +81,7 @@
       </v-menu>
     </v-toolbar-items>
     <v-spacer></v-spacer>
-    <v-btn class="github-button" href="https://github.com/speckleworks/speckleserver" data-size="large" data-show-count="true" aria-label="Star speckleworks/speckleserver on GitHub">Star us on GitHub!</v-btn>
+    <v-btn class="github-button" href="https://github.com/specklesystems/Server" data-size="large" data-show-count="false" aria-label="Star specklesystems/Server on GitHub">Star us on GitHub!</v-btn>
     <v-toolbar-side-icon @click.native="toggleNavBar()" v-if="sideIcon"></v-toolbar-side-icon>
   </v-toolbar>
 </template>
