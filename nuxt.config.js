@@ -19,13 +19,13 @@ export default {
                 hid: `og:image`,
                 property: 'og:image',
                 name: 'og:image',
-                content: `/spksplash.png`
+                content: `https://speckle.systems/spksplash.png`
             },
             {
                 hid: `twitter:image`,
                 property: 'twitter:image',
                 name: 'twitter:image',
-                content: `/spksplash.png`
+                content: `https://speckle.systems/spksplash.png`
             },
             {
                 hid: 'og:site_name',
