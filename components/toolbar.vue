@@ -121,6 +121,11 @@ export default {
               local: true
             },
             {
+              name: "Forum",
+              link: "https://discourse.speckle.works",
+              local: false
+            },
+            {
               name: "Twitter",
               link: "https://twitter.com/SpeckleSystems",
               local: false
@@ -128,11 +133,6 @@ export default {
             {
               name: "Slack",
               link: this.$store.state.slackInviteUrl,
-              local: false
-            },
-            {
-              name: "Forum",
-              link: "https://discourse.speckle.works",
               local: false
             }
           ]

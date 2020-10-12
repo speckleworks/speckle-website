@@ -139,7 +139,8 @@
             </v-card>
           </v-hover>
         </v-flex>
-        <v-flex xs12 sm12 md8 px-2 py-4>
+        <!-- <v-flex xs12 sm12 md8 px-2 py-4> -->
+        <v-flex xs12 sm6 md4 px-2 py-4>
           <v-hover>
             <v-card
               slot-scope="{ hover }"
