@@ -110,7 +110,14 @@ export default {
         {
           name: "About",
           link: "/about",
-          local: true
+          local: true,
+          items: [
+            {
+              name: "Careers",
+              link: "/careers",
+              local: true
+            }
+          ]
         },
         {
           name: "Community",
