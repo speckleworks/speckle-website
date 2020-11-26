@@ -34,8 +34,10 @@
               <a class="flink" href="https://twitter.com/teocomi">Matteo</a>
               founded a company that would
               <router-link class="flink" to="/blog/goodnews"
-                >focus exclusively on developing Speckle</router-link
-              >.
+              >focus exclusively on developing Speckle
+              </router-link
+              >
+              .
             </p>
             <p class="headline font-weight-light mt-5">
               We are always looking for talented people who believe in our
@@ -55,43 +57,31 @@
           class="mt-50"
           style="margin-top: -160px"
         ></v-flex>
-        <!--         <v-flex xs12 py-4 style="min-height:10vh" class="mt-5 mb-5">
-          <h1 class="title text-uppercase text-xs-center">
-            <strong>Contact ✉️</strong>
-          </h1>
-          <p class="headline font-weight-light mt-5">You can reach us at <a href="mailto:hello@speckle.systems">hello@speckle.systems</a></p>
-        </v-flex>-->
-        <!--
-        <v-flex xs12 py-4 style="min-height:10vh" xxxclass="text-xs-center">
-          <h1 class="display-1 font-weight-light xxx-text-uppercase">
-            <strong>Brand Collateral</strong>
-          </h1>
-          <p class="headline font-weight-light mt-5">
-            Spread the love! If you're building on top of Speckle, we would love for you to show that somewhere in your project 👉
-            <a
-              href="https://drive.google.com/file/d/1cR2PmNdpiRpegXTAbtZCWSz3JBJoLbLB/view?usp=sharing"
-            >get here the Speckle Logo</a>!
-          </p>
-          <p class="caption">Click on the download archive button in the top right corner.</p>
-        </v-flex>-->
       </v-layout>
       <v-layout justify-center row wrap px-5 mt-5 class="text-xs-center">
         <v-flex xs12 sm8 lg8 xl6 mt-5 py-5 style="min-height:20vh">
-          <h1 class="display-2 mb-5 font-weight-light xxx-text-uppercase">
+          <h1 class="display-2 mb-3 font-weight-light xxx-text-uppercase">
             Life @ Speckle
           </h1>
-          <v-layout
-            row
-            class="mb-3"
-            v-for="(perk, index) in perks"
-            :key="index"
-          >
-            <v-flex xs-4>A</v-flex>
-            <v-flex xs-6>
-              <span class="mb-0 font-weight-bold primary--text">
+          <h2 class="title font-weight-light">Some inspiring paragraph here telling everyone how cool we are!</h2>
+        </v-flex>
+      </v-layout>
+      <v-layout ma-3 justify-center row wrap v-for="(perk, index) in perks"
+                :key="index" :class="index % 2 == 0 ? 'reversed' : ''">
+        <v-flex xs4>
+          <v-layout justify-center>
+            <v-img :src="perk.image" max-height="200" max-width="200" alt="" class="image-round elevation-5"/>
+          </v-layout>
+        </v-flex>
+        <v-flex xs4>
+          <v-layout fill-height row wrap align-center ma-2>
+            <v-flex>
+              <p :class="index % 2 == 0 ? 'text-sm-right' : ''">
+              <span class="title font-weight-bold primary--text">
                 {{ perk.title }}
               </span>
-              <span class="display-0">{{ perk.description }}</span>
+                <span class="subheading">{{ perk.description }}</span>
+              </p>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -162,7 +152,7 @@
             >
               <center>
                 <v-avatar size="100" class="mt-3">
-                  <img :src="position.image" />
+                  <img :src="position.image"/>
                 </v-avatar>
               </center>
               <v-card-title primary-title class="justify-center">
@@ -170,12 +160,13 @@
               </v-card-title>
               <v-card-title class="justify-center">
                 <span class="title font-weight-light">{{
-                  position.subtitle
-                }}</span>
+                    position.subtitle
+                  }}</span>
               </v-card-title>
               <v-card-text class="justify-center">{{
-                position.description
-              }}</v-card-text>
+                  position.description
+                }}
+              </v-card-text>
             </v-card>
           </v-hover>
         </v-flex>
@@ -203,7 +194,7 @@
                   <div class="subheading">
                     No worries! We are always looking for talented people who
                     believe in our mission and want to change AEC.
-                    <v-divider class="my-3" />
+                    <v-divider class="my-3"/>
                     If you're intrested in working at Speckle, get in touch at
                     hello@speckle.com.
                   </div>
@@ -308,12 +299,39 @@ export default {
       strapiBaseUri: process.env.strapiBaseUri,
       perks: [
         {
-          title: "A perk",
-          description: "A perk description"
+          title: "No office!",
+          description: "Work from home, 100% of the time.",
+          image: "https://via.placeholder.com/200"
         },
         {
-          title: "A second perk",
-          description: "Second perk description"
+          title: "Flexible hours",
+          description: "There is no Big Brother watching you. If you need to take your bunnies to the vet, just do so.",
+          image: "https://via.placeholder.com/200"
+        },
+        {
+          title: "Choose your setup",
+          description: "We don't really care if you are a Mac, Windows or 🖖🏼 person. Choose the hardware/software that makes you happy.",
+          image: "https://via.placeholder.com/200"
+        },
+        {
+          title: "No BS meetings",
+          description: "Let's face it, we all hate useless meetings. Stand-ups don't count! 🤣",
+          image: "https://via.placeholder.com/200"
+        },
+        {
+          title: "Loose dress code",
+          description: "Want to NOT wear trousers? That's fine by us (as long as you don't stand up during meetings...)",
+          image: "https://via.placeholder.com/200"
+        },
+        {
+          title: "Bonkers Stand-Ups",
+          description: "Lets just say: we don't do meetings like others do...",
+          image: "https://via.placeholder.com/200"
+        },
+        {
+          title: "Awesome company retreats",
+          description: "... or at least they will be, once 2020 is over!",
+          image: "https://via.placeholder.com/200"
         }
       ],
       positions: [
@@ -375,5 +393,14 @@ export default {
 
 .flink {
   text-decoration: none;
+}
+
+.reversed {
+  flex-direction: row-reverse !important;
+}
+
+.image-round {
+  overflow: hidden;
+  border-radius: 50%;
 }
 </style>
