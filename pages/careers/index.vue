@@ -77,6 +77,27 @@
       </v-layout>
       <v-layout justify-center row wrap px-5 mt-5 class="text-xs-center">
         <v-flex xs12 sm8 lg8 xl6 mt-5 py-5 style="min-height:20vh">
+          <h1 class="display-2 mb-5 font-weight-light xxx-text-uppercase">
+            Life @ Speckle
+          </h1>
+          <v-layout
+            row
+            class="mb-3"
+            v-for="(perk, index) in perks"
+            :key="index"
+          >
+            <v-flex xs-4>A</v-flex>
+            <v-flex xs-6>
+              <span class="mb-0 font-weight-bold primary--text">
+                {{ perk.title }}
+              </span>
+              <span class="display-0">{{ perk.description }}</span>
+            </v-flex>
+          </v-layout>
+        </v-flex>
+      </v-layout>
+      <v-layout justify-center row wrap px-5 mt-5 class="text-xs-center">
+        <v-flex xs12 sm8 lg8 xl6 mt-5 py-5 style="min-height:20vh">
           <h1 class="display-2 font-weight-light xxx-text-uppercase">
             Open positions
           </h1>
@@ -285,6 +306,16 @@ export default {
           "/uploads/Artboard_1_copy_3_f3f7053d48.png"
       },
       strapiBaseUri: process.env.strapiBaseUri,
+      perks: [
+        {
+          title: "A perk",
+          description: "A perk description"
+        },
+        {
+          title: "A second perk",
+          description: "Second perk description"
+        }
+      ],
       positions: [
         {
           title: "C# Dev",
