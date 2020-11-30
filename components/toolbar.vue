@@ -3,7 +3,7 @@
     <!-- NORMAL MENU -->
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat to="/">
-        <v-img src="https://discourse.speckle.works/uploads/default/original/1X/25cc7f19595c444b111cff766d2310034f9efa79.png" width="20"></v-img>&nbsp;&nbsp;
+        <v-img :src='require("~/assets/logo_small.png")' width="20"></v-img>&nbsp;&nbsp;
         Speckle
       </v-btn>
       <template v-for="(item, i) in menuItems">
@@ -129,30 +129,30 @@ export default {
               name: "Twitter",
               link: "https://twitter.com/SpeckleSystems",
               local: false
-            },
-            {
-              name: "Slack",
-              link: this.$store.state.slackInviteUrl,
-              local: false
             }
+            // {
+            //   name: "Slack",
+            //   link: this.$store.state.slackInviteUrl,
+            //   local: false
+            // }
           ]
         },
         {
           name: "Resources",
           link: "/resources",
           items: [ {
-              name: "Docs",
+              name: "Docs v1",
               link: "/docs/essentials/start",
               local: true
             },
-            {
-              name: "Speckle Insider",
-              link: "/blog/insider-speckle2",
-              local: true
+                        {
+              name: "Source code v1",
+              link: "https://github.com/speckleworks",
+              local: false
             },
             {
-              name: "Github",
-              link: "https://github.com/speckleworks",
+              name: "Source code v2",
+              link: "https://github.com/specklesystems",
               local: false
             }
           ]
