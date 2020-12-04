@@ -357,7 +357,17 @@ export default {
           image:
             "https://img.stackshare.io/service/5883/preview.png",
           url: "/"
-        }
+        },
+        {
+          title: "DevOps/Backend Engineer",
+          subtitle: "CI/CD, Docker, Node.js, Postgresql",
+          description:
+            "We're looking for a DevOps engineer to help us scale our hosted offerings and with potentially also backend skills to help look after the server and its GraphQL API." +
+            " Additional experience with Kubernetes / Bash / Ansible / Terraform and developing Open Source very welcome.",
+          image:
+            "http://cliffchord.com/wp-content/uploads/2019/11/kisspng-devops-software-developer-agile-software-developme-icon-devops-logo-5b56503405fa76.4340629915323832840245.png",
+          url: "/"
+        },
       ]
     };
   }
