@@ -15,7 +15,7 @@
             <v-card-text>
               <p class="display-2 font-weight-thin">We're hiring!</p>
               <p class="display-1 font-weight-thin mt-5">
-                Join our team and help us change the future of the AEC industry.
+                Join our team and help us change <a style="color:white" href="https://speckle.systems/blog/opensource-aec-speckle">the future of the AEC industry</a>.
               </p>
             </v-card-text>
           </v-card>
@@ -29,7 +29,7 @@
             "
           >
                       <p class="headline font-weight-light mt-2">
-              Tired of corporate environments, endless meetings, middle management and unfulfilling tasks?
+              Tired of corporate environments, endless meetings, middle management and unfulfilling tasks? Want to work in public, on open source tech?
             </p>
             <p class="headline font-weight-light mt-5">
               We are looking for smart and talented individuals who believe in our
@@ -55,9 +55,8 @@
           <h1 class="display-2 font-weight-light xxx-text-uppercase">
             Open positions
           </h1>
-          <p class="mt-5 subheading">
-            The world is full of exciting opportunities, and these are some of
-            them!
+            <p class="mt-5 subheading">
+            <b>NHow to apply:</b> Check out the positions below! If you think you fit in one of them, or across them, send us an up-to-date CV & a quick intro explaining your motivation for joining and why you think you would be a good fit.
           </p>
         </v-flex>
       </v-layout>
@@ -153,6 +152,38 @@
               <v-layout align-center fill-height>
                 <v-flex mb-4>
                   <div class="display-1 font-weight-thin my-4">
+                    Our Stack
+                  </div>
+                  <div class="subheading">
+                   The Speckle Stack is quite diverse - and we're happy to let people move across projects. Here's some of the tech:
+                   <v-divider class='my-2'></v-divider>
+                   <b>On the interweb side of things</b>, we're rocking along with nodejs, apollo server, postgresql, vuejs, and threejs.
+                   <v-divider class='my-2'></v-divider>
+                   <b>Our desktop tooling</b> is revolving mostly around .NET. In addition to the .NET Speckle SDK, we like Python!
+                  </div>
+                </v-flex>
+              </v-layout>
+            </v-card>
+          </v-hover>
+        </v-flex>
+        <v-flex xs12 sm6 md4 px-2 py-4>
+          <v-hover>
+            <v-card
+              slot-scope="{ hover }"
+              dark
+              color="primary"
+              :class="
+                `elevation-${
+                  hover ? 20 : 10
+                } card-outer white-text text-white pa-4`
+              "
+              height="100%"
+              target="_blank"
+              href="mailto:hello@speckle.systems"
+            >
+              <v-layout align-center fill-height>
+                <v-flex mb-4>
+                  <div class="display-1 font-weight-thin my-4">
                     Didn't find the right position?
                   </div>
                   <div class="subheading">
@@ -180,7 +211,9 @@
                 :key="index" :class="index % 2 == 0 ? 'reversed' : ''">
         <v-flex xs4>
           <v-layout justify-center>
+
             <v-img :src="perk.image" max-height="200" aspect-ratio="1"  alt="" contain class=""/>
+
           </v-layout>
         </v-flex>
         <v-flex xs4>
