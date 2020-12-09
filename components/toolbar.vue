@@ -10,11 +10,7 @@
     <!-- NORMAL MENU -->
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat to="/">
-        <v-img
-          src="https://discourse.speckle.works/uploads/default/original/1X/25cc7f19595c444b111cff766d2310034f9efa79.png"
-          width="20"
-        ></v-img
-        >&nbsp;&nbsp; Speckle
+        Home
       </v-btn>
       <template v-for="(item, i) in menuItems">
         <v-menu open-on-hover offset-y :key="i" v-if="item.items">
@@ -38,11 +34,7 @@
       <v-menu offset-y :close-on-content-click="false" v-model="mobileMenu">
         <template v-slot:activator="{ on }">
           <v-btn flat block v-on="on">
-            <v-img
-              src="https://discourse.speckle.works/uploads/default/original/1X/25cc7f19595c444b111cff766d2310034f9efa79.png"
-              width="20"
-            ></v-img
-            >&nbsp;&nbsp; Speckle
+            Menu
             <v-icon>arrow_drop_down</v-icon>
           </v-btn>
         </template>
