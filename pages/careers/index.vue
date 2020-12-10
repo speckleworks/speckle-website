@@ -365,7 +365,7 @@ export default {
           title: "AEC Software Engineer",
           subtitle: "C#, WPF, AEC APIs, GraphQL",
           description:
-            "If software APIs are your daily bead 🍞, then this position is for you!"+
+            "If software APIs are your daily bread 🍞, then this position is for you!"+
             " We're looking for an experienced developer who has tamed various authoring and analysis tools APIs (Revit, Rhino, GHrasshopper, Dynamo  APIs...)"+
             " to help us support and expand our growing list of connectors. You will be in charge of our .NET SDK. Web development / Python skills are a plus! ",
           image:
