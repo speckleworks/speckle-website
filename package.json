@@ -39,5 +39,7 @@
         "vuetify-loader": "^1.2.1",
         "webpack": "^4.34.0"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "@nuxt/types": "^0.7.9"
+    }
 }

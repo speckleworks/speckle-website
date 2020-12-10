@@ -163,6 +163,11 @@ export default {
           local: true
         },
         {
+          name: "Careers",
+          link: "/careers",
+          local: true
+        },
+        {
           name: "Web App",
           link: "https://app.speckle.systems",
           local: false
