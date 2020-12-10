@@ -1,22 +1,16 @@
 <template>
-  <v-toolbar
-    prominent
-    app
-    clipped-right
-    :class="$store.state.dark ? '' : ''"
-    style="z-index: 20"
-    :dark="$store.state.dark"
-  >
+  <v-toolbar prominent app clipped-right :class="$store.state.dark ? '' : ''" style="z-index: 20" :dark="$store.state.dark">
     <!-- NORMAL MENU -->
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat to="/">
-        Home
+        <v-img :src='require("~/assets/logo_small.png")' width="20"></v-img>&nbsp;&nbsp;
+        Speckle
       </v-btn>
       <template v-for="(item, i) in menuItems">
         <v-menu open-on-hover offset-y :key="i" v-if="item.items">
           <template v-slot:activator="{ on }">
             <v-btn flat v-on="on">
-              {{ item.name }}&nbsp;
+              {{item.name}}&nbsp;
               <v-icon small>arrow_drop_down</v-icon>
             </v-btn>
           </template>
@@ -31,47 +25,40 @@
     </v-toolbar-items>
     <!-- MOBILE MENU -->
     <v-toolbar-items class="hidden-md-and-up">
-      <v-menu offset-y :close-on-content-click="false" v-model="mobileMenu">
+      <v-menu offset-y :close-on-content-click="false" v-model='mobileMenu'>
         <template v-slot:activator="{ on }">
           <v-btn flat block v-on="on">
-            Menu
+            <v-img src="https://discourse.speckle.works/uploads/default/original/1X/25cc7f19595c444b111cff766d2310034f9efa79.png" width="20"></v-img>&nbsp;&nbsp;
+            Speckle
             <v-icon>arrow_drop_down</v-icon>
           </v-btn>
         </template>
         <v-card>
           <v-list>
-            <v-list-tile to="/" @click="mobileMenu = false">
+            <v-list-tile to='/' @click='mobileMenu = false'>
               <v-list-tile-content>
                 <v-list-tile-title>
                   <b>Home</b>
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <template v-for="item in menuItems">
-              <template v-if="item.items">
+            <template v-for='item in menuItems'>
+              <template v-if='item.items'>
                 <v-list-group>
                   <template v-slot:activator>
                     <v-list-tile>
                       <v-list-tile-content>
                         <v-list-tile-title>
-                          <b>{{ item.name }}</b>
+                          <b>{{item.name}}</b>
                         </v-list-tile-title>
                       </v-list-tile-content>
                     </v-list-tile>
                   </template>
-                  <template v-for="subItem in item.items">
-                    <v-list-tile
-                      :to="subItem.local ? subItem.link : ''"
-                      :href="subItem.local ? '' : subItem.link"
-                      :target="subItem.local ? '' : '_blank'"
-                      @click="mobileMenu = false"
-                    >
+                  <template v-for='(subItem) in item.items'>
+                    <v-list-tile :to='subItem.local ? subItem.link : ""' :href='subItem.local ? "" : subItem.link' :target="subItem.local ? '': '_blank'" @click='mobileMenu = false'>
                       <v-list-tile-content>
                         <v-list-tile-title>
-                          {{ subItem.name }}
-                          <v-icon v-if="!subItem.local" small
-                            >open_in_new</v-icon
-                          >
+                          {{subItem.name}} <v-icon v-if="!subItem.local" small>open_in_new</v-icon>
                         </v-list-tile-title>
                       </v-list-tile-content>
                     </v-list-tile>
@@ -79,15 +66,10 @@
                 </v-list-group>
               </template>
               <template v-else>
-                <v-list-tile
-                  :to="item.local ? item.link : ''"
-                  :href="item.local ? '' : item.link"
-                  @click="mobileMenu = false"
-                  :target="item.local ? '' : '_blank'"
-                >
+                <v-list-tile :to='item.local ? item.link : ""' :href='item.local ? "" : item.link' @click='mobileMenu = false' :target="item.local ? '': '_blank'">
                   <v-list-tile-content>
                     <v-list-tile-title>
-                      <b>{{ item.name }}</b>
+                      <b>{{item.name}}</b>
                       <v-icon v-if="!item.local" small>open_in_new</v-icon>
                     </v-list-tile-title>
                   </v-list-tile-content>
@@ -99,18 +81,8 @@
       </v-menu>
     </v-toolbar-items>
     <v-spacer></v-spacer>
-    <v-btn
-      class="github-button"
-      href="https://github.com/specklesystems/Server"
-      data-size="large"
-      data-show-count="false"
-      aria-label="Star specklesystems/Server on GitHub"
-      >Star us on GitHub!</v-btn
-    >
-    <v-toolbar-side-icon
-      @click.native="toggleNavBar()"
-      v-if="sideIcon"
-    ></v-toolbar-side-icon>
+    <v-btn class="github-button" href="https://github.com/specklesystems/Server" data-size="large" data-show-count="false" aria-label="Star specklesystems/Server on GitHub">Star us on GitHub!</v-btn>
+    <v-toolbar-side-icon @click.native="toggleNavBar()" v-if="sideIcon"></v-toolbar-side-icon>
   </v-toolbar>
 </template>
 <script>
@@ -123,10 +95,10 @@ export default {
   components: {
     MenuItem
   },
-  data() {
+  data( ) {
     return {
       navBar: true,
-      speckle: ["speckle ✨", "spackle 👷🏽‍♂️", "spock le 🖖", "speck 🥓"],
+      speckle: [ "speckle ✨", "spackle 👷🏽‍♂️", "spock le 🖖", "speck 🥓" ],
       title: "speckle",
       mobileMenu: false,
       menuItems: [
@@ -143,8 +115,7 @@ export default {
         {
           name: "Community",
           link: "/community",
-          items: [
-            {
+          items: [ {
               name: "Contributors",
               link: "/contributors",
               local: true
@@ -158,31 +129,30 @@ export default {
               name: "Twitter",
               link: "https://twitter.com/SpeckleSystems",
               local: false
-            },
-            {
-              name: "Slack",
-              link: this.$store.state.slackInviteUrl,
-              local: false
             }
+            // {
+            //   name: "Slack",
+            //   link: this.$store.state.slackInviteUrl,
+            //   local: false
+            // }
           ]
         },
         {
           name: "Resources",
           link: "/resources",
-          items: [
-            {
-              name: "Docs",
+          items: [ {
+              name: "Docs v1",
               link: "/docs/essentials/start",
               local: true
             },
-            {
-              name: "Speckle Insider",
-              link: "/blog/insider-speckle2",
-              local: true
+                        {
+              name: "Source code v1",
+              link: "https://github.com/speckleworks",
+              local: false
             },
             {
-              name: "Github",
-              link: "https://github.com/speckleworks",
+              name: "Source code v2",
+              link: "https://github.com/specklesystems",
               local: false
             }
           ]
@@ -190,11 +160,6 @@ export default {
         {
           name: "Blog",
           link: "/blog",
-          local: true
-        },
-        {
-          name: "Careers",
-          link: "/careers",
           local: true
         },
         {
@@ -206,24 +171,26 @@ export default {
     };
   },
   methods: {
-    toggleDark() {
-      this.$store.commit("TOGGLE_DARK");
-      localStorage.setItem("dark", this.$store.state.dark);
+    toggleDark( ) {
+      this.$store.commit( "TOGGLE_DARK" );
+      localStorage.setItem( "dark", this.$store.state.dark );
     },
-    toggleNavBar() {
-      this.$bus.$emit("toggle-nav");
+    toggleNavBar( ) {
+      this.$bus.$emit( "toggle-nav" );
     },
-    randomize() {
+    randomize( ) {
       this.title = this.speckle[
-        Math.floor(Math.random() * this.speckle.length)
+        Math.floor( Math.random( ) * this.speckle.length )
       ];
     }
   },
-  mounted() {
-    let githubscript = document.createElement("script");
-    githubscript.setAttribute("src", "https://buttons.github.io/buttons.js");
-    document.head.appendChild(githubscript);
+  mounted( ) {
+    let githubscript = document.createElement( "script" );
+    githubscript.setAttribute( "src", "https://buttons.github.io/buttons.js" );
+    document.head.appendChild( githubscript );
   }
 };
+
 </script>
-<style></style>
+<style>
+</style>
