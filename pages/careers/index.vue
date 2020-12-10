@@ -15,7 +15,7 @@
             <v-card-text>
               <p class="display-2 font-weight-thin">We're hiring!</p>
               <p class="display-1 font-weight-thin mt-5">
-                Join our team and help us change <a style="color:white" href="https://speckle.systems/blog/opensource-aec-speckle">the future of the AEC industry</a>.
+                Join our team and help us change <a style="color:white" href="/blog/opensource-aec-speckle">the future of the AEC industry</a>.
               </p>
             </v-card-text>
           </v-card>
@@ -33,7 +33,7 @@
             </p>
             <p class="headline font-weight-light mt-5">
               We are looking for smart and talented individuals who believe in our
-              <a href="http://localhost:3000/blog/speckle2-vision-and-faq">vision</a> and want to change AEC, for the better!
+              <a href="/blog/speckle2-vision-and-faq">vision</a> and want to change AEC, for the better!
             </p>
             <p class="headline font-weight-light mt-5">
               If you fit the description, check out the positions below and get in touch at <a href="mailto:hello@speckle.systems">hello@speckle.systems</a> 👇
@@ -147,7 +147,6 @@
               "
               height="100%"
               target="_blank"
-              href="mailto:hello@speckle.systems"
             >
               <v-layout align-center fill-height>
                 <v-flex mb-4>
@@ -332,7 +331,7 @@ export default {
         },
         {
           title: "No office, no commute!",
-          description: "Work from home or from wherever you fancy the most, 100% of the time.",
+          description: "Work from home or from wherever you fancy, 100% of the time.",
           image: "https://media4.giphy.com/media/XymXANrzgI4k6FL6zr/giphy.gif"
         },
         {
@@ -374,10 +373,10 @@ export default {
           url: "/"
         },
         {
-          title: "Frontent Engineer",
+          title: "Frontend Engineer",
           subtitle: "Js, Vue, UX/UI, GraphQL",
           description:
-            "We're looking for an experienced and talented Frontent + UX/UI engineer to look after and improve the Speckle Web app and to develop brand new specialized apps that will leverage" +
+            "We're looking for an experienced and talented Frontend + UX/UI engineer to look after and improve the Speckle Web app and to develop brand new specialized apps that will leverage" +
             " Speckle data (dashboards, automation & management tools and more) and experiences. AEC / Node.js / Three.js skills are a plus!",
           image:
             "https://user-images.githubusercontent.com/2679513/101770543-7ed67000-3ae0-11eb-9e6d-034469e4b71a.png",
