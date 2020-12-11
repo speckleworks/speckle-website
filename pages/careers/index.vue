@@ -366,7 +366,7 @@ export default {
           subtitle: "C#, WPF, AEC APIs, GraphQL",
           description:
             "If software APIs are your daily bread 🍞, then this position is for you!"+
-            " We're looking for an experienced developer who has tamed various authoring and analysis tools APIs (Revit, Rhino, GHrasshopper, Dynamo  APIs...)"+
+            " We're looking for an experienced developer who has tamed various authoring and analysis tools APIs (Revit, Rhino, Grasshopper, Dynamo  APIs...)"+
             " to help us support and expand our growing list of connectors. You will be in charge of our .NET SDK. Web development / Python skills are a plus! ",
           image:
             "https://user-images.githubusercontent.com/2679513/101771098-5307ba00-3ae1-11eb-9040-9ebe824d9fef.png",
