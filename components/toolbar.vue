@@ -140,26 +140,17 @@ export default {
           link: "/about",
           local: true
         },
+        
         {
-          name: "Community",
-          link: "/community",
-          items: [
-            {
-              name: "Contributors",
-              link: "/contributors",
-              local: true
-            },
-            {
-              name: "Forum",
-              link: "https://discourse.speckle.works",
-              local: false
-            },
-            {
-              name: "Twitter",
-              link: "https://twitter.com/SpeckleSystems",
-              local: false
-            }
-          ]
+          name: "Blog",
+          link: "/blog",
+          local: true
+        },
+
+        {
+          name: "Careers",
+          link: "/careers",
+          local: true
         },
         {
           name: "Resources",
@@ -182,15 +173,10 @@ export default {
             }
           ]
         },
-        {
-          name: "Blog",
-          link: "/blog",
-          local: true
-        },
-        {
-          name: "Careers",
-          link: "/careers",
-          local: true
+                        {
+          name: "Community",
+          link: "https://discourse.speckle.works",
+          local: false
         },
         {
           name: "Web App",

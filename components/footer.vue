@@ -77,22 +77,8 @@ export default {
         },
         {
           name: "Community",
-          items: [ {
-              name: "Contributors",
-              link: "/contributors",
-              local: true
-            },
-            {
-              name: "Twitter",
-              link: "https://twitter.com/SpeckleSystems",
-              local: false
-            },
-            {
-              name: "Forum",
-              link: "https://discourse.speckle.works",
-              local: false
-            }
-          ]
+          link: "https://discourse.speckle.works",
+          local: false
         },
         {
           name: "Resources",

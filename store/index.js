@@ -1,6 +1,7 @@
 import BlogFromDir from './mdFromDir.js'
 import DocsFromDir from './DocsFromDir.js'
 import axios from 'axios'
+import { isRequiredArgument } from 'graphql'
 
 export const state = () => ({
     dark: false,
@@ -58,6 +59,9 @@ export const actions = {
 }
 
 let getContributors = async() => new Promise(async(resolve, reject) => {
+    //TODO: restore contribs page!
+    
+    resolve([])
     console.log('get contribs called')
     let token = process.env.GHPAT
     let org = "speckleworks"
