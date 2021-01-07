@@ -15,7 +15,7 @@
             <v-card-text>
               <p class="display-2 font-weight-thin">We're hiring!</p>
               <p class="display-1 font-weight-thin mt-5">
-                Join our team and help us change <a style="color:white" href="https://speckle.systems/blog/opensource-aec-speckle">the future of the AEC industry</a>.
+                Join our team and help us change <a style="color:white" href="/blog/opensource-aec-speckle">the future of the AEC industry</a>.
               </p>
             </v-card-text>
           </v-card>
@@ -33,7 +33,7 @@
             </p>
             <p class="headline font-weight-light mt-5">
               We are looking for smart and talented individuals who believe in our
-              <a href="http://localhost:3000/blog/speckle2-vision-and-faq">vision</a> and want to change AEC, for the better!
+              <a href="/blog/speckle2-vision-and-faq">vision</a> and want to change AEC, for the better!
             </p>
             <p class="headline font-weight-light mt-5">
               If you fit the description, check out the positions below and get in touch at <a href="mailto:hello@speckle.systems">hello@speckle.systems</a> 👇
@@ -56,7 +56,7 @@
             Open positions
           </h1>
             <p class="mt-5 subheading">
-            <b>NHow to apply:</b> Check out the positions below! If you think you fit in one of them, or across them, send us an up-to-date CV & a quick intro explaining your motivation for joining and why you think you would be a good fit.
+            <b>How to apply:</b> Check out the positions below! If you think you fit in one of them, or across them, send us an up-to-date CV & a quick intro explaining your motivation for joining and why you think you would be a good fit.
           </p>
         </v-flex>
       </v-layout>
@@ -111,7 +111,7 @@
                 } card-outer white-text text-white pa-4 elevation-5`
               "
               height="100%"
-              :to="position.url"
+              
             >
               <center>
                 <v-avatar size="100" class="mt-3">
@@ -147,7 +147,6 @@
               "
               height="100%"
               target="_blank"
-              href="mailto:hello@speckle.systems"
             >
               <v-layout align-center fill-height>
                 <v-flex mb-4>
@@ -229,6 +228,8 @@
           </v-layout>
         </v-flex>
       </v-layout>
+      <v-layout class="ma-5 pa-5"></v-layout>
+
     </v-container>
   </div>
 </template>
@@ -330,7 +331,7 @@ export default {
         },
         {
           title: "No office, no commute!",
-          description: "Work from home or from wherever you fancy the most, 100% of the time.",
+          description: "Work from home or from wherever you fancy, 100% of the time.",
           image: "https://media4.giphy.com/media/XymXANrzgI4k6FL6zr/giphy.gif"
         },
         {
@@ -364,21 +365,21 @@ export default {
           title: "AEC Software Engineer",
           subtitle: "C#, WPF, AEC APIs, GraphQL",
           description:
-            "If software APIs are your daily bead 🍞, then this position is for you!"+
-            " We're looking for an experienced developer who has tamed various authoring and analysis tools APIs (Revit, Rhino, GHrasshopper, Dynamo  APIs...)"+
+            "If software APIs are your daily bread 🍞, then this position is for you!"+
+            " We're looking for an experienced developer who has tamed various authoring and analysis tools APIs (Revit, Rhino, Grasshopper, Dynamo  APIs...)"+
             " to help us support and expand our growing list of connectors. You will be in charge of our .NET SDK. Web development / Python skills are a plus! ",
           image:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLhkgNhzZVREUuVKM34OVtosBGlTCR00Ymqg&usqp=CAU",
+            "https://user-images.githubusercontent.com/2679513/101771098-5307ba00-3ae1-11eb-9040-9ebe824d9fef.png",
           url: "/"
         },
         {
-          title: "Frontent Engineer",
+          title: "Frontend Engineer",
           subtitle: "Js, Vue, UX/UI, GraphQL",
           description:
-            "We're looking for an experienced and talented Frontent + UX/UI engineer to look after and improve the Speckle Web app and to develop brand new specialized apps that will leverage" +
+            "We're looking for an experienced and talented Frontend + UX/UI engineer to look after and improve the Speckle Web app and to develop brand new specialized apps that will leverage" +
             " Speckle data (dashboards, automation & management tools and more) and experiences. AEC / Node.js / Three.js skills are a plus!",
           image:
-            "https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg",
+            "https://user-images.githubusercontent.com/2679513/101770543-7ed67000-3ae0-11eb-9e6d-034469e4b71a.png",
           url: "/"
         },
                 {
@@ -388,7 +389,7 @@ export default {
             "If 3D geometry in the browser is your passion, then this position is for you! We're looking for a skilled Three.js/WebGL developer to bring our viewer to the next level." +
             " You'll be responsible of the coolest open source viewer for the AEC industry! AEC / Frontend experience are a plus!",
           image:
-            "https://img.stackshare.io/service/5883/preview.png",
+            "https://user-images.githubusercontent.com/2679513/101770453-5d758400-3ae0-11eb-992c-010ab0591df9.png",
           url: "/"
         },
         {
@@ -398,7 +399,7 @@ export default {
             "We're looking for a DevOps engineer to help us scale our hosted offerings and with potentially also backend skills to help look after the server and its GraphQL API." +
             " Additional experience with Kubernetes / Bash / Ansible / Terraform and developing Open Source very welcome.",
           image:
-            "http://cliffchord.com/wp-content/uploads/2019/11/kisspng-devops-software-developer-agile-software-developme-icon-devops-logo-5b56503405fa76.4340629915323832840245.png",
+            "https://user-images.githubusercontent.com/2679513/101770359-42a30f80-3ae0-11eb-9841-c546ee66b4e7.png",
           url: "/"
         },
       ]

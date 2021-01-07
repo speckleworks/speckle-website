@@ -5,7 +5,7 @@ date: 2019-01-21
 order: 1
 ---
 <template lang='md'>
-
+  These docs refer to Speckle v1, our team is busy working on a v2 of Speckle! Check out our <a href="/blog">blog</a> and <a href="https://discourse.speckle.works/">forum</a> to stay updated.
   <!-- ![clients](~/assets/docs/various/screenshots.png) -->
   # 1. Register {.font-weight-thin .display-1 .my-4}
 
