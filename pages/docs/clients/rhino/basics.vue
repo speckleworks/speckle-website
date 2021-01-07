@@ -56,7 +56,7 @@ order: 1
   <!-- <div class='embed-container mb-5'><iframe width="560" height="315" src="https://www.youtube.com/embed/D4Bo7u6RtYA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div> -->
   <br>
 
-  If you have any ytrouble, head over to our [forum and buzz](https://discourse.speckle.works), or hit us up on slack. If you think it's a more of a bug rather than a question, [report it on github](https://github.com/speckleworks/SpeckleRhino/issues)!
+  If you have any trouble, head over to our [forum and buzz](https://discourse.speckle.works). If you think it's a more of a bug rather than a question, [report it on github](https://github.com/speckleworks/SpeckleRhino/issues)!
 </template>
 <script>
 export default {

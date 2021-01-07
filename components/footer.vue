@@ -88,11 +88,6 @@ export default {
               local: false
             },
             {
-              name: "Slack",
-              link: this.$store.state.slackInviteUrl,
-              local: false
-            },
-            {
               name: "Forum",
               link: "https://discourse.speckle.works",
               local: false

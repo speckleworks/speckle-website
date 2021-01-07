@@ -158,11 +158,6 @@ export default {
               name: "Twitter",
               link: "https://twitter.com/SpeckleSystems",
               local: false
-            },
-            {
-              name: "Slack",
-              link: this.$store.state.slackInviteUrl,
-              local: false
             }
           ]
         },
