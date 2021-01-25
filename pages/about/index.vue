@@ -29,7 +29,7 @@
             <p class="headline font-weight-light mt-4">
               Since then, the project has matured into a
               <b>solid, open-source, data platform for automation in AEC</b> with a vibrant community of
-              <a class="flink" href="/contributors">contributors</a> and happy hackers.
+              <a class="flink" href="https://discourse.speckle.works/">contributors</a> and happy hackers.
             </p>
             <p class="headline font-weight-light mt-4">
               In early 2020, against all odds, Dimitrie and
@@ -120,7 +120,7 @@
               slot-scope="{ hover }"
               :class="`card-outer white-text text-white pa-4 elevation-5`"
               height="100%"
-              to="/contributors"
+              href="https://discourse.speckle.works/"
             >
               <center>
                 <v-avatar size="100" class="mt-3">

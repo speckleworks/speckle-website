@@ -77,8 +77,11 @@ export default {
         },
         {
           name: "Community",
-          link: "https://discourse.speckle.works",
-          local: false
+          items: [ {
+              name: "Community Forum",
+              link: "https://discourse.speckle.works",
+              local: false
+            }]
         },
         {
           name: "Resources",
@@ -92,11 +95,11 @@ export default {
               link: "/blog",
               local: true
             },
-            {
-              name: "Speckle Insider",
-              link: "/blog/insider-speckle2",
-              local: true
-            },
+            // {
+            //   name: "Speckle Insider",
+            //   link: "/blog/insider-speckle2",
+            //   local: true
+            // },
             // {
             //   name: "Write for Speckle",
             //   link: "/blog/to-do",

@@ -33,7 +33,7 @@
       </v-flex>
       <v-flex xs12 sm6 md4 px-2 py-4>
         <v-hover>
-          <v-card slot-scope="{ hover }" :class="`card-outer white-text text-white pa-4`" height="100%" to='/contributors'>
+          <v-card slot-scope="{ hover }" :class="`card-outer white-text text-white pa-4`" height="100%" href='https://discourse.speckle.works/'>
             <center>
               <v-avatar size="100" class="mt-3">
                 <img src="https://strapi.speckle.works/uploads/thumbnail_speckle_3096476c32.jpeg" />
