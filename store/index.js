@@ -62,27 +62,27 @@ let getContributors = async() => new Promise(async(resolve, reject) => {
     //TODO: restore contribs page!
     
     resolve([])
-    console.log('get contribs called')
-    let token = process.env.GHPAT
-    let org = "speckleworks"
-    let baseUrl = "https://europe-west2-speckle-manager-api.cloudfunctions.net"
+    // console.log('get contribs called')
+    // let token = process.env.GHPAT
+    // let org = "speckleworks"
+    // let baseUrl = "https://europe-west2-speckle-manager-api.cloudfunctions.net"
 
-    try {
-        let result = await axios.get(`${baseUrl}/members?org=${org}`)
+    // try {
+    //     let result = await axios.get(`${baseUrl}/members?org=${org}`)
 
-        let c = []
-            // console.log( result.data )
-        for (let mem of result.data) {
-            let contributor = await axios.get(`${baseUrl}/user?user=${mem.login}`)
-            c.push(contributor.data)
-        }
-        resolve(c)
+    //     let c = []
+    //         // console.log( result.data )
+    //     for (let mem of result.data) {
+    //         let contributor = await axios.get(`${baseUrl}/user?user=${mem.login}`)
+    //         c.push(contributor.data)
+    //     }
+    //     resolve(c)
 
-        // listOfMembers.forEach( async mem => {
-        //   let contributor = await this.$axios.$get( mem.url, { headers: { 'Authorization': ` token ${token}` } } )
-        //   this.dispatch( 'generic/addContrib', { contrib: contributor } )
-        // } )
-    } catch (err) {
-        console.log(err)
-    }
+    //     // listOfMembers.forEach( async mem => {
+    //     //   let contributor = await this.$axios.$get( mem.url, { headers: { 'Authorization': ` token ${token}` } } )
+    //     //   this.dispatch( 'generic/addContrib', { contrib: contributor } )
+    //     // } )
+    // } catch (err) {
+    //     console.log(err)
+    // }
 })

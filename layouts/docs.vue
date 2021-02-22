@@ -1,5 +1,25 @@
 <template>
   <v-app :dark='$store.state.dark'>
+    <v-snackbar
+      class="mt-5 pa-5"
+      :value="true"
+      color="primary"
+      dark
+      :multi-line="true"
+      top
+      :timeout="0">
+      <div>
+        <h3 class="pa-0 ma-0">🚀 A brand new Speckle has arrived, check it out!</h3>
+        <p class="pt-1 ma-0">Psss! You are browsing an old version, time to upgrgade 😉</p>
+      </div>
+      <v-btn
+        text
+        color="blue"
+        href="https://speckle.systems"
+      >
+        Speckle v2
+      </v-btn>
+    </v-snackbar>
     <v-navigation-drawer app clipped right v-model='navbar'>
       <v-container mt-2 style='height:60px;' class='hidden-lg-and-up'>
       </v-container>
@@ -27,17 +47,7 @@
       <v-container v-if='frontmatter'>
         <v-layout justify-center row wrap>
           <v-flex xs12 sm10 lg6 class='my-4 py-3'>
-            <v-alert
-            class="mb-5"
-            :value="true"
-              color="orange"
-              dark
-              icon="mdi-firework"
-              
-              dismissible
-            >
-              🎉 Speckle v2 alpha is out 🚀! Check out the announcement of <a href="https://speckle.systems/blog/speckle-2-alpha/">server</a> and <a href="https://speckle.systems/blog/2-connectors-alpha">connectors</a>.
-            </v-alert>
+           
             <div class='display-2 font-weight-thin mb-4'>
               {{frontmatter.attributes.title}}
             </div>
